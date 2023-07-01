@@ -1,0 +1,70 @@
+{{template "base/head" .}}
+<div role="main" aria-label="{{.Title}}" class="page-content repository new fork">
+	<div class="ui middle very relaxed page grid">
+		<div class="column">
+			<form class="ui form" action="{{.Link}}" method="post">
+				{{.CsrfTokenHtml}}
+				<h3 class="ui top attached header">
+					{{.locale.Tr "new_fork"}}
+				</h3>
+				<div class="ui attached segment">
+					{{template "base/alert" .}}
+					<div class="inline required field {{if .Err_Owner}}error{{end}}">
+						<label>{{.locale.Tr "repo.owner"}}</label>
+						<div class="ui selection owner dropdown">
+							<input type="hidden" id="uid" name="uid" value="{{.ContextUser.ID}}" required>
+							<span class="text truncated-item-container" title="{{.ContextUser.Name}}">
+								{{avatar $.Context .ContextUser 28 "mini"}}
+								<span class="truncated-item-name">{{.ContextUser.ShortName 40}}</span>
+							</span>
+							{{svg "octicon-triangle-down" 14 "dropdown icon"}}
+							<div class="menu">
+								{{if .CanForkToUser}}
+									<div class="item truncated-item-container" data-value="{{.SignedUser.ID}}" title="{{.SignedUser.Name}}">
+										{{avatar $.Context .SignedUser 28 "mini"}}
+										<span class="truncated-item-name">{{.SignedUser.ShortName 40}}</span>
+									</div>
+								{{end}}
+								{{range .Orgs}}
+									<div class="item truncated-item-container" data-value="{{.ID}}" title="{{.Name}}">
+										{{avatar $.Context . 28 "mini"}}
+										<span class="truncated-item-name">{{.ShortName 40}}</span>
+									</div>
+								{{end}}
+							</div>
+						</div>
+					</div>
+
+					<div class="inline field">
+						<label>{{.locale.Tr "repo.fork_from"}}</label>
+						<a href="{{.ForkRepo.Link}}" class="gt-dib">{{.ForkRepo.FullName}}</a>
+					</div>
+					<div class="inline required field {{if .Err_RepoName}}error{{end}}">
+						<label for="repo_name">{{.locale.Tr "repo.repo_name"}}</label>
+						<input id="repo_name" name="repo_name" value="{{.repo_name}}" required>
+					</div>
+					<div class="inline field">
+						<label>{{.locale.Tr "repo.visibility"}}</label>
+						<div class="ui read-only checkbox">
+							<input type="checkbox" {{if .IsPrivate}}checked{{end}}>
+							<label>{{.locale.Tr "repo.visibility_helper" | Safe}}</label>
+						</div>
+						<span class="help">{{.locale.Tr "repo.fork_visibility_helper"}}</span>
+					</div>
+					<div class="inline field {{if .Err_Description}}error{{end}}">
+						<label for="description">{{.locale.Tr "repo.repo_desc"}}</label>
+						<textarea id="description" name="description">{{.description}}</textarea>
+					</div>
+
+					<div class="inline field">
+						<label></label>
+						<button class="ui green button{{if not .CanForkRepo}} disabled{{end}}">
+							{{.locale.Tr "repo.fork_repo"}}
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{{template "base/footer" .}}

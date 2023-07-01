@@ -1,0 +1,25 @@
+{{template "base/head" .}}
+<div role="main" aria-label="{{.Title}}" class="page-content repository labels">
+	{{template "repo/header" .}}
+	<div class="ui container">
+		<div class="navbar gt-mb-4">
+			{{template "repo/issue/navbar" .}}
+			{{if and (or .CanWriteIssues .CanWritePulls) (not .Repository.IsArchived)}}
+				<div class="ui right">
+					<button class="ui small green new-label button">{{.locale.Tr "repo.issues.new_label"}}</button>
+				</div>
+			{{end}}
+		</div>
+		{{if and (or .CanWriteIssues .CanWritePulls) (not .Repository.IsArchived)}}
+			{{template "repo/issue/labels/label_new" .}}
+		{{end}}
+		{{template "base/alert" .}}
+		{{template "repo/issue/labels/label_list" .}}
+	</div>
+</div>
+
+{{if and (or .CanWriteIssues .CanWritePulls) (not .Repository.IsArchived)}}
+{{template "repo/issue/labels/edit_delete_label" .}}
+{{end}}
+</div>
+{{template "base/footer" .}}

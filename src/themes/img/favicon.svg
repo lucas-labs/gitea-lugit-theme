@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <defs>
+    <style>
+      .a {
+        fill: #e373ff;
+      }
+    </style>
+  </defs>
+  <path class="a" d="M32,0V160H0V0ZM80,0V32h48V64H80V32H48V96h80v32H72v32h88V0Z"/>
+</svg>

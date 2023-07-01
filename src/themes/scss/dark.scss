@@ -1,0 +1,66 @@
+@use '@lucas-labs/lui-micro' as lui;
+@use './utils/color-utils' as c;
+@use './gitea';
+
+$is-dark: true;
+
+$colors: (
+    theme: (
+        'rosewater':  c.variants(#f5e0dc, $is-dark, $dark: false),
+        'flamingo':   c.variants(#f2cdcd, $is-dark, $dark: false),
+        'pink':       c.variants(#f5c2e7, $is-dark, $dark: false),
+        'mauve':      c.variants(#cba6f7, $is-dark, $dark: false),
+        'red':        c.variants(#f38ba8, $is-dark, $dark: false),
+        'maroon':     c.variants(#eba0ac, $is-dark, $dark: false),
+        'peach':      c.variants(#fab387, $is-dark, $dark: false),
+        'yellow':     c.variants(#f9e2af, $is-dark, $dark: false),
+        'green':      c.variants(#a6e3a1, $is-dark, $dark: false),
+        'teal':       c.variants(#94e2d5, $is-dark, $dark: false),
+        'sky':        c.variants(#89dceb, $is-dark, $dark: false),
+        'sapphire':   c.variants(#74c7ec, $is-dark, $dark: false),
+        'blue':       c.variants(#89b4fa, $is-dark, $dark: false),
+        'lavender':   c.variants(#b4befe, $is-dark, $dark: false),
+        'black':      c.variants(#181825, $is-dark, $dark: false),
+        'white':      c.variants(#cdd6f4, $is-dark, $dark: false),
+    ),    
+    text: #cdd6f4,
+    primary: c.variants(#cba6f7, $is-dark),
+    secondary: c.variants(#313244, $is-dark),
+    elevation: (
+        '1': #11111b,  // crust
+        '2': #181825,  // mantle
+        '3': #1e1e2e,  // base
+        '4': #313244,  // surface0
+        '5': #45475a,  // surface1
+        '6': #585b70,  // surface2
+        '7': #6c7086,  // overlay0
+        '8': #7f849c,  // overlay1
+        '9': #9399b2,  // overlay2
+        '10': #a6adc8, // subtext0
+        '11': #bac2de, // subtext1
+        '12': #cdd6f4, // text
+    )
+);
+
+// init lui-micro, css-vars only (no reboot, no basic)
+@include lui.init(
+    $theme: (
+        colors: $colors,
+        variables: (
+            'base-font-size': 16px,
+            'font-family': 'Inter, Roboto, sans-serif',
+            'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
+        ),
+    ),
+    
+    $options: (
+        reboot: false,
+        basic: false,
+        fg-var-name: 'text',
+        bg-var-name: 'elevation/1',
+    ),
+);
+
+@include gitea.make-theme(
+    $is-dark: $is-dark,
+);

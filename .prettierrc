@@ -1,0 +1,20 @@
+{
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 4,
+    "printWidth": 90,
+    "overrides": [
+        {
+            "files": ["*.yml", "*.yaml"],
+            "options": {
+                "tabWidth": 2
+            }
+        },
+        {
+            "files": ["*.scss"],
+            "options": {
+                "printWidth": 100
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{{template "base/head" .}}
+<div role="main" aria-label="{{.Title}}" class="page-content organization members">
+	{{template "org/header" .}}
+	<div class="ui container">
+		{{template "base/alert" .}}
+
+		<div class="list">
+			{{range .Members}}
+				<div class="item ui grid">
+					<div class="ui four wide column gt-df">
+						<a href="{{.HomeLink}}">{{avatar $.Context . 48}}</a>
+						<div>
+							<div class="meta"><a href="{{.HomeLink}}">{{.Name}}</a></div>
+							<div class="meta">{{.FullName}}</div>
+						</div>
+					</div>
+					<div class="ui four wide column center">
+						<div class="meta">
+							{{$.locale.Tr "org.members.membership_visibility"}}
+						</div>
+						<div class="meta">
+							{{$isPublic := index $.MembersIsPublicMember .ID}}
+							{{if $isPublic}}
+								<strong>{{$.locale.Tr "org.members.public"}}</strong>
+								{{if or (eq $.SignedUser.ID .ID) $.IsOrganizationOwner}}(<a class="link-action" href data-url="{{$.OrgLink}}/members/action/private?uid={{.ID}}">{{$.locale.Tr "org.members.public_helper"}}</a>){{end}}
+							{{else}}
+								<strong>{{$.locale.Tr "org.members.private"}}</strong>
+								{{if or (eq $.SignedUser.ID .ID) $.IsOrganizationOwner}}(<a class="link-action" href data-url="{{$.OrgLink}}/members/action/public?uid={{.ID}}">{{$.locale.Tr "org.members.private_helper"}}</a>){{end}}
+							{{end}}
+						</div>
+					</div>
+					{{if not $.PublicOnly}}
+						<div class="ui three wide column center">
+							<div class="meta">
+								{{$.locale.Tr "org.members.member_role"}}
+							</div>
+							<div class="meta">
+								<strong>{{if index $.MembersIsUserOrgOwner .ID}}{{svg "octicon-shield-lock"}} {{$.locale.Tr "org.members.owner"}}{{else}}{{$.locale.Tr "org.members.member"}}{{end}}</strong>
+							</div>
+						</div>
+						<div class="ui two wide column center">
+							{{if $.IsOrganizationOwner}}
+							<div class="meta">
+								{{$.locale.Tr "admin.users.2fa"}}
+							</div>
+							<div class="meta">
+								<strong>
+									{{if index $.MembersTwoFaStatus .ID}}
+										<span class="text green">{{svg "octicon-check"}}</span>
+									{{else}}
+										{{svg "octicon-x"}}
+									{{end}}
+								</strong>
+							</div>
+							{{end}}
+						</div>
+					{{end}}
+					<div class="ui three wide column gt-df gt-ac gt-je">
+						<div class="text right">
+							{{if eq $.SignedUser.ID .ID}}
+								<form>
+									<button class="ui red small button delete-button" data-modal-id="leave-organization"
+										data-url="{{$.OrgLink}}/members/action/leave" data-datauid="{{.ID}}"
+										data-name="{{.DisplayName}}"
+										data-data-organization-name="{{$.Org.DisplayName}}">{{$.locale.Tr "org.members.leave"}}</button>
+								</form>
+							{{else if $.IsOrganizationOwner}}
+								<form>
+									<button class="ui red small button delete-button" data-modal-id="remove-organization-member"
+										data-url="{{$.OrgLink}}/members/action/remove" data-datauid="{{.ID}}"
+										data-name="{{.DisplayName}}"
+										data-data-organization-name="{{$.Org.DisplayName}}">{{$.locale.Tr "org.members.remove"}}</button>
+								</form>
+							{{end}}
+						</div>
+					</div>
+				</div>
+			{{end}}
+		</div>
+
+		{{template "base/paginate" .}}
+	</div>
+</div>
+<div class="ui g-modal-confirm delete modal" id="leave-organization">
+	<div class="header">
+		{{$.locale.Tr "org.members.leave"}}
+	</div>
+	<div class="content">
+		<p>{{$.locale.Tr "org.members.leave.detail" `<span class="dataOrganizationName"></span>` | Safe}}</p>
+	</div>
+	{{template "base/modal_actions_confirm" .}}
+</div>
+<div class="ui g-modal-confirm delete modal" id="remove-organization-member">
+	<div class="header">
+		{{$.locale.Tr "org.members.remove"}}
+	</div>
+	<div class="content">
+		<p>{{$.locale.Tr "org.members.remove.detail" `<span class="name"></span>` `<span class="dataOrganizationName"></span>` | Safe}}</p>
+	</div>
+	{{template "base/modal_actions_confirm" .}}
+</div>
+
+{{template "base/footer" .}}
