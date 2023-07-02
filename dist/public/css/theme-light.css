@@ -2844,6 +2844,10 @@ footer .ui.dropdown .menu {
   background-color: var(--c-elevation_4);
 }
 
+#repo-topics {
+  row-gap: var(--v-measure_\.5x);
+}
+
 .ui.table > tr > td, .ui.table > tbody > tr > td {
   border-top-color: rgba(var(--c-theme_blue_base-rgb), 0.04);
 }

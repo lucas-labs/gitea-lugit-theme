@@ -3,6 +3,10 @@
 
 @mixin apply-styles {
 
+    #repo-topics {
+        row-gap: var.get('measure/.5x');
+    }
+
     .ui.table>tr>td, .ui.table>tbody>tr>td {
         border-top-color: rgba(#{color.get('theme/blue/base', 'rgb')}, 0.04);
     }
