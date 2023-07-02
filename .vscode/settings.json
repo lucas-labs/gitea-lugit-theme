@@ -18,7 +18,7 @@
         ".prettierignore": true,
 
         // 📝 readmes
-        "**/**/README.md": true,
+        // "**/**/README.md": true,
         "LICENSE": true,
 
         // 🗑️
