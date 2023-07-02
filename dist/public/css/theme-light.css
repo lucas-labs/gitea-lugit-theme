@@ -1,0 +1,2972 @@
+:root {
+  --v-base-font-size: 14px;
+  --v-font-family: "Outfit", Inter, Roboto, sans-serif;
+  --v-code-font-family: "Source Code Pro", "Roboto Mono", Consolas, monospace;
+  --v-measure_\.25x: 4px;
+  --v-measure_\.5x: 8px;
+  --v-measure_1x: 16px;
+  --v-measure_1\.25x: 20px;
+  --v-measure_1\.5x: 24px;
+  --v-measure_2x: 32px;
+  --v-measure_3x: 48px;
+  --v-measure_4x: 64px;
+  --v-repo-home_sidebar-width: 296px;
+  --c-theme_rosewater_light_3\%: #df9584;
+  --c-theme_rosewater_light_3\%-rgb: 223, 149, 132;
+  --c-theme_rosewater_light_3\%-c: #4c4f69;
+  --c-theme_rosewater_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_6\%: #e29f90;
+  --c-theme_rosewater_light_6\%-rgb: 226, 159, 144;
+  --c-theme_rosewater_light_6\%-c: #4c4f69;
+  --c-theme_rosewater_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_9\%: #e5aa9c;
+  --c-theme_rosewater_light_9\%-rgb: 229, 170, 156;
+  --c-theme_rosewater_light_9\%-c: #4c4f69;
+  --c-theme_rosewater_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_12\%: #e9b4a9;
+  --c-theme_rosewater_light_12\%-rgb: 233, 180, 169;
+  --c-theme_rosewater_light_12\%-c: #4c4f69;
+  --c-theme_rosewater_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_15\%: #ecbfb5;
+  --c-theme_rosewater_light_15\%-rgb: 236, 191, 181;
+  --c-theme_rosewater_light_15\%-c: #4c4f69;
+  --c-theme_rosewater_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_18\%: #efc9c1;
+  --c-theme_rosewater_light_18\%-rgb: 239, 201, 193;
+  --c-theme_rosewater_light_18\%-c: #4c4f69;
+  --c-theme_rosewater_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_21\%: #f2d4cd;
+  --c-theme_rosewater_light_21\%-rgb: 242, 212, 205;
+  --c-theme_rosewater_light_21\%-c: #4c4f69;
+  --c-theme_rosewater_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_24\%: #f5ded9;
+  --c-theme_rosewater_light_24\%-rgb: 245, 222, 217;
+  --c-theme_rosewater_light_24\%-c: #4c4f69;
+  --c-theme_rosewater_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_27\%: #f8e9e5;
+  --c-theme_rosewater_light_27\%-rgb: 248, 233, 229;
+  --c-theme_rosewater_light_27\%-c: #4c4f69;
+  --c-theme_rosewater_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_30\%: #fcf3f2;
+  --c-theme_rosewater_light_30\%-rgb: 252, 243, 242;
+  --c-theme_rosewater_light_30\%-c: #4c4f69;
+  --c-theme_rosewater_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_33\%: #fffefe;
+  --c-theme_rosewater_light_33\%-rgb: 255, 254, 254;
+  --c-theme_rosewater_light_33\%-c: #4c4f69;
+  --c-theme_rosewater_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_36\%: white;
+  --c-theme_rosewater_light_36\%-rgb: 255, 255, 255;
+  --c-theme_rosewater_light_36\%-c: #4c4f69;
+  --c-theme_rosewater_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_light_39\%: white;
+  --c-theme_rosewater_light_39\%-rgb: 255, 255, 255;
+  --c-theme_rosewater_light_39\%-c: #4c4f69;
+  --c-theme_rosewater_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_dark_3\%: #d97f6c;
+  --c-theme_rosewater_dark_3\%-rgb: 217, 127, 108;
+  --c-theme_rosewater_dark_3\%-c: #4c4f69;
+  --c-theme_rosewater_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_dark_6\%: #d67560;
+  --c-theme_rosewater_dark_6\%-rgb: 214, 117, 96;
+  --c-theme_rosewater_dark_6\%-c: #4c4f69;
+  --c-theme_rosewater_dark_6\%-c-rgb: 76, 79, 105;
+  --c-theme_rosewater_dark_9\%: #d36a54;
+  --c-theme_rosewater_dark_9\%-rgb: 211, 106, 84;
+  --c-theme_rosewater_dark_9\%-c: #dce0e8;
+  --c-theme_rosewater_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_12\%: #cf6047;
+  --c-theme_rosewater_dark_12\%-rgb: 207, 96, 71;
+  --c-theme_rosewater_dark_12\%-c: #dce0e8;
+  --c-theme_rosewater_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_15\%: #cc553b;
+  --c-theme_rosewater_dark_15\%-rgb: 204, 85, 59;
+  --c-theme_rosewater_dark_15\%-c: #dce0e8;
+  --c-theme_rosewater_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_18\%: #c54d33;
+  --c-theme_rosewater_dark_18\%-rgb: 197, 77, 51;
+  --c-theme_rosewater_dark_18\%-c: #dce0e8;
+  --c-theme_rosewater_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_21\%: #b94930;
+  --c-theme_rosewater_dark_21\%-rgb: 185, 73, 48;
+  --c-theme_rosewater_dark_21\%-c: #dce0e8;
+  --c-theme_rosewater_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_24\%: #ad442d;
+  --c-theme_rosewater_dark_24\%-rgb: 173, 68, 45;
+  --c-theme_rosewater_dark_24\%-c: #dce0e8;
+  --c-theme_rosewater_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_27\%: #a13f2a;
+  --c-theme_rosewater_dark_27\%-rgb: 161, 63, 42;
+  --c-theme_rosewater_dark_27\%-c: #dce0e8;
+  --c-theme_rosewater_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_30\%: #953a27;
+  --c-theme_rosewater_dark_30\%-rgb: 149, 58, 39;
+  --c-theme_rosewater_dark_30\%-c: #dce0e8;
+  --c-theme_rosewater_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_33\%: #883623;
+  --c-theme_rosewater_dark_33\%-rgb: 136, 54, 35;
+  --c-theme_rosewater_dark_33\%-c: #dce0e8;
+  --c-theme_rosewater_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_36\%: #7c3120;
+  --c-theme_rosewater_dark_36\%-rgb: 124, 49, 32;
+  --c-theme_rosewater_dark_36\%-c: #dce0e8;
+  --c-theme_rosewater_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_dark_39\%: #702c1d;
+  --c-theme_rosewater_dark_39\%-rgb: 112, 44, 29;
+  --c-theme_rosewater_dark_39\%-c: #dce0e8;
+  --c-theme_rosewater_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_rosewater_base: #dc8a78;
+  --c-theme_rosewater_base-rgb: 220, 138, 120;
+  --c-theme_rosewater_base-c: #4c4f69;
+  --c-theme_rosewater_base-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_3\%: #e08484;
+  --c-theme_flamingo_light_3\%-rgb: 224, 132, 132;
+  --c-theme_flamingo_light_3\%-c: #4c4f69;
+  --c-theme_flamingo_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_6\%: #e39090;
+  --c-theme_flamingo_light_6\%-rgb: 227, 144, 144;
+  --c-theme_flamingo_light_6\%-c: #4c4f69;
+  --c-theme_flamingo_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_9\%: #e69d9d;
+  --c-theme_flamingo_light_9\%-rgb: 230, 157, 157;
+  --c-theme_flamingo_light_9\%-c: #4c4f69;
+  --c-theme_flamingo_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_12\%: #e9a9a9;
+  --c-theme_flamingo_light_12\%-rgb: 233, 169, 169;
+  --c-theme_flamingo_light_12\%-c: #4c4f69;
+  --c-theme_flamingo_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_15\%: #ecb5b5;
+  --c-theme_flamingo_light_15\%-rgb: 236, 181, 181;
+  --c-theme_flamingo_light_15\%-c: #4c4f69;
+  --c-theme_flamingo_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_18\%: #efc1c1;
+  --c-theme_flamingo_light_18\%-rgb: 239, 193, 193;
+  --c-theme_flamingo_light_18\%-c: #4c4f69;
+  --c-theme_flamingo_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_21\%: #f3cece;
+  --c-theme_flamingo_light_21\%-rgb: 243, 206, 206;
+  --c-theme_flamingo_light_21\%-c: #4c4f69;
+  --c-theme_flamingo_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_24\%: #f6dada;
+  --c-theme_flamingo_light_24\%-rgb: 246, 218, 218;
+  --c-theme_flamingo_light_24\%-c: #4c4f69;
+  --c-theme_flamingo_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_27\%: #f9e6e6;
+  --c-theme_flamingo_light_27\%-rgb: 249, 230, 230;
+  --c-theme_flamingo_light_27\%-c: #4c4f69;
+  --c-theme_flamingo_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_30\%: #fcf2f2;
+  --c-theme_flamingo_light_30\%-rgb: 252, 242, 242;
+  --c-theme_flamingo_light_30\%-c: #4c4f69;
+  --c-theme_flamingo_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_33\%: #fffefe;
+  --c-theme_flamingo_light_33\%-rgb: 255, 254, 254;
+  --c-theme_flamingo_light_33\%-c: #4c4f69;
+  --c-theme_flamingo_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_36\%: white;
+  --c-theme_flamingo_light_36\%-rgb: 255, 255, 255;
+  --c-theme_flamingo_light_36\%-c: #4c4f69;
+  --c-theme_flamingo_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_light_39\%: white;
+  --c-theme_flamingo_light_39\%-rgb: 255, 255, 255;
+  --c-theme_flamingo_light_39\%-c: #4c4f69;
+  --c-theme_flamingo_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_flamingo_dark_3\%: #da6c6c;
+  --c-theme_flamingo_dark_3\%-rgb: 218, 108, 108;
+  --c-theme_flamingo_dark_3\%-c: #dce0e8;
+  --c-theme_flamingo_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_6\%: #d76060;
+  --c-theme_flamingo_dark_6\%-rgb: 215, 96, 96;
+  --c-theme_flamingo_dark_6\%-c: #dce0e8;
+  --c-theme_flamingo_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_9\%: #d45353;
+  --c-theme_flamingo_dark_9\%-rgb: 212, 83, 83;
+  --c-theme_flamingo_dark_9\%-c: #dce0e8;
+  --c-theme_flamingo_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_12\%: #d14747;
+  --c-theme_flamingo_dark_12\%-rgb: 209, 71, 71;
+  --c-theme_flamingo_dark_12\%-c: #dce0e8;
+  --c-theme_flamingo_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_15\%: #ce3b3b;
+  --c-theme_flamingo_dark_15\%-rgb: 206, 59, 59;
+  --c-theme_flamingo_dark_15\%-c: #dce0e8;
+  --c-theme_flamingo_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_18\%: #c73232;
+  --c-theme_flamingo_dark_18\%-rgb: 199, 50, 50;
+  --c-theme_flamingo_dark_18\%-c: #dce0e8;
+  --c-theme_flamingo_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_21\%: #bb2f2f;
+  --c-theme_flamingo_dark_21\%-rgb: 187, 47, 47;
+  --c-theme_flamingo_dark_21\%-c: #dce0e8;
+  --c-theme_flamingo_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_24\%: #af2c2c;
+  --c-theme_flamingo_dark_24\%-rgb: 175, 44, 44;
+  --c-theme_flamingo_dark_24\%-c: #dce0e8;
+  --c-theme_flamingo_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_27\%: #a22929;
+  --c-theme_flamingo_dark_27\%-rgb: 162, 41, 41;
+  --c-theme_flamingo_dark_27\%-c: #dce0e8;
+  --c-theme_flamingo_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_30\%: #962626;
+  --c-theme_flamingo_dark_30\%-rgb: 150, 38, 38;
+  --c-theme_flamingo_dark_30\%-c: #dce0e8;
+  --c-theme_flamingo_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_33\%: #8a2323;
+  --c-theme_flamingo_dark_33\%-rgb: 138, 35, 35;
+  --c-theme_flamingo_dark_33\%-c: #dce0e8;
+  --c-theme_flamingo_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_36\%: #7e2020;
+  --c-theme_flamingo_dark_36\%-rgb: 126, 32, 32;
+  --c-theme_flamingo_dark_36\%-c: #dce0e8;
+  --c-theme_flamingo_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_dark_39\%: #721d1d;
+  --c-theme_flamingo_dark_39\%-rgb: 114, 29, 29;
+  --c-theme_flamingo_dark_39\%-c: #dce0e8;
+  --c-theme_flamingo_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_flamingo_base: #dd7878;
+  --c-theme_flamingo_base-rgb: 221, 120, 120;
+  --c-theme_flamingo_base-c: #4c4f69;
+  --c-theme_flamingo_base-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_3\%: #ec83d0;
+  --c-theme_pink_light_3\%-rgb: 236, 131, 208;
+  --c-theme_pink_light_3\%-c: #4c4f69;
+  --c-theme_pink_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_6\%: #ee91d5;
+  --c-theme_pink_light_6\%-rgb: 238, 145, 213;
+  --c-theme_pink_light_6\%-c: #4c4f69;
+  --c-theme_pink_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_9\%: #f09eda;
+  --c-theme_pink_light_9\%-rgb: 240, 158, 218;
+  --c-theme_pink_light_9\%-c: #4c4f69;
+  --c-theme_pink_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_12\%: #f2abdf;
+  --c-theme_pink_light_12\%-rgb: 242, 171, 223;
+  --c-theme_pink_light_12\%-c: #4c4f69;
+  --c-theme_pink_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_15\%: #f4b8e4;
+  --c-theme_pink_light_15\%-rgb: 244, 184, 228;
+  --c-theme_pink_light_15\%-c: #4c4f69;
+  --c-theme_pink_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_18\%: #f6c6e9;
+  --c-theme_pink_light_18\%-rgb: 246, 198, 233;
+  --c-theme_pink_light_18\%-c: #4c4f69;
+  --c-theme_pink_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_21\%: #f8d3ee;
+  --c-theme_pink_light_21\%-rgb: 248, 211, 238;
+  --c-theme_pink_light_21\%-c: #4c4f69;
+  --c-theme_pink_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_24\%: #fae0f3;
+  --c-theme_pink_light_24\%-rgb: 250, 224, 243;
+  --c-theme_pink_light_24\%-c: #4c4f69;
+  --c-theme_pink_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_27\%: #fcedf8;
+  --c-theme_pink_light_27\%-rgb: 252, 237, 248;
+  --c-theme_pink_light_27\%-c: #4c4f69;
+  --c-theme_pink_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_30\%: #fefbfd;
+  --c-theme_pink_light_30\%-rgb: 254, 251, 253;
+  --c-theme_pink_light_30\%-c: #4c4f69;
+  --c-theme_pink_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_33\%: white;
+  --c-theme_pink_light_33\%-rgb: 255, 255, 255;
+  --c-theme_pink_light_33\%-c: #4c4f69;
+  --c-theme_pink_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_36\%: white;
+  --c-theme_pink_light_36\%-rgb: 255, 255, 255;
+  --c-theme_pink_light_36\%-c: #4c4f69;
+  --c-theme_pink_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_light_39\%: white;
+  --c-theme_pink_light_39\%-rgb: 255, 255, 255;
+  --c-theme_pink_light_39\%-c: #4c4f69;
+  --c-theme_pink_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_dark_3\%: #e869c6;
+  --c-theme_pink_dark_3\%-rgb: 232, 105, 198;
+  --c-theme_pink_dark_3\%-c: #4c4f69;
+  --c-theme_pink_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_dark_6\%: #e65bc1;
+  --c-theme_pink_dark_6\%-rgb: 230, 91, 193;
+  --c-theme_pink_dark_6\%-c: #4c4f69;
+  --c-theme_pink_dark_6\%-c-rgb: 76, 79, 105;
+  --c-theme_pink_dark_9\%: #e44ebc;
+  --c-theme_pink_dark_9\%-rgb: 228, 78, 188;
+  --c-theme_pink_dark_9\%-c: #dce0e8;
+  --c-theme_pink_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_12\%: #e241b7;
+  --c-theme_pink_dark_12\%-rgb: 226, 65, 183;
+  --c-theme_pink_dark_12\%-c: #dce0e8;
+  --c-theme_pink_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_15\%: #e034b2;
+  --c-theme_pink_dark_15\%-rgb: 224, 52, 178;
+  --c-theme_pink_dark_15\%-c: #dce0e8;
+  --c-theme_pink_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_18\%: #de26ad;
+  --c-theme_pink_dark_18\%-rgb: 222, 38, 173;
+  --c-theme_pink_dark_18\%-c: #dce0e8;
+  --c-theme_pink_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_21\%: #d421a4;
+  --c-theme_pink_dark_21\%-rgb: 212, 33, 164;
+  --c-theme_pink_dark_21\%-c: #dce0e8;
+  --c-theme_pink_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_24\%: #c71f9a;
+  --c-theme_pink_dark_24\%-rgb: 199, 31, 154;
+  --c-theme_pink_dark_24\%-c: #dce0e8;
+  --c-theme_pink_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_27\%: #ba1c90;
+  --c-theme_pink_dark_27\%-rgb: 186, 28, 144;
+  --c-theme_pink_dark_27\%-c: #dce0e8;
+  --c-theme_pink_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_30\%: #ad1a86;
+  --c-theme_pink_dark_30\%-rgb: 173, 26, 134;
+  --c-theme_pink_dark_30\%-c: #dce0e8;
+  --c-theme_pink_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_33\%: #9f187b;
+  --c-theme_pink_dark_33\%-rgb: 159, 24, 123;
+  --c-theme_pink_dark_33\%-c: #dce0e8;
+  --c-theme_pink_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_36\%: #921671;
+  --c-theme_pink_dark_36\%-rgb: 146, 22, 113;
+  --c-theme_pink_dark_36\%-c: #dce0e8;
+  --c-theme_pink_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_dark_39\%: #851467;
+  --c-theme_pink_dark_39\%-rgb: 133, 20, 103;
+  --c-theme_pink_dark_39\%-c: #dce0e8;
+  --c-theme_pink_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_pink_base: #ea76cb;
+  --c-theme_pink_base-rgb: 234, 118, 203;
+  --c-theme_pink_base-c: #4c4f69;
+  --c-theme_pink_base-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_3\%: #6f9fe4;
+  --c-theme_mauve_light_3\%-rgb: 111, 159, 228;
+  --c-theme_mauve_light_3\%-c: #4c4f69;
+  --c-theme_mauve_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_6\%: #7ca7e7;
+  --c-theme_mauve_light_6\%-rgb: 124, 167, 231;
+  --c-theme_mauve_light_6\%-c: #4c4f69;
+  --c-theme_mauve_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_9\%: #89b0e9;
+  --c-theme_mauve_light_9\%-rgb: 137, 176, 233;
+  --c-theme_mauve_light_9\%-c: #4c4f69;
+  --c-theme_mauve_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_12\%: #96b9ec;
+  --c-theme_mauve_light_12\%-rgb: 150, 185, 236;
+  --c-theme_mauve_light_12\%-c: #4c4f69;
+  --c-theme_mauve_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_15\%: #a3c1ee;
+  --c-theme_mauve_light_15\%-rgb: 163, 193, 238;
+  --c-theme_mauve_light_15\%-c: #4c4f69;
+  --c-theme_mauve_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_18\%: #afcaf0;
+  --c-theme_mauve_light_18\%-rgb: 175, 202, 240;
+  --c-theme_mauve_light_18\%-c: #4c4f69;
+  --c-theme_mauve_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_21\%: #bcd2f3;
+  --c-theme_mauve_light_21\%-rgb: 188, 210, 243;
+  --c-theme_mauve_light_21\%-c: #4c4f69;
+  --c-theme_mauve_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_24\%: #c9dbf5;
+  --c-theme_mauve_light_24\%-rgb: 201, 219, 245;
+  --c-theme_mauve_light_24\%-c: #4c4f69;
+  --c-theme_mauve_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_27\%: #d6e4f7;
+  --c-theme_mauve_light_27\%-rgb: 214, 228, 247;
+  --c-theme_mauve_light_27\%-c: #4c4f69;
+  --c-theme_mauve_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_30\%: #e3ecfa;
+  --c-theme_mauve_light_30\%-rgb: 227, 236, 250;
+  --c-theme_mauve_light_30\%-c: #4c4f69;
+  --c-theme_mauve_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_33\%: #f0f5fc;
+  --c-theme_mauve_light_33\%-rgb: 240, 245, 252;
+  --c-theme_mauve_light_33\%-c: #4c4f69;
+  --c-theme_mauve_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_36\%: #fdfeff;
+  --c-theme_mauve_light_36\%-rgb: 253, 254, 255;
+  --c-theme_mauve_light_36\%-c: #4c4f69;
+  --c-theme_mauve_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_light_39\%: white;
+  --c-theme_mauve_light_39\%-rgb: 255, 255, 255;
+  --c-theme_mauve_light_39\%-c: #4c4f69;
+  --c-theme_mauve_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_mauve_dark_3\%: #558de0;
+  --c-theme_mauve_dark_3\%-rgb: 85, 141, 224;
+  --c-theme_mauve_dark_3\%-c: #dce0e8;
+  --c-theme_mauve_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_6\%: #4885dd;
+  --c-theme_mauve_dark_6\%-rgb: 72, 133, 221;
+  --c-theme_mauve_dark_6\%-c: #dce0e8;
+  --c-theme_mauve_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_9\%: #3b7cdb;
+  --c-theme_mauve_dark_9\%-rgb: 59, 124, 219;
+  --c-theme_mauve_dark_9\%-c: #dce0e8;
+  --c-theme_mauve_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_12\%: #2e73d8;
+  --c-theme_mauve_dark_12\%-rgb: 46, 115, 216;
+  --c-theme_mauve_dark_12\%-c: #dce0e8;
+  --c-theme_mauve_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_15\%: #276cd1;
+  --c-theme_mauve_dark_15\%-rgb: 39, 108, 209;
+  --c-theme_mauve_dark_15\%-c: #dce0e8;
+  --c-theme_mauve_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_18\%: #2465c4;
+  --c-theme_mauve_dark_18\%-rgb: 36, 101, 196;
+  --c-theme_mauve_dark_18\%-c: #dce0e8;
+  --c-theme_mauve_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_21\%: #225eb7;
+  --c-theme_mauve_dark_21\%-rgb: 34, 94, 183;
+  --c-theme_mauve_dark_21\%-c: #dce0e8;
+  --c-theme_mauve_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_24\%: #1f58aa;
+  --c-theme_mauve_dark_24\%-rgb: 31, 88, 170;
+  --c-theme_mauve_dark_24\%-c: #dce0e8;
+  --c-theme_mauve_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_27\%: #1d519d;
+  --c-theme_mauve_dark_27\%-rgb: 29, 81, 157;
+  --c-theme_mauve_dark_27\%-c: #dce0e8;
+  --c-theme_mauve_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_30\%: #1b4a90;
+  --c-theme_mauve_dark_30\%-rgb: 27, 74, 144;
+  --c-theme_mauve_dark_30\%-c: #dce0e8;
+  --c-theme_mauve_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_33\%: #184483;
+  --c-theme_mauve_dark_33\%-rgb: 24, 68, 131;
+  --c-theme_mauve_dark_33\%-c: #dce0e8;
+  --c-theme_mauve_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_36\%: #163d77;
+  --c-theme_mauve_dark_36\%-rgb: 22, 61, 119;
+  --c-theme_mauve_dark_36\%-c: #dce0e8;
+  --c-theme_mauve_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_dark_39\%: #14366a;
+  --c-theme_mauve_dark_39\%-rgb: 20, 54, 106;
+  --c-theme_mauve_dark_39\%-c: #dce0e8;
+  --c-theme_mauve_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_mauve_base: #6296e2;
+  --c-theme_mauve_base-rgb: 98, 150, 226;
+  --c-theme_mauve_base-c: #4c4f69;
+  --c-theme_mauve_base-c-rgb: 76, 79, 105;
+  --c-theme_red_light_3\%: #e0103d;
+  --c-theme_red_light_3\%-rgb: 224, 16, 61;
+  --c-theme_red_light_3\%-c: #dce0e8;
+  --c-theme_red_light_3\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_6\%: #ee1241;
+  --c-theme_red_light_6\%-rgb: 238, 18, 65;
+  --c-theme_red_light_6\%-c: #dce0e8;
+  --c-theme_red_light_6\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_9\%: #ef204c;
+  --c-theme_red_light_9\%-rgb: 239, 32, 76;
+  --c-theme_red_light_9\%-c: #dce0e8;
+  --c-theme_red_light_9\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_12\%: #f02e58;
+  --c-theme_red_light_12\%-rgb: 240, 46, 88;
+  --c-theme_red_light_12\%-c: #dce0e8;
+  --c-theme_red_light_12\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_15\%: #f13c63;
+  --c-theme_red_light_15\%-rgb: 241, 60, 99;
+  --c-theme_red_light_15\%-c: #dce0e8;
+  --c-theme_red_light_15\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_18\%: #f24b6f;
+  --c-theme_red_light_18\%-rgb: 242, 75, 111;
+  --c-theme_red_light_18\%-c: #dce0e8;
+  --c-theme_red_light_18\%-c-rgb: 220, 224, 232;
+  --c-theme_red_light_21\%: #f3597a;
+  --c-theme_red_light_21\%-rgb: 243, 89, 122;
+  --c-theme_red_light_21\%-c: #4c4f69;
+  --c-theme_red_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_24\%: #f46786;
+  --c-theme_red_light_24\%-rgb: 244, 103, 134;
+  --c-theme_red_light_24\%-c: #4c4f69;
+  --c-theme_red_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_27\%: #f57691;
+  --c-theme_red_light_27\%-rgb: 245, 118, 145;
+  --c-theme_red_light_27\%-c: #4c4f69;
+  --c-theme_red_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_30\%: #f6849c;
+  --c-theme_red_light_30\%-rgb: 246, 132, 156;
+  --c-theme_red_light_30\%-c: #4c4f69;
+  --c-theme_red_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_33\%: #f792a8;
+  --c-theme_red_light_33\%-rgb: 247, 146, 168;
+  --c-theme_red_light_33\%-c: #4c4f69;
+  --c-theme_red_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_36\%: #f8a0b3;
+  --c-theme_red_light_36\%-rgb: 248, 160, 179;
+  --c-theme_red_light_36\%-c: #4c4f69;
+  --c-theme_red_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_red_light_39\%: #f9afbf;
+  --c-theme_red_light_39\%-rgb: 249, 175, 191;
+  --c-theme_red_light_39\%-c: #4c4f69;
+  --c-theme_red_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_red_dark_3\%: #c40e35;
+  --c-theme_red_dark_3\%-rgb: 196, 14, 53;
+  --c-theme_red_dark_3\%-c: #dce0e8;
+  --c-theme_red_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_6\%: #b50d31;
+  --c-theme_red_dark_6\%-rgb: 181, 13, 49;
+  --c-theme_red_dark_6\%-c: #dce0e8;
+  --c-theme_red_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_9\%: #a70c2d;
+  --c-theme_red_dark_9\%-rgb: 167, 12, 45;
+  --c-theme_red_dark_9\%-c: #dce0e8;
+  --c-theme_red_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_12\%: #990b29;
+  --c-theme_red_dark_12\%-rgb: 153, 11, 41;
+  --c-theme_red_dark_12\%-c: #dce0e8;
+  --c-theme_red_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_15\%: #8b0a26;
+  --c-theme_red_dark_15\%-rgb: 139, 10, 38;
+  --c-theme_red_dark_15\%-c: #dce0e8;
+  --c-theme_red_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_18\%: #7c0922;
+  --c-theme_red_dark_18\%-rgb: 124, 9, 34;
+  --c-theme_red_dark_18\%-c: #dce0e8;
+  --c-theme_red_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_21\%: #6e081e;
+  --c-theme_red_dark_21\%-rgb: 110, 8, 30;
+  --c-theme_red_dark_21\%-c: #dce0e8;
+  --c-theme_red_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_24\%: #60071a;
+  --c-theme_red_dark_24\%-rgb: 96, 7, 26;
+  --c-theme_red_dark_24\%-c: #dce0e8;
+  --c-theme_red_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_27\%: #510616;
+  --c-theme_red_dark_27\%-rgb: 81, 6, 22;
+  --c-theme_red_dark_27\%-c: #dce0e8;
+  --c-theme_red_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_30\%: #430512;
+  --c-theme_red_dark_30\%-rgb: 67, 5, 18;
+  --c-theme_red_dark_30\%-c: #dce0e8;
+  --c-theme_red_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_33\%: #35040e;
+  --c-theme_red_dark_33\%-rgb: 53, 4, 14;
+  --c-theme_red_dark_33\%-c: #dce0e8;
+  --c-theme_red_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_36\%: #27030a;
+  --c-theme_red_dark_36\%-rgb: 39, 3, 10;
+  --c-theme_red_dark_36\%-c: #dce0e8;
+  --c-theme_red_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_red_dark_39\%: #180207;
+  --c-theme_red_dark_39\%-rgb: 24, 2, 7;
+  --c-theme_red_dark_39\%-c: #dce0e8;
+  --c-theme_red_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_red_base: #d20f39;
+  --c-theme_red_base-rgb: 210, 15, 57;
+  --c-theme_red_base-c: #dce0e8;
+  --c-theme_red_base-c-rgb: 220, 224, 232;
+  --c-theme_maroon_light_3\%: #e8525f;
+  --c-theme_maroon_light_3\%-rgb: 232, 82, 95;
+  --c-theme_maroon_light_3\%-c: #dce0e8;
+  --c-theme_maroon_light_3\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_light_6\%: #ea606c;
+  --c-theme_maroon_light_6\%-rgb: 234, 96, 108;
+  --c-theme_maroon_light_6\%-c: #dce0e8;
+  --c-theme_maroon_light_6\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_light_9\%: #eb6d78;
+  --c-theme_maroon_light_9\%-rgb: 235, 109, 120;
+  --c-theme_maroon_light_9\%-c: #4c4f69;
+  --c-theme_maroon_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_12\%: #ed7b85;
+  --c-theme_maroon_light_12\%-rgb: 237, 123, 133;
+  --c-theme_maroon_light_12\%-c: #4c4f69;
+  --c-theme_maroon_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_15\%: #ef8891;
+  --c-theme_maroon_light_15\%-rgb: 239, 136, 145;
+  --c-theme_maroon_light_15\%-c: #4c4f69;
+  --c-theme_maroon_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_18\%: #f1969e;
+  --c-theme_maroon_light_18\%-rgb: 241, 150, 158;
+  --c-theme_maroon_light_18\%-c: #4c4f69;
+  --c-theme_maroon_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_21\%: #f3a3aa;
+  --c-theme_maroon_light_21\%-rgb: 243, 163, 170;
+  --c-theme_maroon_light_21\%-c: #4c4f69;
+  --c-theme_maroon_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_24\%: #f5b1b7;
+  --c-theme_maroon_light_24\%-rgb: 245, 177, 183;
+  --c-theme_maroon_light_24\%-c: #4c4f69;
+  --c-theme_maroon_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_27\%: #f6bec3;
+  --c-theme_maroon_light_27\%-rgb: 246, 190, 195;
+  --c-theme_maroon_light_27\%-c: #4c4f69;
+  --c-theme_maroon_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_30\%: #f8ccd0;
+  --c-theme_maroon_light_30\%-rgb: 248, 204, 208;
+  --c-theme_maroon_light_30\%-c: #4c4f69;
+  --c-theme_maroon_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_33\%: #fad9dc;
+  --c-theme_maroon_light_33\%-rgb: 250, 217, 220;
+  --c-theme_maroon_light_33\%-c: #4c4f69;
+  --c-theme_maroon_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_36\%: #fce7e9;
+  --c-theme_maroon_light_36\%-rgb: 252, 231, 233;
+  --c-theme_maroon_light_36\%-c: #4c4f69;
+  --c-theme_maroon_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_light_39\%: #fef4f5;
+  --c-theme_maroon_light_39\%-rgb: 254, 244, 245;
+  --c-theme_maroon_light_39\%-c: #4c4f69;
+  --c-theme_maroon_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_maroon_dark_3\%: #e43847;
+  --c-theme_maroon_dark_3\%-rgb: 228, 56, 71;
+  --c-theme_maroon_dark_3\%-c: #dce0e8;
+  --c-theme_maroon_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_6\%: #e22a3a;
+  --c-theme_maroon_dark_6\%-rgb: 226, 42, 58;
+  --c-theme_maroon_dark_6\%-c: #dce0e8;
+  --c-theme_maroon_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_9\%: #df1e2f;
+  --c-theme_maroon_dark_9\%-rgb: 223, 30, 47;
+  --c-theme_maroon_dark_9\%-c: #dce0e8;
+  --c-theme_maroon_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_12\%: #d21c2c;
+  --c-theme_maroon_dark_12\%-rgb: 210, 28, 44;
+  --c-theme_maroon_dark_12\%-c: #dce0e8;
+  --c-theme_maroon_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_15\%: #c41a29;
+  --c-theme_maroon_dark_15\%-rgb: 196, 26, 41;
+  --c-theme_maroon_dark_15\%-c: #dce0e8;
+  --c-theme_maroon_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_18\%: #b71926;
+  --c-theme_maroon_dark_18\%-rgb: 183, 25, 38;
+  --c-theme_maroon_dark_18\%-c: #dce0e8;
+  --c-theme_maroon_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_21\%: #a91723;
+  --c-theme_maroon_dark_21\%-rgb: 169, 23, 35;
+  --c-theme_maroon_dark_21\%-c: #dce0e8;
+  --c-theme_maroon_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_24\%: #9c1521;
+  --c-theme_maroon_dark_24\%-rgb: 156, 21, 33;
+  --c-theme_maroon_dark_24\%-c: #dce0e8;
+  --c-theme_maroon_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_27\%: #8e131e;
+  --c-theme_maroon_dark_27\%-rgb: 142, 19, 30;
+  --c-theme_maroon_dark_27\%-c: #dce0e8;
+  --c-theme_maroon_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_30\%: #81111b;
+  --c-theme_maroon_dark_30\%-rgb: 129, 17, 27;
+  --c-theme_maroon_dark_30\%-c: #dce0e8;
+  --c-theme_maroon_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_33\%: #730f18;
+  --c-theme_maroon_dark_33\%-rgb: 115, 15, 24;
+  --c-theme_maroon_dark_33\%-c: #dce0e8;
+  --c-theme_maroon_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_36\%: #660e15;
+  --c-theme_maroon_dark_36\%-rgb: 102, 14, 21;
+  --c-theme_maroon_dark_36\%-c: #dce0e8;
+  --c-theme_maroon_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_dark_39\%: #580c13;
+  --c-theme_maroon_dark_39\%-rgb: 88, 12, 19;
+  --c-theme_maroon_dark_39\%-c: #dce0e8;
+  --c-theme_maroon_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_maroon_base: #e64553;
+  --c-theme_maroon_base-rgb: 230, 69, 83;
+  --c-theme_maroon_base-c: #dce0e8;
+  --c-theme_maroon_base-c-rgb: 220, 224, 232;
+  --c-theme_peach_light_3\%: #fe6e1a;
+  --c-theme_peach_light_3\%-rgb: 254, 110, 26;
+  --c-theme_peach_light_3\%-c: #4c4f69;
+  --c-theme_peach_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_6\%: #fe7729;
+  --c-theme_peach_light_6\%-rgb: 254, 119, 41;
+  --c-theme_peach_light_6\%-c: #4c4f69;
+  --c-theme_peach_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_9\%: #fe8139;
+  --c-theme_peach_light_9\%-rgb: 254, 129, 57;
+  --c-theme_peach_light_9\%-c: #4c4f69;
+  --c-theme_peach_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_12\%: #fe8b48;
+  --c-theme_peach_light_12\%-rgb: 254, 139, 72;
+  --c-theme_peach_light_12\%-c: #4c4f69;
+  --c-theme_peach_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_15\%: #fe9457;
+  --c-theme_peach_light_15\%-rgb: 254, 148, 87;
+  --c-theme_peach_light_15\%-c: #4c4f69;
+  --c-theme_peach_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_18\%: #fe9e66;
+  --c-theme_peach_light_18\%-rgb: 254, 158, 102;
+  --c-theme_peach_light_18\%-c: #4c4f69;
+  --c-theme_peach_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_21\%: #fea876;
+  --c-theme_peach_light_21\%-rgb: 254, 168, 118;
+  --c-theme_peach_light_21\%-c: #4c4f69;
+  --c-theme_peach_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_24\%: #feb185;
+  --c-theme_peach_light_24\%-rgb: 254, 177, 133;
+  --c-theme_peach_light_24\%-c: #4c4f69;
+  --c-theme_peach_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_27\%: #ffbb94;
+  --c-theme_peach_light_27\%-rgb: 255, 187, 148;
+  --c-theme_peach_light_27\%-c: #4c4f69;
+  --c-theme_peach_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_30\%: #ffc5a3;
+  --c-theme_peach_light_30\%-rgb: 255, 197, 163;
+  --c-theme_peach_light_30\%-c: #4c4f69;
+  --c-theme_peach_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_33\%: #ffceb3;
+  --c-theme_peach_light_33\%-rgb: 255, 206, 179;
+  --c-theme_peach_light_33\%-c: #4c4f69;
+  --c-theme_peach_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_36\%: #ffd8c2;
+  --c-theme_peach_light_36\%-rgb: 255, 216, 194;
+  --c-theme_peach_light_36\%-c: #4c4f69;
+  --c-theme_peach_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_light_39\%: #ffe2d1;
+  --c-theme_peach_light_39\%-rgb: 255, 226, 209;
+  --c-theme_peach_light_39\%-c: #4c4f69;
+  --c-theme_peach_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_dark_3\%: #f95c01;
+  --c-theme_peach_dark_3\%-rgb: 249, 92, 1;
+  --c-theme_peach_dark_3\%-c: #4c4f69;
+  --c-theme_peach_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_peach_dark_6\%: #e95601;
+  --c-theme_peach_dark_6\%-rgb: 233, 86, 1;
+  --c-theme_peach_dark_6\%-c: #dce0e8;
+  --c-theme_peach_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_9\%: #da5001;
+  --c-theme_peach_dark_9\%-rgb: 218, 80, 1;
+  --c-theme_peach_dark_9\%-c: #dce0e8;
+  --c-theme_peach_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_12\%: #cb4b01;
+  --c-theme_peach_dark_12\%-rgb: 203, 75, 1;
+  --c-theme_peach_dark_12\%-c: #dce0e8;
+  --c-theme_peach_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_15\%: #bc4501;
+  --c-theme_peach_dark_15\%-rgb: 188, 69, 1;
+  --c-theme_peach_dark_15\%-c: #dce0e8;
+  --c-theme_peach_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_18\%: #ac4001;
+  --c-theme_peach_dark_18\%-rgb: 172, 64, 1;
+  --c-theme_peach_dark_18\%-c: #dce0e8;
+  --c-theme_peach_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_21\%: #9d3a01;
+  --c-theme_peach_dark_21\%-rgb: 157, 58, 1;
+  --c-theme_peach_dark_21\%-c: #dce0e8;
+  --c-theme_peach_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_24\%: #8e3401;
+  --c-theme_peach_dark_24\%-rgb: 142, 52, 1;
+  --c-theme_peach_dark_24\%-c: #dce0e8;
+  --c-theme_peach_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_27\%: #7f2f01;
+  --c-theme_peach_dark_27\%-rgb: 127, 47, 1;
+  --c-theme_peach_dark_27\%-c: #dce0e8;
+  --c-theme_peach_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_30\%: #702900;
+  --c-theme_peach_dark_30\%-rgb: 112, 41, 0;
+  --c-theme_peach_dark_30\%-c: #dce0e8;
+  --c-theme_peach_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_33\%: #602400;
+  --c-theme_peach_dark_33\%-rgb: 96, 36, 0;
+  --c-theme_peach_dark_33\%-c: #dce0e8;
+  --c-theme_peach_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_36\%: #511e00;
+  --c-theme_peach_dark_36\%-rgb: 81, 30, 0;
+  --c-theme_peach_dark_36\%-c: #dce0e8;
+  --c-theme_peach_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_dark_39\%: #421800;
+  --c-theme_peach_dark_39\%-rgb: 66, 24, 0;
+  --c-theme_peach_dark_39\%-c: #dce0e8;
+  --c-theme_peach_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_peach_base: #fe640b;
+  --c-theme_peach_base-rgb: 254, 100, 11;
+  --c-theme_peach_base-c: #4c4f69;
+  --c-theme_peach_base-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_3\%: #e39528;
+  --c-theme_yellow_light_3\%-rgb: 227, 149, 40;
+  --c-theme_yellow_light_3\%-c: #4c4f69;
+  --c-theme_yellow_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_6\%: #e59c36;
+  --c-theme_yellow_light_6\%-rgb: 229, 156, 54;
+  --c-theme_yellow_light_6\%-c: #4c4f69;
+  --c-theme_yellow_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_9\%: #e7a243;
+  --c-theme_yellow_light_9\%-rgb: 231, 162, 67;
+  --c-theme_yellow_light_9\%-c: #4c4f69;
+  --c-theme_yellow_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_12\%: #e8a951;
+  --c-theme_yellow_light_12\%-rgb: 232, 169, 81;
+  --c-theme_yellow_light_12\%-c: #4c4f69;
+  --c-theme_yellow_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_15\%: #eab05e;
+  --c-theme_yellow_light_15\%-rgb: 234, 176, 94;
+  --c-theme_yellow_light_15\%-c: #4c4f69;
+  --c-theme_yellow_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_18\%: #ecb66c;
+  --c-theme_yellow_light_18\%-rgb: 236, 182, 108;
+  --c-theme_yellow_light_18\%-c: #4c4f69;
+  --c-theme_yellow_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_21\%: #eebd79;
+  --c-theme_yellow_light_21\%-rgb: 238, 189, 121;
+  --c-theme_yellow_light_21\%-c: #4c4f69;
+  --c-theme_yellow_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_24\%: #efc487;
+  --c-theme_yellow_light_24\%-rgb: 239, 196, 135;
+  --c-theme_yellow_light_24\%-c: #4c4f69;
+  --c-theme_yellow_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_27\%: #f1ca95;
+  --c-theme_yellow_light_27\%-rgb: 241, 202, 149;
+  --c-theme_yellow_light_27\%-c: #4c4f69;
+  --c-theme_yellow_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_30\%: #f3d1a2;
+  --c-theme_yellow_light_30\%-rgb: 243, 209, 162;
+  --c-theme_yellow_light_30\%-c: #4c4f69;
+  --c-theme_yellow_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_33\%: #f5d8b0;
+  --c-theme_yellow_light_33\%-rgb: 245, 216, 176;
+  --c-theme_yellow_light_33\%-c: #4c4f69;
+  --c-theme_yellow_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_36\%: #f6dfbd;
+  --c-theme_yellow_light_36\%-rgb: 246, 223, 189;
+  --c-theme_yellow_light_36\%-c: #4c4f69;
+  --c-theme_yellow_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_light_39\%: #f8e5cb;
+  --c-theme_yellow_light_39\%-rgb: 248, 229, 203;
+  --c-theme_yellow_light_39\%-c: #4c4f69;
+  --c-theme_yellow_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_dark_3\%: #d1851b;
+  --c-theme_yellow_dark_3\%-rgb: 209, 133, 27;
+  --c-theme_yellow_dark_3\%-c: #4c4f69;
+  --c-theme_yellow_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_yellow_dark_6\%: #c47d19;
+  --c-theme_yellow_dark_6\%-rgb: 196, 125, 25;
+  --c-theme_yellow_dark_6\%-c: #dce0e8;
+  --c-theme_yellow_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_9\%: #b67418;
+  --c-theme_yellow_dark_9\%-rgb: 182, 116, 24;
+  --c-theme_yellow_dark_9\%-c: #dce0e8;
+  --c-theme_yellow_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_12\%: #a96c16;
+  --c-theme_yellow_dark_12\%-rgb: 169, 108, 22;
+  --c-theme_yellow_dark_12\%-c: #dce0e8;
+  --c-theme_yellow_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_15\%: #9b6314;
+  --c-theme_yellow_dark_15\%-rgb: 155, 99, 20;
+  --c-theme_yellow_dark_15\%-c: #dce0e8;
+  --c-theme_yellow_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_18\%: #8e5a12;
+  --c-theme_yellow_dark_18\%-rgb: 142, 90, 18;
+  --c-theme_yellow_dark_18\%-c: #dce0e8;
+  --c-theme_yellow_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_21\%: #805211;
+  --c-theme_yellow_dark_21\%-rgb: 128, 82, 17;
+  --c-theme_yellow_dark_21\%-c: #dce0e8;
+  --c-theme_yellow_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_24\%: #73490f;
+  --c-theme_yellow_dark_24\%-rgb: 115, 73, 15;
+  --c-theme_yellow_dark_24\%-c: #dce0e8;
+  --c-theme_yellow_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_27\%: #65400d;
+  --c-theme_yellow_dark_27\%-rgb: 101, 64, 13;
+  --c-theme_yellow_dark_27\%-c: #dce0e8;
+  --c-theme_yellow_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_30\%: #58380b;
+  --c-theme_yellow_dark_30\%-rgb: 88, 56, 11;
+  --c-theme_yellow_dark_30\%-c: #dce0e8;
+  --c-theme_yellow_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_33\%: #4a2f0a;
+  --c-theme_yellow_dark_33\%-rgb: 74, 47, 10;
+  --c-theme_yellow_dark_33\%-c: #dce0e8;
+  --c-theme_yellow_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_36\%: #3d2708;
+  --c-theme_yellow_dark_36\%-rgb: 61, 39, 8;
+  --c-theme_yellow_dark_36\%-c: #dce0e8;
+  --c-theme_yellow_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_dark_39\%: #2f1e06;
+  --c-theme_yellow_dark_39\%-rgb: 47, 30, 6;
+  --c-theme_yellow_dark_39\%-c: #dce0e8;
+  --c-theme_yellow_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_yellow_base: #df8e1d;
+  --c-theme_yellow_base-rgb: 223, 142, 29;
+  --c-theme_yellow_base-c: #4c4f69;
+  --c-theme_yellow_base-c-rgb: 76, 79, 105;
+  --c-theme_green_light_3\%: #6f9fe4;
+  --c-theme_green_light_3\%-rgb: 111, 159, 228;
+  --c-theme_green_light_3\%-c: #4c4f69;
+  --c-theme_green_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_6\%: #7ca7e7;
+  --c-theme_green_light_6\%-rgb: 124, 167, 231;
+  --c-theme_green_light_6\%-c: #4c4f69;
+  --c-theme_green_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_9\%: #89b0e9;
+  --c-theme_green_light_9\%-rgb: 137, 176, 233;
+  --c-theme_green_light_9\%-c: #4c4f69;
+  --c-theme_green_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_12\%: #96b9ec;
+  --c-theme_green_light_12\%-rgb: 150, 185, 236;
+  --c-theme_green_light_12\%-c: #4c4f69;
+  --c-theme_green_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_15\%: #a3c1ee;
+  --c-theme_green_light_15\%-rgb: 163, 193, 238;
+  --c-theme_green_light_15\%-c: #4c4f69;
+  --c-theme_green_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_18\%: #afcaf0;
+  --c-theme_green_light_18\%-rgb: 175, 202, 240;
+  --c-theme_green_light_18\%-c: #4c4f69;
+  --c-theme_green_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_21\%: #bcd2f3;
+  --c-theme_green_light_21\%-rgb: 188, 210, 243;
+  --c-theme_green_light_21\%-c: #4c4f69;
+  --c-theme_green_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_24\%: #c9dbf5;
+  --c-theme_green_light_24\%-rgb: 201, 219, 245;
+  --c-theme_green_light_24\%-c: #4c4f69;
+  --c-theme_green_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_27\%: #d6e4f7;
+  --c-theme_green_light_27\%-rgb: 214, 228, 247;
+  --c-theme_green_light_27\%-c: #4c4f69;
+  --c-theme_green_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_30\%: #e3ecfa;
+  --c-theme_green_light_30\%-rgb: 227, 236, 250;
+  --c-theme_green_light_30\%-c: #4c4f69;
+  --c-theme_green_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_33\%: #f0f5fc;
+  --c-theme_green_light_33\%-rgb: 240, 245, 252;
+  --c-theme_green_light_33\%-c: #4c4f69;
+  --c-theme_green_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_36\%: #fdfeff;
+  --c-theme_green_light_36\%-rgb: 253, 254, 255;
+  --c-theme_green_light_36\%-c: #4c4f69;
+  --c-theme_green_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_green_light_39\%: white;
+  --c-theme_green_light_39\%-rgb: 255, 255, 255;
+  --c-theme_green_light_39\%-c: #4c4f69;
+  --c-theme_green_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_green_dark_3\%: #558de0;
+  --c-theme_green_dark_3\%-rgb: 85, 141, 224;
+  --c-theme_green_dark_3\%-c: #dce0e8;
+  --c-theme_green_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_6\%: #4885dd;
+  --c-theme_green_dark_6\%-rgb: 72, 133, 221;
+  --c-theme_green_dark_6\%-c: #dce0e8;
+  --c-theme_green_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_9\%: #3b7cdb;
+  --c-theme_green_dark_9\%-rgb: 59, 124, 219;
+  --c-theme_green_dark_9\%-c: #dce0e8;
+  --c-theme_green_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_12\%: #2e73d8;
+  --c-theme_green_dark_12\%-rgb: 46, 115, 216;
+  --c-theme_green_dark_12\%-c: #dce0e8;
+  --c-theme_green_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_15\%: #276cd1;
+  --c-theme_green_dark_15\%-rgb: 39, 108, 209;
+  --c-theme_green_dark_15\%-c: #dce0e8;
+  --c-theme_green_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_18\%: #2465c4;
+  --c-theme_green_dark_18\%-rgb: 36, 101, 196;
+  --c-theme_green_dark_18\%-c: #dce0e8;
+  --c-theme_green_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_21\%: #225eb7;
+  --c-theme_green_dark_21\%-rgb: 34, 94, 183;
+  --c-theme_green_dark_21\%-c: #dce0e8;
+  --c-theme_green_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_24\%: #1f58aa;
+  --c-theme_green_dark_24\%-rgb: 31, 88, 170;
+  --c-theme_green_dark_24\%-c: #dce0e8;
+  --c-theme_green_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_27\%: #1d519d;
+  --c-theme_green_dark_27\%-rgb: 29, 81, 157;
+  --c-theme_green_dark_27\%-c: #dce0e8;
+  --c-theme_green_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_30\%: #1b4a90;
+  --c-theme_green_dark_30\%-rgb: 27, 74, 144;
+  --c-theme_green_dark_30\%-c: #dce0e8;
+  --c-theme_green_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_33\%: #184483;
+  --c-theme_green_dark_33\%-rgb: 24, 68, 131;
+  --c-theme_green_dark_33\%-c: #dce0e8;
+  --c-theme_green_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_36\%: #163d77;
+  --c-theme_green_dark_36\%-rgb: 22, 61, 119;
+  --c-theme_green_dark_36\%-c: #dce0e8;
+  --c-theme_green_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_green_dark_39\%: #14366a;
+  --c-theme_green_dark_39\%-rgb: 20, 54, 106;
+  --c-theme_green_dark_39\%-c: #dce0e8;
+  --c-theme_green_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_green_base: #6296e2;
+  --c-theme_green_base-rgb: 98, 150, 226;
+  --c-theme_green_base-c: #4c4f69;
+  --c-theme_green_base-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_3\%: #199fa6;
+  --c-theme_teal_light_3\%-rgb: 25, 159, 166;
+  --c-theme_teal_light_3\%-c: #4c4f69;
+  --c-theme_teal_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_6\%: #1babb4;
+  --c-theme_teal_light_6\%-rgb: 27, 171, 180;
+  --c-theme_teal_light_6\%-c: #4c4f69;
+  --c-theme_teal_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_9\%: #1db8c1;
+  --c-theme_teal_light_9\%-rgb: 29, 184, 193;
+  --c-theme_teal_light_9\%-c: #4c4f69;
+  --c-theme_teal_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_12\%: #1fc5ce;
+  --c-theme_teal_light_12\%-rgb: 31, 197, 206;
+  --c-theme_teal_light_12\%-c: #4c4f69;
+  --c-theme_teal_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_15\%: #21d1dc;
+  --c-theme_teal_light_15\%-rgb: 33, 209, 220;
+  --c-theme_teal_light_15\%-c: #4c4f69;
+  --c-theme_teal_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_18\%: #2cd6df;
+  --c-theme_teal_light_18\%-rgb: 44, 214, 223;
+  --c-theme_teal_light_18\%-c: #4c4f69;
+  --c-theme_teal_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_21\%: #3ad8e1;
+  --c-theme_teal_light_21\%-rgb: 58, 216, 225;
+  --c-theme_teal_light_21\%-c: #4c4f69;
+  --c-theme_teal_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_24\%: #47dbe3;
+  --c-theme_teal_light_24\%-rgb: 71, 219, 227;
+  --c-theme_teal_light_24\%-c: #4c4f69;
+  --c-theme_teal_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_27\%: #54dee5;
+  --c-theme_teal_light_27\%-rgb: 84, 222, 229;
+  --c-theme_teal_light_27\%-c: #4c4f69;
+  --c-theme_teal_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_30\%: #62e0e7;
+  --c-theme_teal_light_30\%-rgb: 98, 224, 231;
+  --c-theme_teal_light_30\%-c: #4c4f69;
+  --c-theme_teal_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_33\%: #6fe3e9;
+  --c-theme_teal_light_33\%-rgb: 111, 227, 233;
+  --c-theme_teal_light_33\%-c: #4c4f69;
+  --c-theme_teal_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_36\%: #7ce5eb;
+  --c-theme_teal_light_36\%-rgb: 124, 229, 235;
+  --c-theme_teal_light_36\%-c: #4c4f69;
+  --c-theme_teal_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_light_39\%: #8ae8ed;
+  --c-theme_teal_light_39\%-rgb: 138, 232, 237;
+  --c-theme_teal_light_39\%-c: #4c4f69;
+  --c-theme_teal_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_teal_dark_3\%: #15858c;
+  --c-theme_teal_dark_3\%-rgb: 21, 133, 140;
+  --c-theme_teal_dark_3\%-c: #dce0e8;
+  --c-theme_teal_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_6\%: #13797e;
+  --c-theme_teal_dark_6\%-rgb: 19, 121, 126;
+  --c-theme_teal_dark_6\%-c: #dce0e8;
+  --c-theme_teal_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_9\%: #116c71;
+  --c-theme_teal_dark_9\%-rgb: 17, 108, 113;
+  --c-theme_teal_dark_9\%-c: #dce0e8;
+  --c-theme_teal_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_12\%: #0f5f64;
+  --c-theme_teal_dark_12\%-rgb: 15, 95, 100;
+  --c-theme_teal_dark_12\%-c: #dce0e8;
+  --c-theme_teal_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_15\%: #0d5356;
+  --c-theme_teal_dark_15\%-rgb: 13, 83, 86;
+  --c-theme_teal_dark_15\%-c: #dce0e8;
+  --c-theme_teal_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_18\%: #0b4649;
+  --c-theme_teal_dark_18\%-rgb: 11, 70, 73;
+  --c-theme_teal_dark_18\%-c: #dce0e8;
+  --c-theme_teal_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_21\%: #09393c;
+  --c-theme_teal_dark_21\%-rgb: 9, 57, 60;
+  --c-theme_teal_dark_21\%-c: #dce0e8;
+  --c-theme_teal_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_24\%: #072c2f;
+  --c-theme_teal_dark_24\%-rgb: 7, 44, 47;
+  --c-theme_teal_dark_24\%-c: #dce0e8;
+  --c-theme_teal_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_27\%: #052021;
+  --c-theme_teal_dark_27\%-rgb: 5, 32, 33;
+  --c-theme_teal_dark_27\%-c: #dce0e8;
+  --c-theme_teal_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_30\%: #031314;
+  --c-theme_teal_dark_30\%-rgb: 3, 19, 20;
+  --c-theme_teal_dark_30\%-c: #dce0e8;
+  --c-theme_teal_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_33\%: #010607;
+  --c-theme_teal_dark_33\%-rgb: 1, 6, 7;
+  --c-theme_teal_dark_33\%-c: #dce0e8;
+  --c-theme_teal_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_36\%: black;
+  --c-theme_teal_dark_36\%-rgb: 0, 0, 0;
+  --c-theme_teal_dark_36\%-c: #dce0e8;
+  --c-theme_teal_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_dark_39\%: black;
+  --c-theme_teal_dark_39\%-rgb: 0, 0, 0;
+  --c-theme_teal_dark_39\%-c: #dce0e8;
+  --c-theme_teal_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_teal_base: #179299;
+  --c-theme_teal_base-rgb: 23, 146, 153;
+  --c-theme_teal_base-c: #dce0e8;
+  --c-theme_teal_base-c-rgb: 220, 224, 232;
+  --c-theme_sky_light_3\%: #04b0f4;
+  --c-theme_sky_light_3\%-rgb: 4, 176, 244;
+  --c-theme_sky_light_3\%-c: #4c4f69;
+  --c-theme_sky_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_6\%: #0db7fb;
+  --c-theme_sky_light_6\%-rgb: 13, 183, 251;
+  --c-theme_sky_light_6\%-c: #4c4f69;
+  --c-theme_sky_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_9\%: #1cbcfb;
+  --c-theme_sky_light_9\%-rgb: 28, 188, 251;
+  --c-theme_sky_light_9\%-c: #4c4f69;
+  --c-theme_sky_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_12\%: #2bc0fb;
+  --c-theme_sky_light_12\%-rgb: 43, 192, 251;
+  --c-theme_sky_light_12\%-c: #4c4f69;
+  --c-theme_sky_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_15\%: #3ac4fc;
+  --c-theme_sky_light_15\%-rgb: 58, 196, 252;
+  --c-theme_sky_light_15\%-c: #4c4f69;
+  --c-theme_sky_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_18\%: #49c9fc;
+  --c-theme_sky_light_18\%-rgb: 73, 201, 252;
+  --c-theme_sky_light_18\%-c: #4c4f69;
+  --c-theme_sky_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_21\%: #58cdfc;
+  --c-theme_sky_light_21\%-rgb: 88, 205, 252;
+  --c-theme_sky_light_21\%-c: #4c4f69;
+  --c-theme_sky_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_24\%: #67d2fc;
+  --c-theme_sky_light_24\%-rgb: 103, 210, 252;
+  --c-theme_sky_light_24\%-c: #4c4f69;
+  --c-theme_sky_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_27\%: #76d6fd;
+  --c-theme_sky_light_27\%-rgb: 118, 214, 253;
+  --c-theme_sky_light_27\%-c: #4c4f69;
+  --c-theme_sky_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_30\%: #85dbfd;
+  --c-theme_sky_light_30\%-rgb: 133, 219, 253;
+  --c-theme_sky_light_30\%-c: #4c4f69;
+  --c-theme_sky_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_33\%: #94dffd;
+  --c-theme_sky_light_33\%-rgb: 148, 223, 253;
+  --c-theme_sky_light_33\%-c: #4c4f69;
+  --c-theme_sky_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_36\%: #a3e4fd;
+  --c-theme_sky_light_36\%-rgb: 163, 228, 253;
+  --c-theme_sky_light_36\%-c: #4c4f69;
+  --c-theme_sky_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_light_39\%: #b2e8fe;
+  --c-theme_sky_light_39\%-rgb: 178, 232, 254;
+  --c-theme_sky_light_39\%-c: #4c4f69;
+  --c-theme_sky_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_dark_3\%: #049ad6;
+  --c-theme_sky_dark_3\%-rgb: 4, 154, 214;
+  --c-theme_sky_dark_3\%-c: #4c4f69;
+  --c-theme_sky_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_sky_dark_6\%: #038fc7;
+  --c-theme_sky_dark_6\%-rgb: 3, 143, 199;
+  --c-theme_sky_dark_6\%-c: #dce0e8;
+  --c-theme_sky_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_9\%: #0384b8;
+  --c-theme_sky_dark_9\%-rgb: 3, 132, 184;
+  --c-theme_sky_dark_9\%-c: #dce0e8;
+  --c-theme_sky_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_12\%: #037aa9;
+  --c-theme_sky_dark_12\%-rgb: 3, 122, 169;
+  --c-theme_sky_dark_12\%-c: #dce0e8;
+  --c-theme_sky_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_15\%: #036f9a;
+  --c-theme_sky_dark_15\%-rgb: 3, 111, 154;
+  --c-theme_sky_dark_15\%-c: #dce0e8;
+  --c-theme_sky_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_18\%: #02648b;
+  --c-theme_sky_dark_18\%-rgb: 2, 100, 139;
+  --c-theme_sky_dark_18\%-c: #dce0e8;
+  --c-theme_sky_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_21\%: #02597c;
+  --c-theme_sky_dark_21\%-rgb: 2, 89, 124;
+  --c-theme_sky_dark_21\%-c: #dce0e8;
+  --c-theme_sky_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_24\%: #024e6d;
+  --c-theme_sky_dark_24\%-rgb: 2, 78, 109;
+  --c-theme_sky_dark_24\%-c: #dce0e8;
+  --c-theme_sky_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_27\%: #02435e;
+  --c-theme_sky_dark_27\%-rgb: 2, 67, 94;
+  --c-theme_sky_dark_27\%-c: #dce0e8;
+  --c-theme_sky_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_30\%: #01394f;
+  --c-theme_sky_dark_30\%-rgb: 1, 57, 79;
+  --c-theme_sky_dark_30\%-c: #dce0e8;
+  --c-theme_sky_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_33\%: #012e40;
+  --c-theme_sky_dark_33\%-rgb: 1, 46, 64;
+  --c-theme_sky_dark_33\%-c: #dce0e8;
+  --c-theme_sky_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_36\%: #012331;
+  --c-theme_sky_dark_36\%-rgb: 1, 35, 49;
+  --c-theme_sky_dark_36\%-c: #dce0e8;
+  --c-theme_sky_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_dark_39\%: #011822;
+  --c-theme_sky_dark_39\%-rgb: 1, 24, 34;
+  --c-theme_sky_dark_39\%-c: #dce0e8;
+  --c-theme_sky_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_sky_base: #04a5e5;
+  --c-theme_sky_base-rgb: 4, 165, 229;
+  --c-theme_sky_base-c: #4c4f69;
+  --c-theme_sky_base-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_3\%: #22aac2;
+  --c-theme_sapphire_light_3\%-rgb: 34, 170, 194;
+  --c-theme_sapphire_light_3\%-c: #4c4f69;
+  --c-theme_sapphire_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_6\%: #25b6cf;
+  --c-theme_sapphire_light_6\%-rgb: 37, 182, 207;
+  --c-theme_sapphire_light_6\%-c: #4c4f69;
+  --c-theme_sapphire_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_9\%: #2abfd9;
+  --c-theme_sapphire_light_9\%-rgb: 42, 191, 217;
+  --c-theme_sapphire_light_9\%-c: #4c4f69;
+  --c-theme_sapphire_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_12\%: #37c3dc;
+  --c-theme_sapphire_light_12\%-rgb: 55, 195, 220;
+  --c-theme_sapphire_light_12\%-c: #4c4f69;
+  --c-theme_sapphire_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_15\%: #44c7de;
+  --c-theme_sapphire_light_15\%-rgb: 68, 199, 222;
+  --c-theme_sapphire_light_15\%-c: #4c4f69;
+  --c-theme_sapphire_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_18\%: #51cbe0;
+  --c-theme_sapphire_light_18\%-rgb: 81, 203, 224;
+  --c-theme_sapphire_light_18\%-c: #4c4f69;
+  --c-theme_sapphire_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_21\%: #5ecfe2;
+  --c-theme_sapphire_light_21\%-rgb: 94, 207, 226;
+  --c-theme_sapphire_light_21\%-c: #4c4f69;
+  --c-theme_sapphire_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_24\%: #6bd3e5;
+  --c-theme_sapphire_light_24\%-rgb: 107, 211, 229;
+  --c-theme_sapphire_light_24\%-c: #4c4f69;
+  --c-theme_sapphire_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_27\%: #78d7e7;
+  --c-theme_sapphire_light_27\%-rgb: 120, 215, 231;
+  --c-theme_sapphire_light_27\%-c: #4c4f69;
+  --c-theme_sapphire_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_30\%: #85dae9;
+  --c-theme_sapphire_light_30\%-rgb: 133, 218, 233;
+  --c-theme_sapphire_light_30\%-c: #4c4f69;
+  --c-theme_sapphire_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_33\%: #92deec;
+  --c-theme_sapphire_light_33\%-rgb: 146, 222, 236;
+  --c-theme_sapphire_light_33\%-c: #4c4f69;
+  --c-theme_sapphire_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_36\%: #9fe2ee;
+  --c-theme_sapphire_light_36\%-rgb: 159, 226, 238;
+  --c-theme_sapphire_light_36\%-c: #4c4f69;
+  --c-theme_sapphire_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_light_39\%: #ace6f0;
+  --c-theme_sapphire_light_39\%-rgb: 172, 230, 240;
+  --c-theme_sapphire_light_39\%-c: #4c4f69;
+  --c-theme_sapphire_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_sapphire_dark_3\%: #1e94a8;
+  --c-theme_sapphire_dark_3\%-rgb: 30, 148, 168;
+  --c-theme_sapphire_dark_3\%-c: #dce0e8;
+  --c-theme_sapphire_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_6\%: #1b889b;
+  --c-theme_sapphire_dark_6\%-rgb: 27, 136, 155;
+  --c-theme_sapphire_dark_6\%-c: #dce0e8;
+  --c-theme_sapphire_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_9\%: #197d8e;
+  --c-theme_sapphire_dark_9\%-rgb: 25, 125, 142;
+  --c-theme_sapphire_dark_9\%-c: #dce0e8;
+  --c-theme_sapphire_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_12\%: #177181;
+  --c-theme_sapphire_dark_12\%-rgb: 23, 113, 129;
+  --c-theme_sapphire_dark_12\%-c: #dce0e8;
+  --c-theme_sapphire_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_15\%: #156674;
+  --c-theme_sapphire_dark_15\%-rgb: 21, 102, 116;
+  --c-theme_sapphire_dark_15\%-c: #dce0e8;
+  --c-theme_sapphire_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_18\%: #125a67;
+  --c-theme_sapphire_dark_18\%-rgb: 18, 90, 103;
+  --c-theme_sapphire_dark_18\%-c: #dce0e8;
+  --c-theme_sapphire_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_21\%: #104f5a;
+  --c-theme_sapphire_dark_21\%-rgb: 16, 79, 90;
+  --c-theme_sapphire_dark_21\%-c: #dce0e8;
+  --c-theme_sapphire_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_24\%: #0e444d;
+  --c-theme_sapphire_dark_24\%-rgb: 14, 68, 77;
+  --c-theme_sapphire_dark_24\%-c: #dce0e8;
+  --c-theme_sapphire_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_27\%: #0b3840;
+  --c-theme_sapphire_dark_27\%-rgb: 11, 56, 64;
+  --c-theme_sapphire_dark_27\%-c: #dce0e8;
+  --c-theme_sapphire_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_30\%: #092d33;
+  --c-theme_sapphire_dark_30\%-rgb: 9, 45, 51;
+  --c-theme_sapphire_dark_30\%-c: #dce0e8;
+  --c-theme_sapphire_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_33\%: #072126;
+  --c-theme_sapphire_dark_33\%-rgb: 7, 33, 38;
+  --c-theme_sapphire_dark_33\%-c: #dce0e8;
+  --c-theme_sapphire_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_36\%: #041619;
+  --c-theme_sapphire_dark_36\%-rgb: 4, 22, 25;
+  --c-theme_sapphire_dark_36\%-c: #dce0e8;
+  --c-theme_sapphire_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_dark_39\%: #020b0c;
+  --c-theme_sapphire_dark_39\%-rgb: 2, 11, 12;
+  --c-theme_sapphire_dark_39\%-c: #dce0e8;
+  --c-theme_sapphire_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_sapphire_base: #209fb5;
+  --c-theme_sapphire_base-rgb: 32, 159, 181;
+  --c-theme_sapphire_base-c: #4c4f69;
+  --c-theme_sapphire_base-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_3\%: #2d70f6;
+  --c-theme_blue_light_3\%-rgb: 45, 112, 246;
+  --c-theme_blue_light_3\%-c: #dce0e8;
+  --c-theme_blue_light_3\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_light_6\%: #3b7af6;
+  --c-theme_blue_light_6\%-rgb: 59, 122, 246;
+  --c-theme_blue_light_6\%-c: #dce0e8;
+  --c-theme_blue_light_6\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_light_9\%: #4a84f7;
+  --c-theme_blue_light_9\%-rgb: 74, 132, 247;
+  --c-theme_blue_light_9\%-c: #dce0e8;
+  --c-theme_blue_light_9\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_light_12\%: #598ef8;
+  --c-theme_blue_light_12\%-rgb: 89, 142, 248;
+  --c-theme_blue_light_12\%-c: #4c4f69;
+  --c-theme_blue_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_15\%: #6798f8;
+  --c-theme_blue_light_15\%-rgb: 103, 152, 248;
+  --c-theme_blue_light_15\%-c: #4c4f69;
+  --c-theme_blue_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_18\%: #76a2f9;
+  --c-theme_blue_light_18\%-rgb: 118, 162, 249;
+  --c-theme_blue_light_18\%-c: #4c4f69;
+  --c-theme_blue_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_21\%: #85acfa;
+  --c-theme_blue_light_21\%-rgb: 133, 172, 250;
+  --c-theme_blue_light_21\%-c: #4c4f69;
+  --c-theme_blue_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_24\%: #93b6fa;
+  --c-theme_blue_light_24\%-rgb: 147, 182, 250;
+  --c-theme_blue_light_24\%-c: #4c4f69;
+  --c-theme_blue_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_27\%: #a2c0fb;
+  --c-theme_blue_light_27\%-rgb: 162, 192, 251;
+  --c-theme_blue_light_27\%-c: #4c4f69;
+  --c-theme_blue_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_30\%: #b0cafc;
+  --c-theme_blue_light_30\%-rgb: 176, 202, 252;
+  --c-theme_blue_light_30\%-c: #4c4f69;
+  --c-theme_blue_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_33\%: #bfd4fc;
+  --c-theme_blue_light_33\%-rgb: 191, 212, 252;
+  --c-theme_blue_light_33\%-c: #4c4f69;
+  --c-theme_blue_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_36\%: #cedefd;
+  --c-theme_blue_light_36\%-rgb: 206, 222, 253;
+  --c-theme_blue_light_36\%-c: #4c4f69;
+  --c-theme_blue_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_light_39\%: #dce7fd;
+  --c-theme_blue_light_39\%-rgb: 220, 231, 253;
+  --c-theme_blue_light_39\%-c: #4c4f69;
+  --c-theme_blue_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_blue_dark_3\%: #0f5cf4;
+  --c-theme_blue_dark_3\%-rgb: 15, 92, 244;
+  --c-theme_blue_dark_3\%-c: #dce0e8;
+  --c-theme_blue_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_6\%: #0a55ea;
+  --c-theme_blue_dark_6\%-rgb: 10, 85, 234;
+  --c-theme_blue_dark_6\%-c: #dce0e8;
+  --c-theme_blue_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_9\%: #0a50db;
+  --c-theme_blue_dark_9\%-rgb: 10, 80, 219;
+  --c-theme_blue_dark_9\%-c: #dce0e8;
+  --c-theme_blue_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_12\%: #094bcd;
+  --c-theme_blue_dark_12\%-rgb: 9, 75, 205;
+  --c-theme_blue_dark_12\%-c: #dce0e8;
+  --c-theme_blue_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_15\%: #0845be;
+  --c-theme_blue_dark_15\%-rgb: 8, 69, 190;
+  --c-theme_blue_dark_15\%-c: #dce0e8;
+  --c-theme_blue_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_18\%: #0840af;
+  --c-theme_blue_dark_18\%-rgb: 8, 64, 175;
+  --c-theme_blue_dark_18\%-c: #dce0e8;
+  --c-theme_blue_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_21\%: #073ba1;
+  --c-theme_blue_dark_21\%-rgb: 7, 59, 161;
+  --c-theme_blue_dark_21\%-c: #dce0e8;
+  --c-theme_blue_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_24\%: #063592;
+  --c-theme_blue_dark_24\%-rgb: 6, 53, 146;
+  --c-theme_blue_dark_24\%-c: #dce0e8;
+  --c-theme_blue_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_27\%: #063083;
+  --c-theme_blue_dark_27\%-rgb: 6, 48, 131;
+  --c-theme_blue_dark_27\%-c: #dce0e8;
+  --c-theme_blue_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_30\%: #052b75;
+  --c-theme_blue_dark_30\%-rgb: 5, 43, 117;
+  --c-theme_blue_dark_30\%-c: #dce0e8;
+  --c-theme_blue_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_33\%: #052566;
+  --c-theme_blue_dark_33\%-rgb: 5, 37, 102;
+  --c-theme_blue_dark_33\%-c: #dce0e8;
+  --c-theme_blue_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_36\%: #042058;
+  --c-theme_blue_dark_36\%-rgb: 4, 32, 88;
+  --c-theme_blue_dark_36\%-c: #dce0e8;
+  --c-theme_blue_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_dark_39\%: #031b49;
+  --c-theme_blue_dark_39\%-rgb: 3, 27, 73;
+  --c-theme_blue_dark_39\%-c: #dce0e8;
+  --c-theme_blue_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_blue_base: #1e66f5;
+  --c-theme_blue_base-rgb: 30, 102, 245;
+  --c-theme_blue_base-c: #dce0e8;
+  --c-theme_blue_base-c-rgb: 220, 224, 232;
+  --c-theme_lavender_light_3\%: #8194fd;
+  --c-theme_lavender_light_3\%-rgb: 129, 148, 253;
+  --c-theme_lavender_light_3\%-c: #4c4f69;
+  --c-theme_lavender_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_6\%: #90a1fd;
+  --c-theme_lavender_light_6\%-rgb: 144, 161, 253;
+  --c-theme_lavender_light_6\%-c: #4c4f69;
+  --c-theme_lavender_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_9\%: #9faefe;
+  --c-theme_lavender_light_9\%-rgb: 159, 174, 254;
+  --c-theme_lavender_light_9\%-c: #4c4f69;
+  --c-theme_lavender_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_12\%: #aebafe;
+  --c-theme_lavender_light_12\%-rgb: 174, 186, 254;
+  --c-theme_lavender_light_12\%-c: #4c4f69;
+  --c-theme_lavender_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_15\%: #bdc7fe;
+  --c-theme_lavender_light_15\%-rgb: 189, 199, 254;
+  --c-theme_lavender_light_15\%-c: #4c4f69;
+  --c-theme_lavender_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_18\%: #cdd4fe;
+  --c-theme_lavender_light_18\%-rgb: 205, 212, 254;
+  --c-theme_lavender_light_18\%-c: #4c4f69;
+  --c-theme_lavender_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_21\%: #dce1fe;
+  --c-theme_lavender_light_21\%-rgb: 220, 225, 254;
+  --c-theme_lavender_light_21\%-c: #4c4f69;
+  --c-theme_lavender_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_24\%: #ebeeff;
+  --c-theme_lavender_light_24\%-rgb: 235, 238, 255;
+  --c-theme_lavender_light_24\%-c: #4c4f69;
+  --c-theme_lavender_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_27\%: #fafbff;
+  --c-theme_lavender_light_27\%-rgb: 250, 251, 255;
+  --c-theme_lavender_light_27\%-c: #4c4f69;
+  --c-theme_lavender_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_30\%: white;
+  --c-theme_lavender_light_30\%-rgb: 255, 255, 255;
+  --c-theme_lavender_light_30\%-c: #4c4f69;
+  --c-theme_lavender_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_33\%: white;
+  --c-theme_lavender_light_33\%-rgb: 255, 255, 255;
+  --c-theme_lavender_light_33\%-c: #4c4f69;
+  --c-theme_lavender_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_36\%: white;
+  --c-theme_lavender_light_36\%-rgb: 255, 255, 255;
+  --c-theme_lavender_light_36\%-c: #4c4f69;
+  --c-theme_lavender_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_light_39\%: white;
+  --c-theme_lavender_light_39\%-rgb: 255, 255, 255;
+  --c-theme_lavender_light_39\%-c: #4c4f69;
+  --c-theme_lavender_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_lavender_dark_3\%: #637afd;
+  --c-theme_lavender_dark_3\%-rgb: 99, 122, 253;
+  --c-theme_lavender_dark_3\%-c: #dce0e8;
+  --c-theme_lavender_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_6\%: #546dfd;
+  --c-theme_lavender_dark_6\%-rgb: 84, 109, 253;
+  --c-theme_lavender_dark_6\%-c: #dce0e8;
+  --c-theme_lavender_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_9\%: #4560fc;
+  --c-theme_lavender_dark_9\%-rgb: 69, 96, 252;
+  --c-theme_lavender_dark_9\%-c: #dce0e8;
+  --c-theme_lavender_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_12\%: #3654fc;
+  --c-theme_lavender_dark_12\%-rgb: 54, 84, 252;
+  --c-theme_lavender_dark_12\%-c: #dce0e8;
+  --c-theme_lavender_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_15\%: #2747fc;
+  --c-theme_lavender_dark_15\%-rgb: 39, 71, 252;
+  --c-theme_lavender_dark_15\%-c: #dce0e8;
+  --c-theme_lavender_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_18\%: #173afc;
+  --c-theme_lavender_dark_18\%-rgb: 23, 58, 252;
+  --c-theme_lavender_dark_18\%-c: #dce0e8;
+  --c-theme_lavender_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_21\%: #082dfc;
+  --c-theme_lavender_dark_21\%-rgb: 8, 45, 252;
+  --c-theme_lavender_dark_21\%-c: #dce0e8;
+  --c-theme_lavender_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_24\%: #0327f1;
+  --c-theme_lavender_dark_24\%-rgb: 3, 39, 241;
+  --c-theme_lavender_dark_24\%-c: #dce0e8;
+  --c-theme_lavender_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_27\%: #0325e2;
+  --c-theme_lavender_dark_27\%-rgb: 3, 37, 226;
+  --c-theme_lavender_dark_27\%-c: #dce0e8;
+  --c-theme_lavender_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_30\%: #0322d3;
+  --c-theme_lavender_dark_30\%-rgb: 3, 34, 211;
+  --c-theme_lavender_dark_30\%-c: #dce0e8;
+  --c-theme_lavender_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_33\%: #0320c4;
+  --c-theme_lavender_dark_33\%-rgb: 3, 32, 196;
+  --c-theme_lavender_dark_33\%-c: #dce0e8;
+  --c-theme_lavender_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_36\%: #031db5;
+  --c-theme_lavender_dark_36\%-rgb: 3, 29, 181;
+  --c-theme_lavender_dark_36\%-c: #dce0e8;
+  --c-theme_lavender_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_dark_39\%: #021ba6;
+  --c-theme_lavender_dark_39\%-rgb: 2, 27, 166;
+  --c-theme_lavender_dark_39\%-c: #dce0e8;
+  --c-theme_lavender_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_lavender_base: #7287fd;
+  --c-theme_lavender_base-rgb: 114, 135, 253;
+  --c-theme_lavender_base-c: #4c4f69;
+  --c-theme_lavender_base-c-rgb: 76, 79, 105;
+  --c-theme_black_light_3\%: #1e1e2e;
+  --c-theme_black_light_3\%-rgb: 30, 30, 46;
+  --c-theme_black_light_3\%-c: #dce0e8;
+  --c-theme_black_light_3\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_6\%: #242438;
+  --c-theme_black_light_6\%-rgb: 36, 36, 56;
+  --c-theme_black_light_6\%-c: #dce0e8;
+  --c-theme_black_light_6\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_9\%: #2a2a41;
+  --c-theme_black_light_9\%-rgb: 42, 42, 65;
+  --c-theme_black_light_9\%-c: #dce0e8;
+  --c-theme_black_light_9\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_12\%: #30304a;
+  --c-theme_black_light_12\%-rgb: 48, 48, 74;
+  --c-theme_black_light_12\%-c: #dce0e8;
+  --c-theme_black_light_12\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_15\%: #363653;
+  --c-theme_black_light_15\%-rgb: 54, 54, 83;
+  --c-theme_black_light_15\%-c: #dce0e8;
+  --c-theme_black_light_15\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_18\%: #3c3c5d;
+  --c-theme_black_light_18\%-rgb: 60, 60, 93;
+  --c-theme_black_light_18\%-c: #dce0e8;
+  --c-theme_black_light_18\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_21\%: #424266;
+  --c-theme_black_light_21\%-rgb: 66, 66, 102;
+  --c-theme_black_light_21\%-c: #dce0e8;
+  --c-theme_black_light_21\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_24\%: #48486f;
+  --c-theme_black_light_24\%-rgb: 72, 72, 111;
+  --c-theme_black_light_24\%-c: #dce0e8;
+  --c-theme_black_light_24\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_27\%: #4e4e79;
+  --c-theme_black_light_27\%-rgb: 78, 78, 121;
+  --c-theme_black_light_27\%-c: #dce0e8;
+  --c-theme_black_light_27\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_30\%: #545482;
+  --c-theme_black_light_30\%-rgb: 84, 84, 130;
+  --c-theme_black_light_30\%-c: #dce0e8;
+  --c-theme_black_light_30\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_33\%: #5a5a8b;
+  --c-theme_black_light_33\%-rgb: 90, 90, 139;
+  --c-theme_black_light_33\%-c: #dce0e8;
+  --c-theme_black_light_33\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_36\%: #606094;
+  --c-theme_black_light_36\%-rgb: 96, 96, 148;
+  --c-theme_black_light_36\%-c: #dce0e8;
+  --c-theme_black_light_36\%-c-rgb: 220, 224, 232;
+  --c-theme_black_light_39\%: #67679d;
+  --c-theme_black_light_39\%-rgb: 103, 103, 157;
+  --c-theme_black_light_39\%-c: #dce0e8;
+  --c-theme_black_light_39\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_3\%: #12121c;
+  --c-theme_black_dark_3\%-rgb: 18, 18, 28;
+  --c-theme_black_dark_3\%-c: #dce0e8;
+  --c-theme_black_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_6\%: #0c0c12;
+  --c-theme_black_dark_6\%-rgb: 12, 12, 18;
+  --c-theme_black_dark_6\%-c: #dce0e8;
+  --c-theme_black_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_9\%: #060609;
+  --c-theme_black_dark_9\%-rgb: 6, 6, 9;
+  --c-theme_black_dark_9\%-c: #dce0e8;
+  --c-theme_black_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_12\%: black;
+  --c-theme_black_dark_12\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_12\%-c: #dce0e8;
+  --c-theme_black_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_15\%: black;
+  --c-theme_black_dark_15\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_15\%-c: #dce0e8;
+  --c-theme_black_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_18\%: black;
+  --c-theme_black_dark_18\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_18\%-c: #dce0e8;
+  --c-theme_black_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_21\%: black;
+  --c-theme_black_dark_21\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_21\%-c: #dce0e8;
+  --c-theme_black_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_24\%: black;
+  --c-theme_black_dark_24\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_24\%-c: #dce0e8;
+  --c-theme_black_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_27\%: black;
+  --c-theme_black_dark_27\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_27\%-c: #dce0e8;
+  --c-theme_black_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_30\%: black;
+  --c-theme_black_dark_30\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_30\%-c: #dce0e8;
+  --c-theme_black_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_33\%: black;
+  --c-theme_black_dark_33\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_33\%-c: #dce0e8;
+  --c-theme_black_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_36\%: black;
+  --c-theme_black_dark_36\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_36\%-c: #dce0e8;
+  --c-theme_black_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_black_dark_39\%: black;
+  --c-theme_black_dark_39\%-rgb: 0, 0, 0;
+  --c-theme_black_dark_39\%-c: #dce0e8;
+  --c-theme_black_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_black_base: #181825;
+  --c-theme_black_base-rgb: 24, 24, 37;
+  --c-theme_black_base-c: #dce0e8;
+  --c-theme_black_base-c-rgb: 220, 224, 232;
+  --c-theme_white_light_3\%: #f0f4f8;
+  --c-theme_white_light_3\%-rgb: 240, 244, 248;
+  --c-theme_white_light_3\%-c: #4c4f69;
+  --c-theme_white_light_3\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_6\%: #fbfcfd;
+  --c-theme_white_light_6\%-rgb: 251, 252, 253;
+  --c-theme_white_light_6\%-c: #4c4f69;
+  --c-theme_white_light_6\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_9\%: white;
+  --c-theme_white_light_9\%-rgb: 255, 255, 255;
+  --c-theme_white_light_9\%-c: #4c4f69;
+  --c-theme_white_light_9\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_12\%: white;
+  --c-theme_white_light_12\%-rgb: 255, 255, 255;
+  --c-theme_white_light_12\%-c: #4c4f69;
+  --c-theme_white_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_15\%: white;
+  --c-theme_white_light_15\%-rgb: 255, 255, 255;
+  --c-theme_white_light_15\%-c: #4c4f69;
+  --c-theme_white_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_18\%: white;
+  --c-theme_white_light_18\%-rgb: 255, 255, 255;
+  --c-theme_white_light_18\%-c: #4c4f69;
+  --c-theme_white_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_21\%: white;
+  --c-theme_white_light_21\%-rgb: 255, 255, 255;
+  --c-theme_white_light_21\%-c: #4c4f69;
+  --c-theme_white_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_24\%: white;
+  --c-theme_white_light_24\%-rgb: 255, 255, 255;
+  --c-theme_white_light_24\%-c: #4c4f69;
+  --c-theme_white_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_27\%: white;
+  --c-theme_white_light_27\%-rgb: 255, 255, 255;
+  --c-theme_white_light_27\%-c: #4c4f69;
+  --c-theme_white_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_30\%: white;
+  --c-theme_white_light_30\%-rgb: 255, 255, 255;
+  --c-theme_white_light_30\%-c: #4c4f69;
+  --c-theme_white_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_33\%: white;
+  --c-theme_white_light_33\%-rgb: 255, 255, 255;
+  --c-theme_white_light_33\%-c: #4c4f69;
+  --c-theme_white_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_36\%: white;
+  --c-theme_white_light_36\%-rgb: 255, 255, 255;
+  --c-theme_white_light_36\%-c: #4c4f69;
+  --c-theme_white_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_white_light_39\%: white;
+  --c-theme_white_light_39\%-rgb: 255, 255, 255;
+  --c-theme_white_light_39\%-c: #4c4f69;
+  --c-theme_white_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_3\%: #dce6ee;
+  --c-theme_white_dark_3\%-rgb: 220, 230, 238;
+  --c-theme_white_dark_3\%-c: #4c4f69;
+  --c-theme_white_dark_3\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_6\%: #d1dee9;
+  --c-theme_white_dark_6\%-rgb: 209, 222, 233;
+  --c-theme_white_dark_6\%-c: #4c4f69;
+  --c-theme_white_dark_6\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_9\%: #c7d7e4;
+  --c-theme_white_dark_9\%-rgb: 199, 215, 228;
+  --c-theme_white_dark_9\%-c: #4c4f69;
+  --c-theme_white_dark_9\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_12\%: #bdcfdf;
+  --c-theme_white_dark_12\%-rgb: 189, 207, 223;
+  --c-theme_white_dark_12\%-c: #4c4f69;
+  --c-theme_white_dark_12\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_15\%: #b2c8da;
+  --c-theme_white_dark_15\%-rgb: 178, 200, 218;
+  --c-theme_white_dark_15\%-c: #4c4f69;
+  --c-theme_white_dark_15\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_18\%: #a8c0d5;
+  --c-theme_white_dark_18\%-rgb: 168, 192, 213;
+  --c-theme_white_dark_18\%-c: #4c4f69;
+  --c-theme_white_dark_18\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_21\%: #9eb9d0;
+  --c-theme_white_dark_21\%-rgb: 158, 185, 208;
+  --c-theme_white_dark_21\%-c: #4c4f69;
+  --c-theme_white_dark_21\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_24\%: #93b1cb;
+  --c-theme_white_dark_24\%-rgb: 147, 177, 203;
+  --c-theme_white_dark_24\%-c: #4c4f69;
+  --c-theme_white_dark_24\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_27\%: #89aac6;
+  --c-theme_white_dark_27\%-rgb: 137, 170, 198;
+  --c-theme_white_dark_27\%-c: #4c4f69;
+  --c-theme_white_dark_27\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_30\%: #7fa3c1;
+  --c-theme_white_dark_30\%-rgb: 127, 163, 193;
+  --c-theme_white_dark_30\%-c: #4c4f69;
+  --c-theme_white_dark_30\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_33\%: #749bbc;
+  --c-theme_white_dark_33\%-rgb: 116, 155, 188;
+  --c-theme_white_dark_33\%-c: #4c4f69;
+  --c-theme_white_dark_33\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_36\%: #6a94b7;
+  --c-theme_white_dark_36\%-rgb: 106, 148, 183;
+  --c-theme_white_dark_36\%-c: #4c4f69;
+  --c-theme_white_dark_36\%-c-rgb: 76, 79, 105;
+  --c-theme_white_dark_39\%: #608cb2;
+  --c-theme_white_dark_39\%-rgb: 96, 140, 178;
+  --c-theme_white_dark_39\%-c: #dce0e8;
+  --c-theme_white_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_white_base: #e6edf3;
+  --c-theme_white_base-rgb: 230, 237, 243;
+  --c-theme_white_base-c: #4c4f69;
+  --c-theme_white_base-c-rgb: 76, 79, 105;
+  --c-text: #4c4f69;
+  --c-text-rgb: 76, 79, 105;
+  --c-text-c: #dce0e8;
+  --c-text-c-rgb: 220, 224, 232;
+  --c-primary_light_3\%: #6f9fe4;
+  --c-primary_light_3\%-rgb: 111, 159, 228;
+  --c-primary_light_3\%-c: #4c4f69;
+  --c-primary_light_3\%-c-rgb: 76, 79, 105;
+  --c-primary_light_6\%: #7ca7e7;
+  --c-primary_light_6\%-rgb: 124, 167, 231;
+  --c-primary_light_6\%-c: #4c4f69;
+  --c-primary_light_6\%-c-rgb: 76, 79, 105;
+  --c-primary_light_9\%: #89b0e9;
+  --c-primary_light_9\%-rgb: 137, 176, 233;
+  --c-primary_light_9\%-c: #4c4f69;
+  --c-primary_light_9\%-c-rgb: 76, 79, 105;
+  --c-primary_light_12\%: #96b9ec;
+  --c-primary_light_12\%-rgb: 150, 185, 236;
+  --c-primary_light_12\%-c: #4c4f69;
+  --c-primary_light_12\%-c-rgb: 76, 79, 105;
+  --c-primary_light_15\%: #a3c1ee;
+  --c-primary_light_15\%-rgb: 163, 193, 238;
+  --c-primary_light_15\%-c: #4c4f69;
+  --c-primary_light_15\%-c-rgb: 76, 79, 105;
+  --c-primary_light_18\%: #afcaf0;
+  --c-primary_light_18\%-rgb: 175, 202, 240;
+  --c-primary_light_18\%-c: #4c4f69;
+  --c-primary_light_18\%-c-rgb: 76, 79, 105;
+  --c-primary_light_21\%: #bcd2f3;
+  --c-primary_light_21\%-rgb: 188, 210, 243;
+  --c-primary_light_21\%-c: #4c4f69;
+  --c-primary_light_21\%-c-rgb: 76, 79, 105;
+  --c-primary_light_24\%: #c9dbf5;
+  --c-primary_light_24\%-rgb: 201, 219, 245;
+  --c-primary_light_24\%-c: #4c4f69;
+  --c-primary_light_24\%-c-rgb: 76, 79, 105;
+  --c-primary_light_27\%: #d6e4f7;
+  --c-primary_light_27\%-rgb: 214, 228, 247;
+  --c-primary_light_27\%-c: #4c4f69;
+  --c-primary_light_27\%-c-rgb: 76, 79, 105;
+  --c-primary_light_30\%: #e3ecfa;
+  --c-primary_light_30\%-rgb: 227, 236, 250;
+  --c-primary_light_30\%-c: #4c4f69;
+  --c-primary_light_30\%-c-rgb: 76, 79, 105;
+  --c-primary_light_33\%: #f0f5fc;
+  --c-primary_light_33\%-rgb: 240, 245, 252;
+  --c-primary_light_33\%-c: #4c4f69;
+  --c-primary_light_33\%-c-rgb: 76, 79, 105;
+  --c-primary_light_36\%: #fdfeff;
+  --c-primary_light_36\%-rgb: 253, 254, 255;
+  --c-primary_light_36\%-c: #4c4f69;
+  --c-primary_light_36\%-c-rgb: 76, 79, 105;
+  --c-primary_light_39\%: white;
+  --c-primary_light_39\%-rgb: 255, 255, 255;
+  --c-primary_light_39\%-c: #4c4f69;
+  --c-primary_light_39\%-c-rgb: 76, 79, 105;
+  --c-primary_dark_3\%: #558de0;
+  --c-primary_dark_3\%-rgb: 85, 141, 224;
+  --c-primary_dark_3\%-c: #dce0e8;
+  --c-primary_dark_3\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_6\%: #4885dd;
+  --c-primary_dark_6\%-rgb: 72, 133, 221;
+  --c-primary_dark_6\%-c: #dce0e8;
+  --c-primary_dark_6\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_9\%: #3b7cdb;
+  --c-primary_dark_9\%-rgb: 59, 124, 219;
+  --c-primary_dark_9\%-c: #dce0e8;
+  --c-primary_dark_9\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_12\%: #2e73d8;
+  --c-primary_dark_12\%-rgb: 46, 115, 216;
+  --c-primary_dark_12\%-c: #dce0e8;
+  --c-primary_dark_12\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_15\%: #276cd1;
+  --c-primary_dark_15\%-rgb: 39, 108, 209;
+  --c-primary_dark_15\%-c: #dce0e8;
+  --c-primary_dark_15\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_18\%: #2465c4;
+  --c-primary_dark_18\%-rgb: 36, 101, 196;
+  --c-primary_dark_18\%-c: #dce0e8;
+  --c-primary_dark_18\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_21\%: #225eb7;
+  --c-primary_dark_21\%-rgb: 34, 94, 183;
+  --c-primary_dark_21\%-c: #dce0e8;
+  --c-primary_dark_21\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_24\%: #1f58aa;
+  --c-primary_dark_24\%-rgb: 31, 88, 170;
+  --c-primary_dark_24\%-c: #dce0e8;
+  --c-primary_dark_24\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_27\%: #1d519d;
+  --c-primary_dark_27\%-rgb: 29, 81, 157;
+  --c-primary_dark_27\%-c: #dce0e8;
+  --c-primary_dark_27\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_30\%: #1b4a90;
+  --c-primary_dark_30\%-rgb: 27, 74, 144;
+  --c-primary_dark_30\%-c: #dce0e8;
+  --c-primary_dark_30\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_33\%: #184483;
+  --c-primary_dark_33\%-rgb: 24, 68, 131;
+  --c-primary_dark_33\%-c: #dce0e8;
+  --c-primary_dark_33\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_36\%: #163d77;
+  --c-primary_dark_36\%-rgb: 22, 61, 119;
+  --c-primary_dark_36\%-c: #dce0e8;
+  --c-primary_dark_36\%-c-rgb: 220, 224, 232;
+  --c-primary_dark_39\%: #14366a;
+  --c-primary_dark_39\%-rgb: 20, 54, 106;
+  --c-primary_dark_39\%-c: #dce0e8;
+  --c-primary_dark_39\%-c-rgb: 220, 224, 232;
+  --c-primary_base: #6296e2;
+  --c-primary_base-rgb: 98, 150, 226;
+  --c-primary_base-c: #4c4f69;
+  --c-primary_base-c-rgb: 76, 79, 105;
+  --c-secondary_light_3\%: #646683;
+  --c-secondary_light_3\%-rgb: 100, 102, 131;
+  --c-secondary_light_3\%-c: #dce0e8;
+  --c-secondary_light_3\%-c-rgb: 220, 224, 232;
+  --c-secondary_light_6\%: #6a6d8b;
+  --c-secondary_light_6\%-rgb: 106, 109, 139;
+  --c-secondary_light_6\%-c: #dce0e8;
+  --c-secondary_light_6\%-c-rgb: 220, 224, 232;
+  --c-secondary_light_9\%: #727493;
+  --c-secondary_light_9\%-rgb: 114, 116, 147;
+  --c-secondary_light_9\%-c: #dce0e8;
+  --c-secondary_light_9\%-c-rgb: 220, 224, 232;
+  --c-secondary_light_12\%: #7a7d9a;
+  --c-secondary_light_12\%-rgb: 122, 125, 154;
+  --c-secondary_light_12\%-c: #dce0e8;
+  --c-secondary_light_12\%-c-rgb: 220, 224, 232;
+  --c-secondary_light_15\%: #8385a0;
+  --c-secondary_light_15\%-rgb: 131, 133, 160;
+  --c-secondary_light_15\%-c: #dce0e8;
+  --c-secondary_light_15\%-c-rgb: 220, 224, 232;
+  --c-secondary_light_18\%: #8c8ea7;
+  --c-secondary_light_18\%-rgb: 140, 142, 167;
+  --c-secondary_light_18\%-c: #4c4f69;
+  --c-secondary_light_18\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_21\%: #9496ae;
+  --c-secondary_light_21\%-rgb: 148, 150, 174;
+  --c-secondary_light_21\%-c: #4c4f69;
+  --c-secondary_light_21\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_24\%: #9d9fb4;
+  --c-secondary_light_24\%-rgb: 157, 159, 180;
+  --c-secondary_light_24\%-c: #4c4f69;
+  --c-secondary_light_24\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_27\%: #a6a7bb;
+  --c-secondary_light_27\%-rgb: 166, 167, 187;
+  --c-secondary_light_27\%-c: #4c4f69;
+  --c-secondary_light_27\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_30\%: #aeb0c2;
+  --c-secondary_light_30\%-rgb: 174, 176, 194;
+  --c-secondary_light_30\%-c: #4c4f69;
+  --c-secondary_light_30\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_33\%: #b7b8c8;
+  --c-secondary_light_33\%-rgb: 183, 184, 200;
+  --c-secondary_light_33\%-c: #4c4f69;
+  --c-secondary_light_33\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_36\%: #c0c1cf;
+  --c-secondary_light_36\%-rgb: 192, 193, 207;
+  --c-secondary_light_36\%-c: #4c4f69;
+  --c-secondary_light_36\%-c-rgb: 76, 79, 105;
+  --c-secondary_light_39\%: #c8c9d5;
+  --c-secondary_light_39\%-rgb: 200, 201, 213;
+  --c-secondary_light_39\%-c: #4c4f69;
+  --c-secondary_light_39\%-c-rgb: 76, 79, 105;
+  --c-secondary_dark_3\%: #565871;
+  --c-secondary_dark_3\%-rgb: 86, 88, 113;
+  --c-secondary_dark_3\%-c: #dce0e8;
+  --c-secondary_dark_3\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_6\%: #505169;
+  --c-secondary_dark_6\%-rgb: 80, 81, 105;
+  --c-secondary_dark_6\%-c: #dce0e8;
+  --c-secondary_dark_6\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_9\%: #494b60;
+  --c-secondary_dark_9\%-rgb: 73, 75, 96;
+  --c-secondary_dark_9\%-c: #dce0e8;
+  --c-secondary_dark_9\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_12\%: #434457;
+  --c-secondary_dark_12\%-rgb: 67, 68, 87;
+  --c-secondary_dark_12\%-c: #dce0e8;
+  --c-secondary_dark_12\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_15\%: #3c3d4f;
+  --c-secondary_dark_15\%-rgb: 60, 61, 79;
+  --c-secondary_dark_15\%-c: #dce0e8;
+  --c-secondary_dark_15\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_18\%: #353646;
+  --c-secondary_dark_18\%-rgb: 53, 54, 70;
+  --c-secondary_dark_18\%-c: #dce0e8;
+  --c-secondary_dark_18\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_21\%: #2f303d;
+  --c-secondary_dark_21\%-rgb: 47, 48, 61;
+  --c-secondary_dark_21\%-c: #dce0e8;
+  --c-secondary_dark_21\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_24\%: #282935;
+  --c-secondary_dark_24\%-rgb: 40, 41, 53;
+  --c-secondary_dark_24\%-c: #dce0e8;
+  --c-secondary_dark_24\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_27\%: #21222c;
+  --c-secondary_dark_27\%-rgb: 33, 34, 44;
+  --c-secondary_dark_27\%-c: #dce0e8;
+  --c-secondary_dark_27\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_30\%: #1b1b23;
+  --c-secondary_dark_30\%-rgb: 27, 27, 35;
+  --c-secondary_dark_30\%-c: #dce0e8;
+  --c-secondary_dark_30\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_33\%: #14151a;
+  --c-secondary_dark_33\%-rgb: 20, 21, 26;
+  --c-secondary_dark_33\%-c: #dce0e8;
+  --c-secondary_dark_33\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_36\%: #0e0e12;
+  --c-secondary_dark_36\%-rgb: 14, 14, 18;
+  --c-secondary_dark_36\%-c: #dce0e8;
+  --c-secondary_dark_36\%-c-rgb: 220, 224, 232;
+  --c-secondary_dark_39\%: #070709;
+  --c-secondary_dark_39\%-rgb: 7, 7, 9;
+  --c-secondary_dark_39\%-c: #dce0e8;
+  --c-secondary_dark_39\%-c-rgb: 220, 224, 232;
+  --c-secondary_base: #5d5f7a;
+  --c-secondary_base-rgb: 93, 95, 122;
+  --c-secondary_base-c: #dce0e8;
+  --c-secondary_base-c-rgb: 220, 224, 232;
+  --c-elevation_1: #dce0e8;
+  --c-elevation_1-rgb: 220, 224, 232;
+  --c-elevation_1-c: #4c4f69;
+  --c-elevation_1-c-rgb: 76, 79, 105;
+  --c-elevation_2: #e6e9ef;
+  --c-elevation_2-rgb: 230, 233, 239;
+  --c-elevation_2-c: #4c4f69;
+  --c-elevation_2-c-rgb: 76, 79, 105;
+  --c-elevation_3: #eff1f5;
+  --c-elevation_3-rgb: 239, 241, 245;
+  --c-elevation_3-c: #4c4f69;
+  --c-elevation_3-c-rgb: 76, 79, 105;
+  --c-elevation_4: #ccd0da;
+  --c-elevation_4-rgb: 204, 208, 218;
+  --c-elevation_4-c: #4c4f69;
+  --c-elevation_4-c-rgb: 76, 79, 105;
+  --c-elevation_5: #bcc0cc;
+  --c-elevation_5-rgb: 188, 192, 204;
+  --c-elevation_5-c: #4c4f69;
+  --c-elevation_5-c-rgb: 76, 79, 105;
+  --c-elevation_6: #acb0be;
+  --c-elevation_6-rgb: 172, 176, 190;
+  --c-elevation_6-c: #4c4f69;
+  --c-elevation_6-c-rgb: 76, 79, 105;
+  --c-elevation_7: #9ca0b0;
+  --c-elevation_7-rgb: 156, 160, 176;
+  --c-elevation_7-c: #4c4f69;
+  --c-elevation_7-c-rgb: 76, 79, 105;
+  --c-elevation_8: #8c8fa1;
+  --c-elevation_8-rgb: 140, 143, 161;
+  --c-elevation_8-c: #4c4f69;
+  --c-elevation_8-c-rgb: 76, 79, 105;
+  --c-elevation_9: #7c7f93;
+  --c-elevation_9-rgb: 124, 127, 147;
+  --c-elevation_9-c: #dce0e8;
+  --c-elevation_9-c-rgb: 220, 224, 232;
+  --c-elevation_10: #6c6f85;
+  --c-elevation_10-rgb: 108, 111, 133;
+  --c-elevation_10-c: #dce0e8;
+  --c-elevation_10-c-rgb: 220, 224, 232;
+  --c-elevation_11: #5c5f77;
+  --c-elevation_11-rgb: 92, 95, 119;
+  --c-elevation_11-c: #dce0e8;
+  --c-elevation_11-c-rgb: 220, 224, 232;
+  --c-elevation_12: #4c4f69;
+  --c-elevation_12-rgb: 76, 79, 105;
+  --c-elevation_12-c: #dce0e8;
+  --c-elevation_12-c-rgb: 220, 224, 232;
+}
+
+:root {
+  color-scheme: dark;
+  --is-dark-theme: true;
+  accent-color: var(--c-primary_base);
+  --color-primary: var(--c-primary_base);
+  --color-primary-contrast: var(--c-primary_base-c);
+  --color-primary-dark-1: var(--c-primary_dark_3\%);
+  --color-primary-dark-2: var(--c-primary_dark_6\%);
+  --color-primary-dark-3: var(--c-primary_dark_9\%);
+  --color-primary-dark-4: var(--c-primary_dark_12\%);
+  --color-primary-dark-5: var(--c-primary_dark_15\%);
+  --color-primary-dark-6: var(--c-primary_dark_18\%);
+  --color-primary-dark-7: var(--c-primary_dark_21\%);
+  --color-primary-light-1: var(--c-primary_light_3\%);
+  --color-primary-light-2: var(--c-primary_light_6\%);
+  --color-primary-light-3: var(--c-primary_light_9\%);
+  --color-primary-light-4: var(--c-primary_light_12\%);
+  --color-primary-light-5: var(--c-primary_light_15\%);
+  --color-primary-light-6: var(--c-primary_light_18\%);
+  --color-primary-light-7: var(--c-primary_light_21\%);
+  --color-primary-alpha-10: rgba(var(--c-primary_base-rgb), 0.1);
+  --color-primary-alpha-20: rgba(var(--c-primary_base-rgb), 0.2);
+  --color-primary-alpha-30: rgba(var(--c-primary_base-rgb), 0.3);
+  --color-primary-alpha-40: rgba(var(--c-primary_base-rgb), 0.4);
+  --color-primary-alpha-50: rgba(var(--c-primary_base-rgb), 0.5);
+  --color-primary-alpha-60: rgba(var(--c-primary_base-rgb), 0.6);
+  --color-primary-alpha-70: rgba(var(--c-primary_base-rgb), 0.7);
+  --color-primary-alpha-80: rgba(var(--c-primary_base-rgb), 0.8);
+  --color-primary-alpha-90: rgba(var(--c-primary_base-rgb), 0.9);
+  --color-secondary: var(--c-elevation_5);
+  --color-secondary-dark-1: var(--c-secondary_light_3\%);
+  --color-secondary-dark-2: var(--c-secondary_light_6\%);
+  --color-secondary-dark-3: var(--c-secondary_light_9\%);
+  --color-secondary-dark-4: var(--c-secondary_light_12\%);
+  --color-secondary-dark-5: var(--c-secondary_light_15\%);
+  --color-secondary-dark-6: var(--c-secondary_light_18\%);
+  --color-secondary-dark-7: var(--c-secondary_light_21\%);
+  --color-secondary-dark-8: var(--c-secondary_light_24\%);
+  --color-secondary-dark-9: var(--c-secondary_light_27\%);
+  --color-secondary-dark-10: var(--c-secondary_light_30\%);
+  --color-secondary-dark-11: var(--c-secondary_light_33\%);
+  --color-secondary-dark-12: var(--c-secondary_light_36\%);
+  --color-secondary-dark-13: var(--c-secondary_light_39\%);
+  --color-secondary-light-1: var(--c-secondary_dark_3\%);
+  --color-secondary-light-2: var(--c-secondary_dark_6\%);
+  --color-secondary-light-3: var(--c-secondary_dark_9\%);
+  --color-secondary-light-4: var(--c-secondary_dark_12\%);
+  --color-secondary-alpha-10: rgba(var(--c-secondary_base-rgb), 0.1);
+  --color-secondary-alpha-20: rgba(var(--c-secondary_base-rgb), 0.2);
+  --color-secondary-alpha-30: rgba(var(--c-secondary_base-rgb), 0.3);
+  --color-secondary-alpha-40: rgba(var(--c-secondary_base-rgb), 0.4);
+  --color-secondary-alpha-50: rgba(var(--c-secondary_base-rgb), 0.5);
+  --color-secondary-alpha-60: rgba(var(--c-secondary_base-rgb), 0.6);
+  --color-secondary-alpha-70: rgba(var(--c-secondary_base-rgb), 0.7);
+  --color-secondary-alpha-80: rgba(var(--c-secondary_base-rgb), 0.8);
+  --color-secondary-alpha-90: rgba(var(--c-secondary_base-rgb), 0.9);
+  /* colors */
+  --color-red: var(--c-theme_red_base);
+  --color-orange: var(--c-theme_peach_base);
+  --color-yellow: var(--c-theme_yellow_base);
+  --color-olive: var(--c-theme_green_base);
+  --color-green: var(--c-theme_green_base);
+  --color-teal: var(--c-theme_teal_base);
+  --color-blue: var(--c-theme_blue_base);
+  --color-violet: var(--c-theme_lavender_base);
+  --color-purple: var(--c-theme_mauve_base);
+  --color-pink: var(--c-theme_pink_base);
+  --color-brown: var(--c-theme_flamingo_base);
+  --color-grey: var(--c-elevation_9);
+  --color-black: var(--c-elevation_1);
+  /* dark variants */
+  --color-red-dark-1: var(--c-theme_red_dark_12\%);
+  --color-orange-dark-1: var(--c-theme_peach_dark_12\%);
+  --color-yellow-dark-1: var(--c-theme_yellow_dark_12\%);
+  --color-olive-dark-1: var(--c-theme_green_dark_12\%);
+  --color-green-dark-1: var(--c-theme_green_dark_12\%);
+  --color-teal-dark-1: var(--c-theme_teal_dark_12\%);
+  --color-blue-dark-1: var(--c-theme_blue_dark_12\%);
+  --color-violet-dark-1: var(--c-theme_lavender_dark_12\%);
+  --color-purple-dark-1: var(--c-theme_mauve_dark_12\%);
+  --color-pink-dark-1: var(--c-theme_pink_dark_12\%);
+  --color-brown-dark-1: var(--c-theme_flamingo_dark_12\%);
+  --color-red-dark-2: var(--c-theme_red_dark_15\%);
+  --color-orange-dark-2: var(--c-theme_peach_dark_15\%);
+  --color-yellow-dark-2: var(--c-theme_yellow_dark_15\%);
+  --color-olive-dark-2: var(--c-theme_green_dark_15\%);
+  --color-green-dark-2: var(--c-theme_green_dark_15\%);
+  --color-teal-dark-2: var(--c-theme_teal_dark_15\%);
+  --color-blue-dark-2: var(--c-theme_blue_dark_15\%);
+  --color-violet-dark-2: var(--c-theme_lavender_dark_15\%);
+  --color-purple-dark-2: var(--c-theme_mauve_dark_15\%);
+  --color-pink-dark-2: var(--c-theme_pink_dark_15\%);
+  --color-brown-dark-2: var(--c-theme_flamingo_dark_15\%);
+  /* light variants  */
+  --color-red-light: var(--c-theme_red_light_12\%);
+  --color-orange-light: var(--c-theme_peach_light_12\%);
+  --color-yellow-light: var(--c-theme_yellow_light_12\%);
+  --color-olive-light: var(--c-theme_green_light_12\%);
+  --color-green-light: var(--c-theme_green_light_12\%);
+  --color-teal-light: var(--c-theme_teal_light_12\%);
+  --color-blue-light: var(--c-theme_blue_light_12\%);
+  --color-violet-light: var(--c-theme_lavender_light_12\%);
+  --color-purple-light: var(--c-theme_mauve_light_12\%);
+  --color-pink-light: var(--c-theme_pink_light_12\%);
+  --color-brown-light: var(--c-theme_flamingo_light_12\%);
+  --color-grey-light: var(--c-elevation_11);
+  --color-black-light: var(--c-theme_black_light_12\%);
+  /* other colors */
+  --color-gold: var(--c-theme_rosewater_base);
+  --color-white: var(--c-text);
+  --color-diff-removed-word-bg: rgba(var(--c-theme_red_base-rgb), 0.15);
+  --color-diff-added-word-bg: rgba(var(--c-theme_green_base-rgb), 0.15);
+  --color-diff-removed-row-bg: rgba(var(--c-theme_red_base-rgb), 0.07);
+  --color-diff-moved-row-bg: rgba(var(--c-theme_yellow_base-rgb), 0.07);
+  --color-diff-added-row-bg: rgba(var(--c-theme_green_base-rgb), 0.07);
+  --color-diff-removed-row-border: rgba(var(--c-theme_red_base-rgb), 0.07);
+  --color-diff-moved-row-border: rgba(var(--c-theme_yellow_base-rgb), 0.07);
+  --color-diff-added-row-border: rgba(var(--c-theme_green_base-rgb), 0.07);
+  --color-diff-inactive: var(--c-elevation_9);
+  --color-error-border: var(--c-theme_red_base);
+  --color-error-bg: rgba(var(--c-theme_red_base-rgb), 0.15);
+  --color-error-bg-active: var(--c-theme_red_light_6\%);
+  --color-error-bg-hover: var(--c-theme_red_light_12\%);
+  --color-error-text: var(--c-theme_red_base);
+  --color-success-border: var(--c-theme_green_light_12\%);
+  --color-success-bg: rgba(var(--c-theme_green_base-rgb), 0.15);
+  --color-success-text: var(--c-text);
+  --color-warning-border: var(--c-theme_yellow_light_12\%);
+  --color-warning-bg: var(--c-theme_yellow_base);
+  --color-warning-text: var(--c-elevation_3);
+  --color-info-border: var(--c-theme_blue_light_12\%);
+  --color-info-bg: var(--c-elevation_3);
+  --color-info-text: var(--c-text);
+  --color-red-badge: var(--c-theme_red_light_12\%);
+  --color-red-badge-bg: var(--c-elevation_3);
+  --color-red-badge-hover-bg: var(--c-theme_red_light_6\%);
+  --color-green-badge: var(--c-theme_green_base);
+  --color-green-badge-bg: var(--c-elevation_3);
+  --color-green-badge-hover-bg: var(--c-theme_green_light_6\%);
+  --color-yellow-badge: var(--c-theme_yellow_base);
+  --color-yellow-badge-bg: var(--c-elevation_3);
+  --color-yellow-badge-hover-bg: var(--c-theme_yellow_light_6\%);
+  --color-orange-badge: var(--c-theme_peach_base);
+  --color-orange-badge-bg: var(--c-elevation_3);
+  --color-orange-badge-hover-bg: var(--c-theme_peach_light_6\%);
+  --color-git: var(--c-theme_peach_base);
+  --color-label-bg: var(--c-primary_base);
+  /* target-based colors */
+  --color-body: var(--c-elevation_3);
+  --color-box-header: rgba(var(--c-elevation_2-rgb), 0.8);
+  --color-box-body: transparent;
+  --color-box-body-highlight: var(--c-elevation_4);
+  --color-text-dark: var(--c-elevation_10);
+  --color-text: var(--c-text);
+  --color-text-light: var(--c-elevation_12);
+  --color-text-light-1: var(--c-elevation_11);
+  --color-text-light-2: var(--c-elevation_10);
+  --color-text-light-3: var(--c-elevation_9);
+  --color-footer: rgba(var(--c-elevation_2-rgb), 0.2);
+  --color-timeline: var(--c-elevation_4);
+  --color-input-text: var(--c-text);
+  --color-input-background: var(--c-elevation_4);
+  --color-input-toggle-background: var(--c-elevation_4);
+  --color-input-border: var(--c-elevation_5);
+  --color-input-border-hover: var(--c-elevation_6);
+  --color-header-wrapper: var(--c-elevation_2);
+  --color-header-wrapper-transparent: #00000000;
+  --color-light: var(--c-elevation_6);
+  --color-light-mimic-enabled: rgba(
+      0,
+      0,
+      0,
+      calc(40 / 255 * 222 / 255 / var(--opacity-disabled))
+  );
+  --color-light-border: var(--c-elevation_6);
+  --color-hover: rgba(var(--c-elevation_6-rgb), 0.1);
+  --color-active: rgba(var(--c-text-rgb), 0.1);
+  --color-menu: var(--c-elevation_3);
+  --color-card: var(--c-elevation_3);
+  --color-markup-table-row: rgba(var(--c-text-rgb), 0.02);
+  --color-markup-code-block: rgba(var(--c-text-rgb), 0.05);
+  --color-button: var(--c-elevation_4);
+  --color-code-bg: var(--c-elevation_2);
+  --color-code-sidebar-bg: var(--c-elevation_4);
+  --color-shadow: rgba(var(--c-elevation_3-rgb), 0.1);
+  --color-secondary-bg: var(--c-elevation_4);
+  --color-text-focus: var(--c-text);
+  --color-expand-button: var(--c-elevation_6);
+  --color-placeholder-text: var(--c-elevation_6);
+  --color-editor-line-highlight: var(--color-primary-light-5);
+  --color-project-board-bg: var(--color-secondary-light-2);
+  --color-caret: var(--color-text);
+  --color-reaction-bg: rgba(var(--c-text-rgb), 0.07);
+  --color-reaction-active-bg: var(--color-primary-alpha-40);
+  --color-nav-bg: var(--c-elevation_2);
+  --color-nav-hover-bg: var(--c-elevation_6);
+  --color-label-active-bg: var(--c-elevation_6);
+  --color-accent: var(--color-primary-light-1);
+  --color-small-accent: var(--color-primary-light-5);
+  --color-active-line: var(--c-elevation_5);
+}
+:root * {
+  --fonts-regular: var(--v-font-family);
+  --fonts-monospace: var(--v-code-font-family);
+}
+
+/* invert emojis that are hard to read otherwise */
+.emoji[aria-label="check mark"],
+.emoji[aria-label="currency exchange"],
+.emoji[aria-label="TOP arrow"],
+.emoji[aria-label="END arrow"],
+.emoji[aria-label="ON! arrow"],
+.emoji[aria-label="SOON arrow"],
+.emoji[aria-label="heavy dollar sign"],
+.emoji[aria-label=copyright],
+.emoji[aria-label=registered],
+.emoji[aria-label="trade mark"],
+.emoji[aria-label=multiply],
+.emoji[aria-label=plus],
+.emoji[aria-label=minus],
+.emoji[aria-label=divide],
+.emoji[aria-label="curly loop"],
+.emoji[aria-label="double curly loop"],
+.emoji[aria-label="wavy dash"],
+.emoji[aria-label="paw prints"],
+.emoji[aria-label="musical note"],
+.emoji[aria-label="musical notes"] {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.ui.ui.ui.button:not(.inverted, .basic).primary, .ui.ui.ui.button:not(.inverted, .basic).green, .ui.ui.ui.button:not(.inverted, .basic).red, .ui.ui.ui.button:not(.inverted, .basic).teal,
+.ui.ui.ui.label:not(.inverted, .basic).primary,
+.ui.ui.ui.label:not(.inverted, .basic).green,
+.ui.ui.ui.label:not(.inverted, .basic).red,
+.ui.ui.ui.label:not(.inverted, .basic).teal {
+  color: var(--c-elevation_3);
+}
+.ui.ui.ui.button:not(.inverted, .basic).primary:hover, .ui.ui.ui.button:not(.inverted, .basic).green:hover, .ui.ui.ui.button:not(.inverted, .basic).red:hover, .ui.ui.ui.button:not(.inverted, .basic).teal:hover,
+.ui.ui.ui.label:not(.inverted, .basic).primary:hover,
+.ui.ui.ui.label:not(.inverted, .basic).green:hover,
+.ui.ui.ui.label:not(.inverted, .basic).red:hover,
+.ui.ui.ui.label:not(.inverted, .basic).teal:hover {
+  color: var(--c-elevation_1);
+}
+
+.ui.success.message, .ui.attached.success.message, .ui.positive.message, .ui.attached.positive.message {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: var(--color-success-border);
+}
+
+.ui.grey.labels .label, .ui.ui.ui.grey.label {
+  background-color: var(--c-primary_base);
+  border-color: var(--c-primary_base);
+  color: var(--c-elevation_3);
+  font-weight: 900;
+}
+
+.ui.label, .ui.menu .item > .label {
+  background: var(--color-label-bg);
+  color: var(--color-label-text);
+}
+
+.ui.basic.modal {
+  background-color: var(--c-elevation_1);
+}
+
+.ui.error.message .header, .ui.negative.message .header, .ui.red.message .header {
+  color: var(--color-error-text);
+}
+
+.ui.commit-header-row .svg.gitea-lock ~ a {
+  color: var(--c-elevation_3);
+}
+
+.ui.sha.isSigned.isVerified:hover .shortsha {
+  color: var(--c-elevation_3);
+}
+.ui.sha.isSigned.isVerified:hover svg.gitea-lock {
+  fill: var(--c-elevation_3);
+}
+
+.ui.basic.modal,
+.ui.basic.modal > .header,
+.ui.inverted.button {
+  color: var(--c-text) !important;
+}
+
+::selection {
+  background: rgba(var(--c-theme_rosewater_base-rgb), 0.3) !important;
+}
+
+body {
+  font-size: var(--v-base-font-size);
+}
+
+footer {
+  justify-content: flex-end !important;
+}
+footer .right-links {
+  justify-content: space-around !important;
+}
+footer .right-links > a {
+  border-left: none !important;
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+}
+footer .ui.dropdown .menu {
+  left: -50% !important;
+  margin-bottom: 16px !important;
+}
+
+.chroma .code-inner {
+  font: 14px var(--v-code-font-family);
+}
+
+/* NameBuiltinPseudo */
+.chroma .bp {
+  color: var(--c-theme_peach_base);
+}
+
+/* Comment */
+.chroma .c {
+  color: var(--c-elevated_7);
+}
+
+/* CommentSingle */
+.chroma .c1 {
+  color: var(--c-elevated_7);
+}
+
+/* CommentHashbang */
+.chroma .ch {
+  color: var(--c-elevated_7);
+}
+
+/* CommentMultiline */
+.chroma .cm {
+  color: var(--c-elevated_7);
+}
+
+/* CommentPreproc */
+.chroma .cp {
+  color: var(--c-theme_blue_base);
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: var(--c-theme_blue_base);
+}
+
+/* CommentSpecial */
+.chroma .cs {
+  color: var(--c-elevated_7);
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: var(--c-theme_blue_base);
+}
+
+/* NameFunctionMagic */
+/* Generic */
+/* GenericDeleted */
+.chroma .gd {
+  color: var(--c-theme);
+  background-color: rgba(var(--c-theme_red_base-rgb), 0.15);
+}
+
+/* GenericEmph */
+.chroma .ge {
+  font-style: italic;
+}
+
+/* GenericHeading */
+.chroma .gh {
+  color: var(--c-theme_sky_base);
+}
+
+/* GenericInserted */
+.chroma .gi {
+  color: var(--c-theme);
+  background-color: rgba(var(--c-theme_green_base-rgb), 0.15);
+}
+
+/* GenericUnderline */
+/* GenericOutput */
+.chroma .go {
+  color: var(--c-theme_peach_base);
+}
+
+/* GenericPrompt */
+.chroma .gp {
+  color: var(--c-elevated_7);
+  font-weight: bold;
+}
+
+/* GenericError */
+.chroma .gr {
+  color: var(--c-theme_maroon_base);
+}
+
+/* GenericStrong */
+.chroma .gs {
+  font-weight: bold;
+}
+
+/* GenericTraceback */
+.chroma .gt {
+  color: var(--c-theme_maroon_base);
+}
+
+/* GenericSubheading */
+.chroma .gu {
+  color: var(--c-theme_sky_base);
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+  color: var(--c-theme_peach_base);
+}
+
+/* Keyword */
+.chroma .k {
+  color: var(--c-theme_mauve_base);
+}
+
+/* KeywordConstant */
+.chroma .kc {
+  color: var(--c-theme_yellow_base);
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+  color: var(--c-theme_mauve_base);
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+  color: var(--c-theme_yellow_base);
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+  color: var(--c-theme_mauve_base);
+  font-weight: bold;
+}
+
+/* KeywordReserved */
+.chroma .kr {
+  color: var(--c-theme_mauve_base);
+}
+
+/* KeywordType */
+.chroma .kt {
+  color: var(--c-theme_yellow_base);
+}
+
+/* Literal */
+/* LiteralDate */
+/* LiteralNumber */
+.chroma .m {
+  color: var(--c-theme_peach_base);
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+  color: var(--c-theme_peach_base);
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+  color: var(--c-theme_peach_base);
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+  color: var(--c-theme_peach_base);
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+  color: var(--c-theme_peach_base);
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+  color: var(--c-theme_peach_base);
+}
+
+/* Name */
+.chroma .n {
+  color: var(--c-theme_lavender_base);
+}
+
+/* NameAttribute */
+.chroma .na {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameBuiltin */
+.chroma .nb {
+  color: var(--c-theme_peach_base);
+}
+
+/* NameClass */
+.chroma .nc {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameDecorator */
+.chroma .nd {
+  color: var(--c-theme_pink_base);
+}
+
+/* NameException */
+.chroma .ne {
+  color: var(--c-theme_maroon_base);
+}
+
+/* NameFunction */
+.chroma .nf {
+  color: var(--c-theme_blue_base);
+}
+
+/* NameEntity */
+.chroma .ni {
+  color: var(--c-theme_pink_base);
+}
+
+/* NameLabel */
+.chroma .nl {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameNamespace */
+.chroma .nn {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameConstant */
+.chroma .no {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameTag */
+.chroma .nt {
+  color: var(--c-theme_mauve_base);
+}
+
+/* NameVariable */
+.chroma .nv {
+  color: var(--c-theme_peach_base);
+}
+
+/* NameOther */
+.chroma .nx {
+  color: var(--c-theme_peach_base);
+}
+
+/* Operator */
+.chroma .o {
+  color: var(--c-theme_sky_base);
+}
+
+/* OperatorWord */
+.chroma .ow {
+  color: var(--c-theme_sky_base);
+  font-weight: bold;
+}
+
+/* Punctuation */
+.chroma .p {
+  color: var(--c-elevated_9);
+}
+
+/* NameProperty */
+/* LiteralString */
+.chroma .s {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+  color: var(--c-theme_blue_base);
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+  color: var(--c-theme_blue_base);
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: var(--c-theme_green_base);
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+  color: var(--c-theme_green_base);
+}
+
+/* NameVariableClass */
+.chroma .vc {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameVariableGlobal */
+.chroma .vg {
+  color: var(--c-theme_peach_base);
+}
+
+/* NameVariableInstance */
+.chroma .vi {
+  color: var(--c-theme_yellow_base);
+}
+
+/* NameVariableMagic */
+/* TextWhitespace */
+.chroma .w {
+  color: var(--c-elevated_4);
+}
+
+.CodeMirror .cm-property,
+.CodeMirror.cm-s-default .cm-property,
+.CodeMirror.cm-s-paper .cm-property {
+  color: var(--c-text);
+}
+.CodeMirror .cm-header,
+.CodeMirror.cm-s-default .cm-header,
+.CodeMirror.cm-s-paper .cm-header {
+  color: var(--c-text);
+}
+.CodeMirror .cm-quote,
+.CodeMirror.cm-s-default .cm-quote,
+.CodeMirror.cm-s-paper .cm-quote {
+  color: var(--c-theme_green_base);
+}
+.CodeMirror .cm-keyword,
+.CodeMirror.cm-s-default .cm-keyword,
+.CodeMirror.cm-s-paper .cm-keyword {
+  color: var(--c-theme_mauve_base);
+}
+.CodeMirror .cm-atom,
+.CodeMirror.cm-s-default .cm-atom,
+.CodeMirror.cm-s-paper .cm-atom {
+  color: var(--c-theme_red_base);
+}
+.CodeMirror .cm-number,
+.CodeMirror.cm-s-default .cm-number,
+.CodeMirror.cm-s-paper .cm-number {
+  color: var(--c-theme_peach_base);
+}
+.CodeMirror .cm-def,
+.CodeMirror.cm-s-default .cm-def,
+.CodeMirror.cm-s-paper .cm-def {
+  color: var(--c-text);
+}
+.CodeMirror .cm-variable-2,
+.CodeMirror.cm-s-default .cm-variable-2,
+.CodeMirror.cm-s-paper .cm-variable-2 {
+  color: var(--c-theme_sky_base);
+}
+.CodeMirror .cm-variable-3,
+.CodeMirror.cm-s-default .cm-variable-3,
+.CodeMirror.cm-s-paper .cm-variable-3 {
+  color: var(--c-theme_teal_base);
+}
+.CodeMirror .cm-comment,
+.CodeMirror.cm-s-default .cm-comment,
+.CodeMirror.cm-s-paper .cm-comment {
+  color: var(--c-elevation_6);
+}
+.CodeMirror .cm-string,
+.CodeMirror.cm-s-default .cm-string,
+.CodeMirror.cm-s-paper .cm-string {
+  color: var(--c-theme_green);
+}
+.CodeMirror .cm-string-2,
+.CodeMirror.cm-s-default .cm-string-2,
+.CodeMirror.cm-s-paper .cm-string-2 {
+  color: var(--c-theme_green);
+}
+.CodeMirror .cm-meta,
+.CodeMirror.cm-s-default .cm-meta,
+.CodeMirror.cm-s-paper .cm-meta {
+  color: var(--c-theme_peach_base);
+}
+.CodeMirror .cm-qualifier,
+.CodeMirror.cm-s-default .cm-qualifier,
+.CodeMirror.cm-s-paper .cm-qualifier {
+  color: var(--c-theme_peach_base);
+}
+.CodeMirror .cm-builtin,
+.CodeMirror.cm-s-default .cm-builtin,
+.CodeMirror.cm-s-paper .cm-builtin {
+  color: var(--c-theme_peach_base);
+}
+.CodeMirror .cm-bracket,
+.CodeMirror.cm-s-default .cm-bracket,
+.CodeMirror.cm-s-paper .cm-bracket {
+  color: var(--c-text);
+}
+.CodeMirror .cm-tag,
+.CodeMirror.cm-s-default .cm-tag,
+.CodeMirror.cm-s-paper .cm-tag {
+  color: var(--c-theme_yellow_base);
+}
+.CodeMirror .cm-attribute,
+.CodeMirror.cm-s-default .cm-attribute,
+.CodeMirror.cm-s-paper .cm-attribute {
+  color: var(--c-theme_yellow_base);
+}
+.CodeMirror .cm-hr,
+.CodeMirror.cm-s-default .cm-hr,
+.CodeMirror.cm-s-paper .cm-hr {
+  color: var(--c-elevation_9);
+}
+.CodeMirror .cm-url,
+.CodeMirror.cm-s-default .cm-url,
+.CodeMirror.cm-s-paper .cm-url {
+  color: var(--c-theme_blue_base);
+}
+.CodeMirror .cm-link,
+.CodeMirror.cm-s-default .cm-link,
+.CodeMirror.cm-s-paper .cm-link {
+  color: var(--c-theme_blue_base);
+}
+.CodeMirror .cm-error,
+.CodeMirror.cm-s-default .cm-error,
+.CodeMirror.cm-s-paper .cm-error {
+  color: var(--c-theme_red_base);
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--v-measure_1x);
+}
+.header-wrapper .ui.container {
+  margin: 0 0 0 0 !important;
+  max-width: unset !important;
+  width: 100% !important;
+  padding: 0 var(--v-measure_1x);
+}
+.header-wrapper .repo-header {
+  margin: 0 0 var(--v-measure_1x) 0;
+}
+.header-wrapper .ui.tabs.divider {
+  margin-bottom: 0;
+}
+.header-wrapper .ui.tabular.menu.navbar .item {
+  --item-margin-bottom: var(--v-measure_1x);
+  margin: var(--item-margin-bottom) var(--v-measure_\.5x);
+  border-radius: var(--v-measure_\.25x);
+  padding: var(--v-measure_\.5x) var(--v-measure_\.5x);
+  color: var(--color-text);
+  border: none;
+}
+.header-wrapper .ui.tabular.menu.navbar .item svg {
+  color: var(--color-text-light-3);
+  margin-right: var(--v-measure_\.5x);
+}
+.header-wrapper .ui.tabular.menu.navbar .item.active {
+  background-color: transparent;
+  color: var(--color-text);
+  border-radius: var(--v-measure_\.25x) !important;
+  font-weight: normal;
+}
+.header-wrapper .ui.tabular.menu.navbar .item.active::after {
+  background: var(--c-primary_base);
+  border-radius: 6px;
+  bottom: calc(0px - var(--item-margin-bottom));
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+.header-wrapper .ui.tabular.menu.navbar .item .small.label {
+  background-color: var(--c-elevation_7);
+  border: 1px solid var(--c-elevation_7);
+  border-radius: var(--v-measure_2x);
+  color: var(--color-text);
+  font-weight: var(--base-text-weight-medium, 500);
+  min-width: calc(var(--v-measure_1\.25x) + 6px);
+  padding: 6px;
+  text-align: center;
+}
+.header-wrapper .ui.tabular.menu.navbar .item:hover {
+  background-color: var(--c-elevation_4);
+}
+
+.ui.table > tr > td, .ui.table > tbody > tr > td {
+  border-top-color: rgba(var(--c-theme_blue_base-rgb), 0.04);
+}
+
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 24px;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .ui.repo-topic.large.label.topic {
+  background-color: rgba(var(--c-theme_blue_base-rgb), 0.3);
+  color: var(--c-primary_base);
+  border-radius: var(--v-measure_2x);
+  border: 1px solid rgba(var(--c-theme_blue_base-rgb), 0.4);
+  line-height: 14px;
+}
+@media (max-width: 1100px) {
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0 var(--v-measure_2x);
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data {
+    min-width: calc(var(--v-repo-home_sidebar-width) * 0.87) !important;
+    max-width: calc(var(--v-repo-home_sidebar-width) * 0.87) !important;
+    width: calc(var(--v-repo-home_sidebar-width) * 0.87) !important;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row .gt-gap-y-3 {
+    column-gap: var(--v-measure_\.5x);
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row .gt-gap-y-3 #new-pull-request {
+    display: none;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row .gt-gap-y-3 [role=menu] {
+    display: none;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row #clone-panel #repo-clone-url {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 24px;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-topics {
+    display: none !important;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-desc {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    row-gap: var(--v-measure_1x);
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-desc h5 {
+    display: none;
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-desc span {
+    font-size: 1.2em !important;
+    font-style: italic !important;
+    color: var(--color-text-light-3);
+  }
+  .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-desc a {
+    font-size: 1.1em;
+  }
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row .gt-gap-y-3 {
+  column-gap: var(--v-measure_\.5x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .repo-button-row #clone-panel #repo-clone-url {
+  width: unset;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data {
+  min-width: var(--v-repo-home_sidebar-width);
+  max-width: var(--v-repo-home_sidebar-width);
+  width: var(--v-repo-home_sidebar-width);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data #repo-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  row-gap: var(--v-measure_1x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data #repo-desc * {
+  margin: 0;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data #repo-desc h5 {
+  font-size: 1.1em;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data #repo-desc span {
+  font-size: 1.1em;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-header-data #repo-desc a {
+  font-size: 1.1em;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view .lugit-repo-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--v-measure_1x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit {
+  flex-direction: column;
+  row-gap: var(--v-measure_1x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 {
+  margin: 0px !important;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 + div {
+  display: flex;
+  column-gap: var(--v-measure_1x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 + div button {
+  display: block !important;
+  margin: 0px !important;
+  width: 100%;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-topics {
+  margin-top: var(--v-measure_1x) !important;
+}
