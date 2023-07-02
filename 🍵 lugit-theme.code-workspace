@@ -5,6 +5,31 @@
 		}
 	],
 	"settings": {
+		"files.exclude": {
+			"**/.git": false,
+			"**/.svn": false,
+			"**/.hg": false,
+			"**/CVS": false,
+			"**/.DS_Store": false,
+			"**/Thumbs.db": true,
+			"**/.project": false,
+			"**/.classpath": false,
+			".vscode": false,
+			".settings": false,
+			".idea/": false,
+			".out/": false,
+			"out/": false,
+			"*.iml": false,
+			"*.iws": false,
+			"*.ipr": false,
+			"*.ids": false,
+			"*.orig": false,
+			"build/": false,
+			"bin/": false,
+			".gradle": false,
+			"**/.settings": true,
+			"**/.factorypath": true
+		}
 
 	}
 }

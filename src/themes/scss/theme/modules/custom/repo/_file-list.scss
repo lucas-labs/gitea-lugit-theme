@@ -1,0 +1,166 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin apply-styles {
+
+    .ui.table>tr>td, .ui.table>tbody>tr>td {
+        border-top-color: rgba(#{color.get('theme/blue/base', 'rgb')}, 0.04);
+    }
+
+    .page-content.repository.file.list > .ui.container.lugit-repo-list-view {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 24px;
+
+        .ui.repo-topic.large.label.topic {
+            background-color: rgba(#{color.get('theme/blue/base', 'rgb')}, 0.3);
+            color: color.get('primary/base');
+            border-radius: var.get('measure/2x');
+            border: 1px solid rgba(#{color.get('theme/blue/base', 'rgb')}, 0.4);
+            line-height: 14px;
+        }
+
+        @media (max-width: 1100px) {
+            width: 100%;
+            min-width: 100%;
+            margin: 0;
+            padding: 0 var.get('measure/2x');
+
+            .lugit-repo-header-data {
+                min-width: calc(#{var.get('repo-home/sidebar-width')} * 0.87) !important;
+                max-width: calc(#{var.get('repo-home/sidebar-width')} * 0.87) !important;
+                width: calc(#{var.get('repo-home/sidebar-width')} * 0.87) !important;
+            }
+
+            .repo-button-row {
+                .gt-gap-y-3 {
+                    column-gap: var.get('measure/.5x');
+    
+                    #new-pull-request {
+                        display: none;
+                    }
+
+                    [role=menu] {
+                        display: none;
+                    }
+                }
+    
+                #clone-panel {
+                    #repo-clone-url {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            column-gap: 0;
+            row-gap: 24px;
+
+            .lugit-repo-header-data {
+                min-width: 100%!important;
+                max-width: 100%!important;
+                width: 100%!important;
+            }
+
+            #repo-topics {
+                display: none !important;
+            }
+
+            #repo-desc {
+                display: flex;
+                flex-direction: column;
+                font-size: 1em;
+                row-gap: var.get('measure/1x');
+
+                h5 {
+                    display: none;
+                }
+
+                span {
+                    font-size: 1.2em !important;
+                    font-style: italic !important;
+                    color: var(--color-text-light-3);
+                }
+
+                a {
+                    font-size: 1.1em;
+                }
+            }
+
+        }
+
+        .repo-button-row {
+            .gt-gap-y-3 {
+                column-gap: var.get('measure/.5x');
+            }
+
+            #clone-panel {
+                #repo-clone-url {
+                    width: unset;
+                }
+            }
+        }        
+
+        .lugit-repo-header-data {
+            min-width: var.get('repo-home/sidebar-width');
+            max-width: var.get('repo-home/sidebar-width');
+            width: var.get('repo-home/sidebar-width');
+
+            #repo-desc {
+                display: flex;
+                flex-direction: column;
+                font-size: 1em;
+                row-gap: var.get('measure/1x');
+
+                * {
+                    margin: 0;
+                }
+
+                h5 {
+                    font-size: 1.1em;
+                }
+
+                span {
+                    font-size: 1.1em;
+                }
+
+                a {
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        .lugit-repo-content {
+            display: flex;
+            flex-direction: column;
+            row-gap: var.get('measure/1x');
+        }
+
+        #topic_edit {
+            flex-direction: column;
+            row-gap: var.get('measure/1x');
+
+            .field.gt-f1.gt-mr-3 {
+                margin: 0px !important;
+
+                +div {
+                    display: flex;
+                    column-gap: var.get('measure/1x');
+                    
+                    button {
+                        display: block !important;
+                        margin: 0px !important;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #repo-topics {
+            margin-top: var.get('measure/1x') !important;
+        }
+
+    }
+}

@@ -1,0 +1,5 @@
+@use './file-list';
+
+@mixin apply-styles {
+    @include file-list.apply-styles();    
+}

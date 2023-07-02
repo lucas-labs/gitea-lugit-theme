@@ -4,19 +4,18 @@ import { Logger } from '../utils/logger.js';
 import { compile } from 'sass';
 
 const logger = new Logger(buildScss.name, 'debug', 'pink');
-const scss_home = 'themes/scss';
-const css_home = '/public/css';
+const themesSrc = 'themes/scss';
+const baseStylesSrc = 'styles';
+const cssDistPath = '/public/css';
 
-export async function buildScss(src_home, dist_home) {
-    logger.info('SCSS build has started');
-    const themes = get_themes(src_home);
-    mkdirSync(join(dist_home, css_home), { recursive: true });
+async function buildThemes(srcPath, distPath) {
+    const themes = getScssFiles(srcPath, themesSrc);
 
     for (const theme of themes) {
         logger.debug(`Building ${theme.name} theme`);
 
         const result = compile(theme.path, {
-            loadPaths: [join(src_home, scss_home), join(src_home, '../node_modules')],
+            loadPaths: [join(srcPath, '../node_modules')],
             quietDeps: true,
             logger: {
                 debug: logger.simpleDebug.bind(logger),
@@ -29,36 +28,58 @@ export async function buildScss(src_home, dist_home) {
         logger.debug(`Writing ${theme.name} theme to disk`);
 
         writeFileSync(
-            join(dist_home, css_home, `theme-${theme.name}.css`),
+            join(distPath, cssDistPath, `theme-${theme.name}.css`),
             result.css
         );
     }
+}
+
+async function buildBaseStyle(srcPath, distPath) {
+    const scssFiles = getScssFiles(srcPath, baseStylesSrc);
+
+    for (const file of scssFiles) {
+        logger.debug(`Building ${scssFiles.name} file`);
+
+        const result = compile(file.path, {
+            loadPaths: [join(srcPath, '../node_modules')],
+            quietDeps: true,
+            logger: {
+                debug: logger.simpleDebug.bind(logger),
+                info:  logger.simpleInfo.bind(logger),
+                warn:  logger.simpleWarn.bind(logger),
+                error: logger.simpleError.bind(logger),
+            }
+        });
+        
+        logger.debug(`Writing ${file.name} css file to disk`);
+
+        writeFileSync(
+            join(distPath, cssDistPath, `${file.name}.css`),
+            result.css
+        );
+    }
+}
+
+export async function buildScss(srcPath, distPath) {
+    logger.info('SCSS build has started');
+    
+    mkdirSync(join(distPath, cssDistPath), { recursive: true });
+
+    await buildBaseStyle(srcPath, distPath);
+    await buildThemes(srcPath, distPath);
 
     logger.info('SCSS build has finished');
 }
 
-
-function get_themes(src_home) {
-    return readdirSync(join(src_home, scss_home)).filter(
-        (fn) => fn.endsWith('.scss') && !fn.startsWith('_')
-    ).map((file) => ({
-        name: file.replace('.scss', ''),
-        path: join(src_home, scss_home, file),
-    }))
+function getScssFiles(srcHome, path) {
+    try {
+        return readdirSync(join(srcHome, path)).filter(
+            (fn) => fn.endsWith('.scss') && !fn.startsWith('_')
+        ).map((file) => ({
+            name: file.replace('.scss', ''),
+            path: join(srcHome, path, file),
+        }))
+    } catch (err) {
+        return [];
+    }
 }
-
-
-// for (const flavor of Object.keys(variants)) {
-//     for (const accent of accents) {
-//         const input = builder(flavor, accent);
-//         const result = compileString(input, {
-//             loadPaths: [join(__dirname, 'src'), join(__dirname, 'node_modules')],
-//         });
-
-//         mkdirSync(join(__dirname, 'dist'), { recursive: true });
-//         writeFileSync(
-//             join(__dirname, 'dist', `theme-catppuccin-${flavor}-${accent}.css`),
-//             result.css
-//         );
-//     }
-// }
