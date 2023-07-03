@@ -11,14 +11,15 @@ const logger = new Logger('deploy', 'info', 'brightMagenta');
 
 const sync = browsersync.create('lugit')
 
-sync.init({
-    proxy: 'http://lugit.local',
-    port: 8080,
-})
-
-
-export async function deploy(srcPath, distPath, serverPath, serviceName, file = null) {
+export async function deploy(srcPath, distPath, serverPath, serviceName, file = null, live = false) {
     logger.info('Deploying...');
+
+    if(live && !sync.active) {
+        sync.init({
+            proxy: 'http://lugit.local',
+            port: 8080,
+        })
+    }
 
     let shouldRestart = true;
 
@@ -34,7 +35,7 @@ export async function deploy(srcPath, distPath, serverPath, serviceName, file = 
         await copyTo(distPath, serverPath);        
         shouldRestart && await restartService(serviceName);
 
-        if(!shouldRestart) {
+        if(!shouldRestart && live) {
             sync.reload();
         }
 

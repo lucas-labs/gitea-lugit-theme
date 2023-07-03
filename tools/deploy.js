@@ -13,7 +13,7 @@ const srcPath = resolve(cwd(), src);
 const distPath = resolve(cwd(), dist);
 const serverPath = resolve(
     cwd(),
-    getArg('--sever', 'D:/users/lucas/Desktop/dev/server/gitea')
+    getArg('--server', 'd:/gitea')
 );
 
 logger.info('Deploy started!');

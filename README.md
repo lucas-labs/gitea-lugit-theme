@@ -42,3 +42,15 @@ DEFAULT_THEME=dark # optional
 $ npm install
 $ npm run build
 ```
+
+### serve
+```bash
+$ npm run serve -- --server path/to/gitea/custom
+
+# e.g.
+
+# on linux
+$ npm run serve -- --server ~/gitea/custom
+# on windows
+$ npm run serve -- -- --server c:/gitea/custom
+```

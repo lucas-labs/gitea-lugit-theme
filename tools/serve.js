@@ -13,7 +13,7 @@ const srcPath = resolve(cwd(), src);
 const distPath = resolve(cwd(), dist);
 const serverPath = resolve(
     cwd(),
-    getArg('--sever', 'd:/gitea')
+    getArg('--server', 'd:/gitea')
 );
 const debouncer = new TaskDebouncer(300);
 const logger = new Logger('serve', 'info', 'brightMagenta');
@@ -37,4 +37,5 @@ watcher.on('change', (file) => debouncer.add(
     serverPath,
     serviceName,
     file,
+    true
 ));
