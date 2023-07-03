@@ -2158,8 +2158,8 @@
   --color-label-bg: var(--c-primary_base);
   /* target-based colors */
   --color-body: var(--c-elevation_3);
-  --color-box-header: rgba(var(--c-elevation_2-rgb), 0.8);
-  --color-box-body: transparent;
+  --color-box-header: rgba(var(--c-elevation_2-rgb), 1);
+  --color-box-body: var(--color-body);
   --color-box-body-highlight: var(--c-elevation_4);
   --color-text-dark: var(--c-elevation_10);
   --color-text: var(--c-text);

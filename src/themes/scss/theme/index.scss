@@ -190,8 +190,8 @@
 
         /* target-based colors */
         --color-body: #{$lvl1};
-        --color-box-header: #{rgba(color.get('elevation/2', 'rgb'), .8)};
-        --color-box-body: transparent;
+        --color-box-header: #{rgba(color.get('elevation/2', 'rgb'), 1)};
+        --color-box-body: var(--color-body);
         --color-box-body-highlight: #{color.get('elevation/4')};
         --color-text-dark: #{color.get('elevation/10')};
         --color-text: #{color.get('text')};
