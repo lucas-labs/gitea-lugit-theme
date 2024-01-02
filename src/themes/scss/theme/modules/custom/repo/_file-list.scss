@@ -5,6 +5,7 @@
 
     #repo-topics {
         row-gap: var.get('measure/.5x');
+        margin-top: 0 !important;
     }
 
     .ui.table>tr>td, .ui.table>tbody>tr>td {
@@ -146,9 +147,31 @@
             flex-direction: column;
             row-gap: var.get('measure/1x');
 
-            .field.gt-f1.gt-mr-3 {
+            .field.gt-f1.gt-mr-3 { 
                 margin: 0px !important;
 
+
+                // topic selection editing (task list
+                div.fluid.multiple.search.selection.dropdown {
+                    display: flex;
+                    flex-wrap: wrap;
+                    box-shadow: none;
+                    padding: var.get('measure/.25x') var.get('measure/.5x');
+                    
+                    .item {
+                        border: none;
+                    }
+
+                    .menu {
+                        top: calc(100% + 1px);
+                    }
+                }
+                
+                .dropdown {
+                    display: none;
+                }
+
+                // Cancel, Save buttons
                 +div {
                     display: flex;
                     column-gap: var.get('measure/1x');

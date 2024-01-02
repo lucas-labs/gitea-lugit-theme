@@ -1,7 +1,9 @@
 @use './repo-header';
 @use './repo';
+@use './project';
 
 @mixin apply-custom-styles {
     @include repo-header.apply-styles();
     @include repo.apply-styles();
+    @include project.apply-styles();
 }

@@ -2199,13 +2199,14 @@
   --color-expand-button: var(--c-elevation_6);
   --color-placeholder-text: var(--c-elevation_6);
   --color-editor-line-highlight: var(--color-primary-light-5);
-  --color-project-board-bg: var(--color-secondary-light-2);
+  --color-project-board-bg: var(--c-elevation_2);
   --color-caret: var(--color-text);
   --color-reaction-bg: rgba(var(--c-text-rgb), 0.07);
   --color-reaction-active-bg: var(--color-primary-alpha-40);
   --color-nav-bg: var(--c-elevation_2);
   --color-nav-hover-bg: var(--c-elevation_6);
   --color-label-active-bg: var(--c-elevation_6);
+  --color-label-text: var(--c-text);
   --color-accent: var(--color-primary-light-1);
   --color-small-accent: var(--color-primary-light-5);
   --color-active-line: var(--c-elevation_5);
@@ -2839,6 +2840,8 @@ footer .ui.dropdown .menu {
   min-width: calc(var(--v-measure_1\.25x) + 6px);
   padding: 6px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .header-wrapper .ui.tabular.menu.navbar .item:hover {
   background-color: var(--c-elevation_4);
@@ -2846,6 +2849,7 @@ footer .ui.dropdown .menu {
 
 #repo-topics {
   row-gap: var(--v-measure_\.5x);
+  margin-top: 0 !important;
 }
 
 .ui.table > tr > td, .ui.table > tbody > tr > td {
@@ -2962,6 +2966,21 @@ footer .ui.dropdown .menu {
 .page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 {
   margin: 0px !important;
 }
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 div.fluid.multiple.search.selection.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: none;
+  padding: var(--v-measure_\.25x) var(--v-measure_\.5x);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 div.fluid.multiple.search.selection.dropdown .item {
+  border: none;
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 div.fluid.multiple.search.selection.dropdown .menu {
+  top: calc(100% + 1px);
+}
+.page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 .dropdown {
+  display: none;
+}
 .page-content.repository.file.list > .ui.container.lugit-repo-list-view #topic_edit .field.gt-f1.gt-mr-3 + div {
   display: flex;
   column-gap: var(--v-measure_1x);
@@ -2973,4 +2992,13 @@ footer .ui.dropdown .menu {
 }
 .page-content.repository.file.list > .ui.container.lugit-repo-list-view #repo-topics {
   margin-top: var(--v-measure_1x) !important;
+}
+
+#project-board .project-column-header .project-column-title .circular.label {
+  display: flex;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 16px;
+  padding: 0 var(--v-measure_\.25x) !important;
 }
