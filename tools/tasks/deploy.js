@@ -4,6 +4,7 @@ import { buildFonts } from './fonts.js';
 import { buildTemplates } from './templates.js';
 import { copyTo } from './copy-to.js';
 import { restartService } from './restart-service.js';
+import { buildImg } from './img.js';
 import { extname  } from 'path';
 import browsersync from 'browser-sync';
 
@@ -31,6 +32,7 @@ export async function deploy(srcPath, distPath, serverPath, serviceName, file = 
     try {
         await buildScss(srcPath, distPath);
         await buildFonts(srcPath, distPath);
+        // await buildImg(srcPath, distPath);
         await buildTemplates(srcPath, distPath);
         await copyTo(distPath, serverPath);        
         shouldRestart && await restartService(serviceName);

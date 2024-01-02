@@ -6,7 +6,7 @@ import { compile } from 'sass';
 const logger = new Logger(buildScss.name, 'debug', 'pink');
 const themesSrc = 'themes/scss';
 const baseStylesSrc = 'styles';
-const cssDistPath = '/public/css';
+const cssDistPath = '/public/assets/css';
 
 async function buildThemes(srcPath, distPath) {
     const themes = getScssFiles(srcPath, themesSrc);

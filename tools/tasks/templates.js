@@ -3,13 +3,13 @@ import { copyFolderRecursiveSync } from '../utils/funcs.js';
 import { Logger } from '../utils/logger.js';
 
 const logger = new Logger(buildTemplates.name, 'info', 'blue');
-const imgSrc = 'templates';
-const imgDest = '/';
+const tmplSrc = 'templates';
+const tmplDest = '/';
 
 export async function buildTemplates(srcHome, distHome) {
-    logger.info('Fonts build has started');
-    const tmplSrcPath = join(srcHome, imgSrc);
-    const tmplDestPath = join(distHome, imgDest);
+    logger.info('Templates build has started');
+    const tmplSrcPath = join(srcHome, tmplSrc);
+    const tmplDestPath = join(distHome, tmplDest);
 
     // just copy the entire tmplSrcPath to tmplDestPath
     copyFolderRecursiveSync(tmplSrcPath, tmplDestPath);

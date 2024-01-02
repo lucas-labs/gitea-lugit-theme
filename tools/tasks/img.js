@@ -9,7 +9,7 @@ import { mkdirSync, copyFileSync } from 'fs';
 
 const logger = new Logger(buildImg.name, 'info', 'brightGreen');
 const imgSrc = 'themes/img';
-const imgDest = '/public/img';
+const imgDest = '/public/assets/img';
 
 export async function buildImg(srcHome, distHome) {
     logger.info('Images build has started');

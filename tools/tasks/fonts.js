@@ -5,7 +5,7 @@ import { Logger } from '../utils/logger.js';
 
 const logger = new Logger(buildFonts.name, 'info', 'brightCyan');
 const imgSrc = 'themes/fonts';
-const imgDest = '/public/fonts';
+const imgDest = '/public/assets/fonts';
 
 export async function buildFonts(srcHome, distHome) {
     logger.info('Fonts build has started');
