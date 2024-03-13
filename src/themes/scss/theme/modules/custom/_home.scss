@@ -1,0 +1,14 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin apply-styles {
+    .page-content.home {
+        div.center {
+            img {
+                // background-color: color.get('primary/base');
+                // border-radius: var.get('measure/4x');
+                // padding: var.get('measure/1.25x');
+            }
+        }
+    }        
+}

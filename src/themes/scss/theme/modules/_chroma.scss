@@ -2,12 +2,6 @@
 @use '@lucas-labs/lui-micro/var' as var;
 
 
-// variables: (
-//     'base-font-size': 16px,
-//     'font-family': 'Roboto, sans-serif',
-//     'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
-// ),
-
 @mixin make-chroma-styles {
     .chroma .code-inner{
         font: 14px var.get('code-font-family');

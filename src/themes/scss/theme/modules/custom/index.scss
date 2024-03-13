@@ -1,9 +1,13 @@
 @use './repo-header';
 @use './repo';
 @use './project';
+@use './home';
+@use './markup';
 
 @mixin apply-custom-styles {
     @include repo-header.apply-styles();
     @include repo.apply-styles();
     @include project.apply-styles();
+    @include home.apply-styles();
+    @include markup.apply-styles();
 }

@@ -1,0 +1,9 @@
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin apply-styles() {
+    .markup {
+        table {
+            width: fit-content;
+        }
+    }
+}

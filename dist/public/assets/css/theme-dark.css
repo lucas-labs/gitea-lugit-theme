@@ -2189,9 +2189,9 @@
   --color-menu: var(--c-elevation_3);
   --color-card: var(--c-elevation_3);
   --color-markup-table-row: rgba(var(--c-text-rgb), 0.02);
-  --color-markup-code-block: rgba(var(--c-text-rgb), 0.05);
+  --color-markup-code-block: var(--c-elevation_2);
   --color-button: var(--c-elevation_4);
-  --color-code-bg: var(--c-elevation_2);
+  --color-code-bg: $lvl1;
   --color-code-sidebar-bg: var(--c-elevation_4);
   --color-shadow: rgba(var(--c-elevation_3-rgb), 0.1);
   --color-secondary-bg: var(--c-elevation_4);
@@ -2206,7 +2206,7 @@
   --color-nav-bg: var(--c-elevation_2);
   --color-nav-hover-bg: var(--c-elevation_6);
   --color-label-active-bg: var(--c-elevation_6);
-  --color-label-text: var(--c-text);
+  --color-label-text: var(--c-primary_base-c);
   --color-accent: var(--color-primary-light-1);
   --color-small-accent: var(--color-primary-light-5);
   --color-active-line: var(--c-elevation_5);
@@ -2784,6 +2784,99 @@ footer .ui.dropdown .menu {
   color: var(--c-theme_red_base);
 }
 
+.monaco-editor {
+  --vscode-editor-background: var(--c-elevation_0) !important;
+  --vscode-editorGutter-background: var(--c-elevation_0) !important;
+}
+.monaco-editor .selected-text {
+  background-color: var(--c-elevation_4) !important;
+}
+.monaco-editor .margin-view-overlays .line-numbers {
+  color: var(--c-elevation_10) !important;
+}
+.monaco-editor .line-numbers.active-line-number {
+  color: var(--c-primary_base) !important;
+}
+.monaco-editor .view-overlays .current-line,
+.monaco-editor .margin-view-overlays .current-line-margin {
+  background-color: var(--c-elevation_2) !important;
+}
+.monaco-editor .mtk1 {
+  color: var(--c-text) !important;
+}
+.monaco-editor .mtk2 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk3 {
+  color: var(--c-theme_peach_base) !important;
+}
+.monaco-editor .mtk4 {
+  color: var(--c-theme_teal_base) !important;
+}
+.monaco-editor .mtk5 {
+  color: var(--c-text) !important;
+}
+.monaco-editor .mtk6 {
+  color: var(--c-theme_sapphire_base) !important;
+}
+.monaco-editor .mtk7 {
+  color: var(--c-theme_peach_base) !important;
+}
+.monaco-editor .mtk8 {
+  color: var(--c-elevation_9) !important;
+}
+.monaco-editor .mtk9 {
+  color: var(--c-theme_sapphire_base) !important;
+}
+.monaco-editor .mtk10 {
+  color: var(--c-elevation_10) !important;
+}
+.monaco-editor .mtk11 {
+  color: var(--c-theme_teal_base) !important;
+}
+.monaco-editor .mtk12 {
+  color: var(--c-theme_teal_base) !important;
+}
+.monaco-editor .mtk13 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk14 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk15 {
+  color: var(--c-theme_sapphire_base) !important;
+}
+.monaco-editor .mtk16 {
+  color: var(--c-elevation_9) !important;
+}
+.monaco-editor .mtk17 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk18 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk19 {
+  color: var(--c-theme_teal_base) !important;
+}
+.monaco-editor .mtk20 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk21 {
+  color: var(--c-theme_green_base) !important;
+}
+.monaco-editor .mtk22 {
+  color: #ff69b4 !important;
+}
+.monaco-editor .mtk23 {
+  color: var(--c-theme_blue_base) !important;
+}
+.monaco-editor .mtk24 {
+  color: var(--c-theme_peach_base) !important;
+}
+.monaco-editor .mtk25 {
+  color: var(--c-theme_pink_base) !important;
+}
+
 .header-wrapper {
   display: flex;
   flex-direction: column;
@@ -2893,7 +2986,7 @@ footer .ui.dropdown .menu {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .page-content.repository.file.list > .ui.container.lugit-repo-list-view {
     flex-direction: column;
     column-gap: 0;
@@ -3001,4 +3094,8 @@ footer .ui.dropdown .menu {
   justify-content: center;
   line-height: 16px;
   padding: 0 var(--v-measure_\.25x) !important;
+}
+
+.markup table {
+  width: fit-content;
 }
