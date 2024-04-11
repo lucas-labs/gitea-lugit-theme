@@ -2425,6 +2425,7 @@ footer .ui.dropdown .menu {
   display: inline-flex;
   gap: 0px;
   border-radius: 16px;
+  opacity: 0.9;
   --color-green-badge-bg: none !important;
   --color-green-badge-hover-bg: rgba(var(--c-theme_dark-green_base-rgb), 0.05) !important;
   --color-label-text: rgba(var(--c-theme_dark-green_base-rgb), 1) !important;
@@ -2434,6 +2435,7 @@ footer .ui.dropdown .menu {
   padding: 4px 6px 4px 12px !important;
 }
 .label.isSigned.isVerified .ui.detail.icon.button {
+  opacity: 1;
   padding: 4px 12px 4px 6px !important;
   margin: 0 !important;
   background: none !important;

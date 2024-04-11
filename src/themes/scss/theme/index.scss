@@ -350,6 +350,7 @@
         display: inline-flex;
         gap: 0px;
         border-radius: 16px;
+        opacity: 0.9;
 
         --color-green-badge-bg: none !important;
         --color-green-badge-hover-bg: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 0.05) !important;
@@ -361,6 +362,7 @@
         }
 
         .ui.detail.icon.button {
+            opacity: 1;
             padding: 4px 12px 4px 6px !important;
             margin: 0 !important;
             background: none !important;
