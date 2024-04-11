@@ -1,7 +1,7 @@
 /**
  * #### TaskDebouncer
- * 
- * Executes a task after a certain delay, but cancels the execution if 
+ *
+ * Executes a task after a certain delay, but cancels the execution if
  * a new task is sent before the delay expires. Also, if a task is
  * already being executed, the new task is queued and executed after
  * the current one finishes. It will only execute the task that was
@@ -41,7 +41,7 @@ export class TaskDebouncer {
         this.#setProcessing(false);
 
         // continue with the next task
-        this.#continue();               
+        this.#continue();
     }
 
     #continue() {
@@ -55,7 +55,7 @@ export class TaskDebouncer {
      * the new task is queued and executed after the current one finishes.
      * It will only execute the task if no other task is sent before the
      * delay expires or before the current task finishes.
-     * 
+     *
      * IOW, it will only execute the task that was sent last.
      */
     add(executor, ...args) {

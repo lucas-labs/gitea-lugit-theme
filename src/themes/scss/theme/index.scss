@@ -310,21 +310,6 @@
         color: var(--color-error-text);
     }
 
-    // link color for signed commits
-    .ui.commit-header-row .svg.gitea-lock ~ a {
-        color: $lvl1;
-    }
-
-    // most recent commit hover when signed
-    .ui.sha.isSigned.isVerified:hover {
-        .shortsha {
-            color: $lvl1;
-        }
-        svg.gitea-lock {
-            fill: $lvl1;
-        }
-    }
-
     // modal text color for the "Remove GPG Key" modal
     .ui.basic.modal,
     .ui.basic.modal > .header,
@@ -357,6 +342,34 @@
             left: -50% !important;
             margin-bottom: 16px !important;
         }
+    }
+
+    .label.isSigned.isVerified {
+        margin: 0px .25em !important;
+        padding: 0;
+        display: inline-flex;
+        gap: 0px;
+        border-radius: 16px;
+
+        --color-green-badge-bg: none !important;
+        --color-green-badge-hover-bg: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 0.05) !important;
+        --color-label-text: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
+        --color-green-badge: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
+
+        .shortsha {
+            padding: 4px 6px 4px 12px !important;
+        }
+
+        .ui.detail.icon.button {
+            padding: 4px 12px 4px 6px !important;
+            margin: 0 !important;
+            background: none !important;
+            border-color: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
+        }
+    }
+
+    #commits-table {
+        --color-light: transparent !important;
     }
 
     @include chroma.make-chroma-styles;

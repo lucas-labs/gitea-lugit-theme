@@ -983,6 +983,114 @@
   --c-theme_green_base-rgb: 98, 150, 226;
   --c-theme_green_base-c: #4c4f69;
   --c-theme_green_base-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_3\%: #138232;
+  --c-theme_dark-green_light_3\%-rgb: 19, 130, 50;
+  --c-theme_dark-green_light_3\%-c: #dce0e8;
+  --c-theme_dark-green_light_3\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_light_6\%: #159037;
+  --c-theme_dark-green_light_6\%-rgb: 21, 144, 55;
+  --c-theme_dark-green_light_6\%-c: #dce0e8;
+  --c-theme_dark-green_light_6\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_light_9\%: #179d3c;
+  --c-theme_dark-green_light_9\%-rgb: 23, 157, 60;
+  --c-theme_dark-green_light_9\%-c: #dce0e8;
+  --c-theme_dark-green_light_9\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_light_12\%: #19aa42;
+  --c-theme_dark-green_light_12\%-rgb: 25, 170, 66;
+  --c-theme_dark-green_light_12\%-c: #4c4f69;
+  --c-theme_dark-green_light_12\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_15\%: #1bb847;
+  --c-theme_dark-green_light_15\%-rgb: 27, 184, 71;
+  --c-theme_dark-green_light_15\%-c: #4c4f69;
+  --c-theme_dark-green_light_15\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_18\%: #1dc54c;
+  --c-theme_dark-green_light_18\%-rgb: 29, 197, 76;
+  --c-theme_dark-green_light_18\%-c: #4c4f69;
+  --c-theme_dark-green_light_18\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_21\%: #1fd351;
+  --c-theme_dark-green_light_21\%-rgb: 31, 211, 81;
+  --c-theme_dark-green_light_21\%-c: #4c4f69;
+  --c-theme_dark-green_light_21\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_24\%: #22df57;
+  --c-theme_dark-green_light_24\%-rgb: 34, 223, 87;
+  --c-theme_dark-green_light_24\%-c: #4c4f69;
+  --c-theme_dark-green_light_24\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_27\%: #2fe161;
+  --c-theme_dark-green_light_27\%-rgb: 47, 225, 97;
+  --c-theme_dark-green_light_27\%-c: #4c4f69;
+  --c-theme_dark-green_light_27\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_30\%: #3ce36b;
+  --c-theme_dark-green_light_30\%-rgb: 60, 227, 107;
+  --c-theme_dark-green_light_30\%-c: #4c4f69;
+  --c-theme_dark-green_light_30\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_33\%: #4ae575;
+  --c-theme_dark-green_light_33\%-rgb: 74, 229, 117;
+  --c-theme_dark-green_light_33\%-c: #4c4f69;
+  --c-theme_dark-green_light_33\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_36\%: #57e77f;
+  --c-theme_dark-green_light_36\%-rgb: 87, 231, 127;
+  --c-theme_dark-green_light_36\%-c: #4c4f69;
+  --c-theme_dark-green_light_36\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_light_39\%: #64e989;
+  --c-theme_dark-green_light_39\%-rgb: 100, 233, 137;
+  --c-theme_dark-green_light_39\%-c: #4c4f69;
+  --c-theme_dark-green_light_39\%-c-rgb: 76, 79, 105;
+  --c-theme_dark-green_dark_3\%: #0f6828;
+  --c-theme_dark-green_dark_3\%-rgb: 15, 104, 40;
+  --c-theme_dark-green_dark_3\%-c: #dce0e8;
+  --c-theme_dark-green_dark_3\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_6\%: #0d5a23;
+  --c-theme_dark-green_dark_6\%-rgb: 13, 90, 35;
+  --c-theme_dark-green_dark_6\%-c: #dce0e8;
+  --c-theme_dark-green_dark_6\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_9\%: #0b4d1e;
+  --c-theme_dark-green_dark_9\%-rgb: 11, 77, 30;
+  --c-theme_dark-green_dark_9\%-c: #dce0e8;
+  --c-theme_dark-green_dark_9\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_12\%: #094018;
+  --c-theme_dark-green_dark_12\%-rgb: 9, 64, 24;
+  --c-theme_dark-green_dark_12\%-c: #dce0e8;
+  --c-theme_dark-green_dark_12\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_15\%: #073213;
+  --c-theme_dark-green_dark_15\%-rgb: 7, 50, 19;
+  --c-theme_dark-green_dark_15\%-c: #dce0e8;
+  --c-theme_dark-green_dark_15\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_18\%: #05250e;
+  --c-theme_dark-green_dark_18\%-rgb: 5, 37, 14;
+  --c-theme_dark-green_dark_18\%-c: #dce0e8;
+  --c-theme_dark-green_dark_18\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_21\%: #031709;
+  --c-theme_dark-green_dark_21\%-rgb: 3, 23, 9;
+  --c-theme_dark-green_dark_21\%-c: #dce0e8;
+  --c-theme_dark-green_dark_21\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_24\%: #010a04;
+  --c-theme_dark-green_dark_24\%-rgb: 1, 10, 4;
+  --c-theme_dark-green_dark_24\%-c: #dce0e8;
+  --c-theme_dark-green_dark_24\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_27\%: black;
+  --c-theme_dark-green_dark_27\%-rgb: 0, 0, 0;
+  --c-theme_dark-green_dark_27\%-c: #dce0e8;
+  --c-theme_dark-green_dark_27\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_30\%: black;
+  --c-theme_dark-green_dark_30\%-rgb: 0, 0, 0;
+  --c-theme_dark-green_dark_30\%-c: #dce0e8;
+  --c-theme_dark-green_dark_30\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_33\%: black;
+  --c-theme_dark-green_dark_33\%-rgb: 0, 0, 0;
+  --c-theme_dark-green_dark_33\%-c: #dce0e8;
+  --c-theme_dark-green_dark_33\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_36\%: black;
+  --c-theme_dark-green_dark_36\%-rgb: 0, 0, 0;
+  --c-theme_dark-green_dark_36\%-c: #dce0e8;
+  --c-theme_dark-green_dark_36\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_dark_39\%: black;
+  --c-theme_dark-green_dark_39\%-rgb: 0, 0, 0;
+  --c-theme_dark-green_dark_39\%-c: #dce0e8;
+  --c-theme_dark-green_dark_39\%-c-rgb: 220, 224, 232;
+  --c-theme_dark-green_base: #11752d;
+  --c-theme_dark-green_base-rgb: 17, 117, 45;
+  --c-theme_dark-green_base-c: #dce0e8;
+  --c-theme_dark-green_base-c-rgb: 220, 224, 232;
   --c-theme_teal_light_3\%: #199fa6;
   --c-theme_teal_light_3\%-rgb: 25, 159, 166;
   --c-theme_teal_light_3\%-c: #4c4f69;
@@ -2281,17 +2389,6 @@
   color: var(--color-error-text);
 }
 
-.ui.commit-header-row .svg.gitea-lock ~ a {
-  color: var(--c-elevation_3);
-}
-
-.ui.sha.isSigned.isVerified:hover .shortsha {
-  color: var(--c-elevation_3);
-}
-.ui.sha.isSigned.isVerified:hover svg.gitea-lock {
-  fill: var(--c-elevation_3);
-}
-
 .ui.basic.modal,
 .ui.basic.modal > .header,
 .ui.inverted.button {
@@ -2320,6 +2417,31 @@ footer .right-links > a {
 footer .ui.dropdown .menu {
   left: -50% !important;
   margin-bottom: 16px !important;
+}
+
+.label.isSigned.isVerified {
+  margin: 0px 0.25em !important;
+  padding: 0;
+  display: inline-flex;
+  gap: 0px;
+  border-radius: 16px;
+  --color-green-badge-bg: none !important;
+  --color-green-badge-hover-bg: rgba(var(--c-theme_dark-green_base-rgb), 0.05) !important;
+  --color-label-text: rgba(var(--c-theme_dark-green_base-rgb), 1) !important;
+  --color-green-badge: rgba(var(--c-theme_dark-green_base-rgb), 1) !important;
+}
+.label.isSigned.isVerified .shortsha {
+  padding: 4px 6px 4px 12px !important;
+}
+.label.isSigned.isVerified .ui.detail.icon.button {
+  padding: 4px 12px 4px 6px !important;
+  margin: 0 !important;
+  background: none !important;
+  border-color: rgba(var(--c-theme_dark-green_base-rgb), 1) !important;
+}
+
+#commits-table {
+  --color-light: transparent !important;
 }
 
 .chroma .code-inner {
