@@ -12,6 +12,10 @@
 
 ![light theme](figs/light.png)
 
+## `auto`
+
+Switches between `dark` and `light` automatically based on the user's system preference.
+
 ## Usage
 
 1. Clone this repo
@@ -20,7 +24,7 @@
 
 ```ini
 [ui]
-THEMES=...,dark,light
+THEMES=...,dark,light,auto
 DEFAULT_THEME=dark # optional
 ```
 
