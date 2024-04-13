@@ -16,6 +16,7 @@
     "devDependencies": {
         "browser-sync": "^2.29.3",
         "chokidar": "^3.5.3",
+        "css-tree": "^2.3.1",
         "eslint": "^8.43.0",
         "fabric": "5.3",
         "imagemin-zopfli": "^7.0.0",

@@ -6,6 +6,7 @@ import { copyTo } from './copy-to.js';
 import { restartService } from './restart-service.js';
 import { extname  } from 'path';
 import browsersync from 'browser-sync';
+import { optimizeCss } from './optimize-css.js';
 
 const logger = new Logger('deploy', 'info', 'brightMagenta');
 
@@ -29,7 +30,7 @@ export async function deploy(srcPath, distPath, serverPath, serviceName, file = 
     }
 
     try {
-        await buildScss(srcPath, distPath);
+        await buildScss(srcPath, distPath).then(() => optimizeCss(distPath));
         await buildFonts(srcPath, distPath);
         // await buildImg(srcPath, distPath);
         await buildTemplates(srcPath, distPath);

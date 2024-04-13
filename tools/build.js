@@ -6,6 +6,7 @@ import { buildImg } from './tasks/img.js';
 import { buildTemplates } from './tasks/templates.js';
 import { Logger } from './utils/logger.js';
 import { buildFonts } from './tasks/fonts.js';
+import { optimizeCss } from './tasks/optimize-css.js';
 const srcPath = join(cwd(), 'src');
 const distPath = join(cwd(), 'dist');
 
@@ -33,7 +34,7 @@ async function build() {
 
     // start building tasks
     await Promise.all([
-        buildScss(srcPath, distPath),
+        buildScss(srcPath, distPath).then(() => optimizeCss(distPath)),
         buildImg(srcPath, distPath),
         buildFonts(srcPath, distPath),
         buildTemplates(srcPath, distPath),
