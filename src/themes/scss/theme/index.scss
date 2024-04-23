@@ -344,15 +344,19 @@
         }
     }
 
-    .label.isSigned.isVerified {
+    .label.isSigned {
         margin: 0px .25em !important;
-        padding: 0;
-        display: inline-flex;
-        gap: 0px;
-        border-radius: 16px;
+        padding: 0 !important;
+        display: inline-flex !important;
+        gap: 0px !important;
+        border-radius: 16px !important;
 
+        --color-light-border: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
+        --color-label-bg: none !important;
+        --color-text: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
         --color-green-badge-bg: none !important;
         --color-green-badge-hover-bg: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 0.05) !important;
+        --color-label-hover-bg: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 0.05) !important;
         --color-label-text: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
         --color-green-badge: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
 
@@ -361,11 +365,17 @@
         }
 
         .ui.detail.icon.button {
-            opacity: 1;
-            padding: 4px 12px 4px 6px !important;
+            opacity: 1 !important;
+            padding: 4px 8px 4px 6px !important;
             margin: 0 !important;
             background: none !important;
             border-color: rgba(#{color.get('theme/dark-green/base', 'rgb')}, 1) !important;
+        }
+
+        &.isVerified {
+            .ui.detail.icon.button {
+                padding: 4px 12px 4px 6px !important;
+            }
         }
     }
 
