@@ -1,0 +1,7 @@
+@mixin apply-styles {
+    .issue-content {
+        img {
+            max-width: 100%;
+        }
+    }
+}

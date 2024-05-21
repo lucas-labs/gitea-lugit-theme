@@ -383,6 +383,24 @@
         --color-light: transparent !important;
     }
 
+    .flex-list {
+        .flex-item {
+            .flex-item-main {
+                gap: var.get('measure/.25x');
+
+                .flex-item-header {
+                    .flex-item-title {
+                        gap: var.get('measure/.5x');
+                    }
+                }
+
+                .flex-item-body:not(:last-child) {
+                    margin-bottom: var.get('measure/1x');
+                }
+            }
+        }
+    }
+
     @include chroma.make-chroma-styles;
     @include codemirror.make-code-mirror-styles;
     @include monaco.make-monaco-styles($is-dark: true);
