@@ -1,6 +1,6 @@
 {
     "name": "@lucas-labs/lugit-theme",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "type": "module",
     "description": "Custom theme for lucaslabs' internal git server",
     "main": "index.js",
