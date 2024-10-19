@@ -58,6 +58,9 @@
         --color-primary-alpha-80: rgba(#{color.get('primary/base', 'rgb')}, 0.8);
         --color-primary-alpha-90: rgba(#{color.get('primary/base', 'rgb')}, 0.9);
 
+
+        --color-primary-hover: #{color.get('primary/light/3%')};
+        --color-primary-active: #{color.get('primary/light/6%')};
         --color-secondary: #{color.get('elevation/5')};
 
         --color-secondary-dark-1: #{color.get('secondary/light/3%')};
@@ -231,13 +234,17 @@
         --color-secondary-bg: #{color.get('elevation/4')};
         --color-text-focus: #{color.get('text')};
         --color-expand-button: #{color.get('elevation/6')};
-        --color-placeholder-text: #{color.get('elevation/6')};
+        --color-placeholder-text: #{color.get('elevation/9')};
         --color-editor-line-highlight: var(--color-primary-light-5);
         --color-project-board-bg: #{color.get('elevation/2')};
         --color-caret: var(--color-text);
         --color-reaction-bg: rgba(#{color.get('text', 'rgb')}, 0.07);
         --color-reaction-active-bg: var(--color-primary-alpha-40);
+        --color-tooltip-text: #{color.get('primary/base')};
+        --color-tooltip-bg: #{color.get('primary/base', 'contrast')};
         --color-nav-bg: #{$lvl2};
+        --color-secondary-nav-bg: #{$lvl2};
+        --color-nav-text: #{color.get('text')};
         --color-nav-hover-bg: #{color.get('elevation/6')};
         --color-label-active-bg: #{color.get('elevation/6')};
         --color-label-text: #{color.get('primary/base', 'contrast')};
@@ -405,6 +412,5 @@
     @include chroma.make-chroma-styles;
     @include codemirror.make-code-mirror-styles;
     @include monaco.make-monaco-styles($is-dark: true);
-
     @include custom.apply-custom-styles;
 }

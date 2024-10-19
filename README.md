@@ -18,8 +18,8 @@ Switches between `dark` and `light` automatically based on the user's system pre
 
 ## Usage
 
-1. Clone this repo
-2. Place the files in the `dist` folder in your `$GITEA_CUSTOM` directory.
+1. Go to the [releases page](https://github.com/lucas-labs/gitea-lugit-theme/releases) and get the latest `gitea-lugit-theme.tar.gz` release file.
+2. Place the `templates` and `public` folder in your `$GITEA_CUSTOM` directory.
 3. Append the themes in your `app.ini` file:
 
 ```ini
@@ -32,14 +32,14 @@ DEFAULT_THEME=dark # optional
 
 4. Restart `gitea`.
 
-> 🗒️ **Note**\
-> Works with `gitea` version `v1.20`.
+> [!NOTE]
+> The latest version works with `gitea` version `v1.22.x`.
 
 ## Credits
 
 - [`catppuccin/gitea`](https://github.com/catppuccin/gitea), these themes are based on them.
 
-## Dev
+## Development
 
 ### build
 ```bash

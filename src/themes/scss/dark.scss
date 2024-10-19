@@ -11,7 +11,7 @@ $colors: (
         'rosewater':  c.variants(#f5e0dc, $is-dark),
         'flamingo':   c.variants(#f2cdcd, $is-dark),
         'pink':       c.variants(#f5c2e7, $is-dark),
-        'mauve':      c.variants($brand, $is-dark),
+        'mauve':      c.variants(#9b6bf5, $is-dark),
         'red':        c.variants(#f38ba8, $is-dark),
         'maroon':     c.variants(#eba0ac, $is-dark),
         'peach':      c.variants(#fab387, $is-dark),
@@ -50,8 +50,9 @@ $colors: (
     $theme: (
         colors: $colors,
         variables: (
+            'small-font-size': 12px,
             'base-font-size': 14px,
-            'font-family': '"Outfit", Inter, Roboto, sans-serif',
+            'font-family': '"Outfit", Inter, Roboto, "Segoe UI", sans-serif',
             'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
             'measure': (
                 '.25x': 4px,

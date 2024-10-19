@@ -2,7 +2,7 @@
 @use '@lucas-labs/lui-micro/color' as color;
 
 @mixin apply-styles {
-    .header-wrapper {
+    .secondary-nav {
         display: flex;
         flex-direction: column;
         margin-bottom: var.get('measure/1x');
@@ -21,40 +21,34 @@
         .ui.tabs.divider {
             margin-bottom: 0;
         }
-        
-        .ui.tabular.menu.navbar {
+
+        overflow-menu {
             .item {
-                --item-margin-bottom: #{var.get('measure/1x')};
-                margin: var(--item-margin-bottom) var.get('measure/.5x');
-                border-radius: var.get('measure/.25x');
-                padding: var.get('measure/.5x') var.get('measure/.5x');
-                color: var(--color-text);
-                border: none;
+                --item-margin-bottom: #{var.get('measure/.5x')} !important;
+                margin: 0 var.get('measure/.5x') var(--item-margin-bottom) !important;
+                border-radius: var.get('measure/.25x') !important;
+                padding: var.get('measure/.5x') var.get('measure/.5x') !important;
+                color: var(--color-text) !important;
+                border: none !important;
+                position: relative; // Make the parent element positioned
 
                 svg {
-                    color: var(--color-text-light-3);
-                    margin-right: var.get('measure/.5x');
+                    color: var(--color-text-light-3) !important;
+                    margin-right: var.get('measure/.5x') !important;
+                }
+
+                &:hover {
+                    background-color: color.get('elevation/4') !important;
                 }
 
                 &.active {
-                    background-color: transparent;
-                    color: var(--color-text);
-                    border-radius: var.get('measure/.25x') !important;
-                    font-weight: normal;
-                    // border-bottom: 4px solid color.get('primary/base');;
-
-                    &::after {
-                        background: color.get('primary/base');
-                        border-radius: 6px;
-                        bottom: calc(0px - var(--item-margin-bottom));
-                        content: "";
-                        height: 2px;
-                        position: absolute;
-                        right: 50%;
-                        transform: translate(50%, -50%);
-                        width: 100%;
-                        z-index: 1;
-                    }
+                    background-color: transparent !important;
+                    color: var(--color-text) !important;
+                    border-radius: 0 !important;
+                    // font-weight: normal !important;
+                    border-bottom: calc(var(--item-margin-bottom) - 1px) solid var(--color-secondary-nav-bg) !important;
+                    margin-bottom: 1px !important;
+                    box-shadow: 0px 2px 0px 0px color.get('primary/base') !important;
                 }
 
                 .small.label {
@@ -69,11 +63,7 @@
                     align-items: center;
                     justify-content: center;
                 }
-
-                &:hover {
-                    background-color: color.get('elevation/4');
-                }
             }
         }
-    }    
+    }
 }

@@ -50,8 +50,9 @@ $colors: (
     $theme: (
         colors: $colors,
         variables: (
+            'small-font-size': 12px,
             'base-font-size': 14px,
-            'font-family': '"Outfit", Inter, Roboto, sans-serif',
+            'font-family': '"Outfit", Inter, Roboto, "Segoe UI", sans-serif',
             'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
             'measure': (
                 '.25x': 4px,
