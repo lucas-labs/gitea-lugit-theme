@@ -8,15 +8,15 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm ci
       - run: npm run build
       - name: Create tarball
-        run: tar czf catppuccin-gitea.tar.gz --directory=./dist .
+        run: tar czf gitea-lugit-theme.tar.gz --directory=./dist .
       - name: Add zips to release
         uses: softprops/action-gh-release@v1
         with:
-          files: ./lugit-theme.tar.gz
+          files: ./gitea-lugit-theme.tar.gz
