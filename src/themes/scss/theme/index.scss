@@ -188,6 +188,7 @@
         --color-orange-badge-hover-bg: #{color.get('theme/peach/light/6%')};
         --color-git: #{color.get('theme/peach/base')};
         --color-label-bg: #{color.get('primary/base')};
+        --color-label-hover-bg: #{color.get('primary/light/6%')};
 
         /* target-based colors */
         --color-body: #{$lvl1};
