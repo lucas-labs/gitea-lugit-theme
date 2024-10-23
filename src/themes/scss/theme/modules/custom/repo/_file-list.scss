@@ -148,6 +148,47 @@
             display: flex;
             flex-direction: column;
             row-gap: var.get('measure/1x');
+            flex: 1;
+        }
+
+        #repo-files-table {
+            .commit-list {
+                .latest-commit {
+                    gap: var.get('measure/.5x');
+                }
+
+                .isSigned, .isVerified {
+                    padding: 0 !important;
+                    border: none !important;
+                    .shortsha {
+                        display: none;
+                    }
+
+                    .detail {
+                        border-left: none !important;
+                        padding: 0 !important;
+                        margin: 0 !important;
+
+                        div {
+                            display: block;
+                            padding: 0 !important;
+                            margin: 0 !important;
+
+                            svg {
+                                margin: 0 !important;
+                            }
+                        }
+                    }
+
+                    .avatar {
+                        display: none;
+                    }
+                }
+
+                .commit-summary {
+                    color: var(--color-text-light-2) !important
+                }
+            }
         }
 
         #topic_edit {

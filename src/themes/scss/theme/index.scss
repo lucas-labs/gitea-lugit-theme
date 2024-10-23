@@ -278,6 +278,15 @@
             filter: invert(100%) hue-rotate(180deg);
         }
     }
+    
+    @media (prefers-color-scheme: dark) {
+        input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover, input:-webkit-autofill:active, .ui.form .field.field input:-webkit-autofill, .ui.form .field.field input:-webkit-autofill:focus, .ui.form .field.field input:-webkit-autofill:hover, .ui.form .field.field input:-webkit-autofill:active {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: var(--color-secondary);
+            box-shadow: 0 0 0 100px var(--color-primary-light-3) inset !important;
+            border-color: var(--color-primary-light-3) !important;
+        }        
+    }
 
     .ui.ui.ui.button:not(.inverted, .basic),
     .ui.ui.ui.label:not(.inverted, .basic) {
