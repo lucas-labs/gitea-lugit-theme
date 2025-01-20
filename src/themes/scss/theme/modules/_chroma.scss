@@ -1,0 +1,304 @@
+@use '@lucas-labs/lui-micro/color' as color;
+@use '@lucas-labs/lui-micro/var' as var;
+
+
+@mixin chroma {
+    .chroma .code-inner{
+        font: 14px var.get('code-font-family');
+    }
+
+    /* NameBuiltinPseudo */
+    .chroma .bp {
+        color: color.get('palette/orange/base');
+    }
+    /* Comment */
+    .chroma .c {
+        color: color.get('elevated/7');
+    }
+    /* CommentSingle */
+    .chroma .c1 {
+        color: color.get('elevated/7');
+    }
+    /* CommentHashbang */
+    .chroma .ch {
+        color: color.get('elevated/7');
+    }
+    /* CommentMultiline */
+    .chroma .cm {
+        color: color.get('elevated/7');
+    }
+    /* CommentPreproc */
+    .chroma .cp {
+        color: color.get('palette/blue/base');
+    }
+    /* CommentPreprocFile */
+    .chroma .cpf {
+        color: color.get('palette/blue/base');
+    }
+    /* CommentSpecial */
+    .chroma .cs {
+        color: color.get('elevated/7');
+    }
+    /* LiteralStringDelimiter */
+    .chroma .dl {
+        color: color.get('palette/blue/base');
+    }
+    /* NameFunctionMagic */
+    .chroma .fm {
+    }
+    /* Generic */
+    .chroma .g {
+    }
+    /* GenericDeleted */
+    .chroma .gd {
+        color: color.get('theme');
+        background-color: rgba(#{color.get('palette/red/base', 'rgb')}, 0.15);
+    }
+    /* GenericEmph */
+    .chroma .ge {
+        font-style: italic;
+    }
+    /* GenericHeading */
+    .chroma .gh {
+        color: color.get('palette/teal/base');
+    }
+    /* GenericInserted */
+    .chroma .gi {
+        color: color.get('theme');
+        background-color: rgba(#{color.get('palette/green/base', 'rgb')}, 0.15);
+    }
+    /* GenericUnderline */
+    .chroma .gl {
+    }
+    /* GenericOutput */
+    .chroma .go {
+        color: color.get('palette/orange/base');
+    }
+    /* GenericPrompt */
+    .chroma .gp {
+        color: color.get('elevated/7');
+        font-weight: bold;
+    }
+    /* GenericError */
+    .chroma .gr {
+        color: color.get('palette/brown/base');
+    }
+    /* GenericStrong */
+    .chroma .gs {
+        font-weight: bold;
+    }
+    /* GenericTraceback */
+    .chroma .gt {
+        color: color.get('palette/brown/base');
+    }
+    /* GenericSubheading */
+    .chroma .gu {
+        color: color.get('palette/teal/base');
+    }
+    /* LiteralNumberIntegerLong */
+    .chroma .il {
+        color: color.get('palette/orange/base');
+    }
+    /* Keyword */
+    .chroma .k {
+        color: color.get('palette/purple/base');
+    }
+    /* KeywordConstant */
+    .chroma .kc {
+        color: color.get('palette/yellow/base');
+    }
+    /* KeywordDeclaration */
+    .chroma .kd {
+        color: color.get('palette/purple/base');
+    }
+    /* KeywordNamespace */
+    .chroma .kn {
+        color: color.get('palette/yellow/base');
+    }
+    /* KeywordPseudo */
+    .chroma .kp {
+        color: color.get('palette/purple/base');
+        font-weight: bold;
+    }
+    /* KeywordReserved */
+    .chroma .kr {
+        color: color.get('palette/purple/base');
+    }
+    /* KeywordType */
+    .chroma .kt {
+        color: color.get('palette/yellow/base');
+    }
+    /* Literal */
+    .chroma .l {
+    }
+    /* LiteralDate */
+    .chroma .ld {
+    }
+    /* LiteralNumber */
+    .chroma .m {
+        color: color.get('palette/orange/base');
+    }
+    /* LiteralNumberBin */
+    .chroma .mb {
+        color: color.get('palette/orange/base');
+    }
+    /* LiteralNumberFloat */
+    .chroma .mf {
+        color: color.get('palette/orange/base');
+    }
+    /* LiteralNumberHex */
+    .chroma .mh {
+        color: color.get('palette/orange/base');
+    }
+    /* LiteralNumberInteger */
+    .chroma .mi {
+        color: color.get('palette/orange/base');
+    }
+    /* LiteralNumberOct */
+    .chroma .mo {
+        color: color.get('palette/orange/base');
+    }
+    /* Name */
+    .chroma .n {
+        color: color.get('palette/violet/base');
+    }
+    /* NameAttribute */
+    .chroma .na {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameBuiltin */
+    .chroma .nb {
+        color: color.get('palette/orange/base');
+    }
+    /* NameClass */
+    .chroma .nc {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameDecorator */
+    .chroma .nd {
+        color: color.get('palette/pink/base');
+    }
+    /* NameException */
+    .chroma .ne {
+        color: color.get('palette/brown/base');
+    }
+    /* NameFunction */
+    .chroma .nf {
+        color: color.get('palette/blue/base');
+    }
+    /* NameEntity */
+    .chroma .ni {
+        color: color.get('palette/pink/base');
+    }
+    /* NameLabel */
+    .chroma .nl {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameNamespace */
+    .chroma .nn {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameConstant */
+    .chroma .no {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameTag */
+    .chroma .nt {
+        color: color.get('palette/purple/base');
+    }
+    /* NameVariable */
+    .chroma .nv {
+        color: color.get('palette/orange/base');
+    }
+    /* NameOther */
+    .chroma .nx {
+        color: color.get('palette/orange/base');
+    }
+    /* Operator */
+    .chroma .o {
+        color: color.get('palette/teal/base');
+    }
+    /* OperatorWord */
+    .chroma .ow {
+        color: color.get('palette/teal/base');
+        font-weight: bold;
+    }
+    /* Punctuation */
+    .chroma .p {
+        color: color.get('elevated/9');
+    }
+    /* NameProperty */
+    .chroma .py {
+    }
+    /* LiteralString */
+    .chroma .s {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringSingle */
+    .chroma .s1 {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringDouble */
+    .chroma .s2 {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringAffix */
+    .chroma .sa {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringBacktick */
+    .chroma .sb {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringChar */
+    .chroma .sc {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringDoc */
+    .chroma .sd {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringEscape */
+    .chroma .se {
+        color: color.get('palette/blue/base');
+    }
+    /* LiteralStringHeredoc */
+    .chroma .sh {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringInterpol */
+    .chroma .si {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringRegex */
+    .chroma .sr {
+        color: color.get('palette/blue/base');
+    }
+    /* LiteralStringSymbol */
+    .chroma .ss {
+        color: color.get('palette/green/base');
+    }
+    /* LiteralStringOther */
+    .chroma .sx {
+        color: color.get('palette/green/base');
+    }
+    /* NameVariableClass */
+    .chroma .vc {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameVariableGlobal */
+    .chroma .vg {
+        color: color.get('palette/orange/base');
+    }
+    /* NameVariableInstance */
+    .chroma .vi {
+        color: color.get('palette/yellow/base');
+    }
+    /* NameVariableMagic */
+    .chroma .vm {
+    }
+    /* TextWhitespace */
+    .chroma .w {
+        color: color.get('elevated/4');
+    }
+}

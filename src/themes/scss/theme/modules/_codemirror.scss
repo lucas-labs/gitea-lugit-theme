@@ -1,0 +1,95 @@
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin codemirror {
+    .CodeMirror,
+    .CodeMirror.cm-s-default,
+    .CodeMirror.cm-s-paper {
+        .cm-property {
+            color: color.get('text')
+        }
+
+        .cm-header {
+            color: color.get('text')
+        }
+
+        .cm-quote {
+            color: color.get('palette/green/base')
+        }
+
+        .cm-keyword {
+            color: color.get('palette/purple/base');
+        }
+
+        .cm-atom {
+            color: color.get('palette/red/base');
+        }
+
+        .cm-number {
+            color: color.get('palette/orange/base');
+        }
+
+        .cm-def {
+            color: color.get('text')
+        }
+
+        .cm-variable-2 {
+            color: color.get('palette/blue/base');
+        }
+
+        .cm-variable-3 {
+            color: color.get('palette/teal/base');
+        }
+
+        .cm-comment {
+            color: color.get('elevation/6')
+        }
+
+        .cm-string {
+            color: color.get('palette/green/base')
+        }
+
+        .cm-string-2 {
+            color: color.get('palette/green/base')
+        }
+
+        .cm-meta {
+            color: color.get('palette/orange/base');
+        }
+
+        .cm-qualifier {
+            color: color.get('palette/orange/base');
+        }
+
+        .cm-builtin {
+            color: color.get('palette/orange/base');
+        }
+
+        .cm-bracket {
+            color: color.get('text')
+        }
+
+        .cm-tag {
+            color: color.get('palette/yellow/base');
+        }
+
+        .cm-attribute {
+            color: color.get('palette/yellow/base');
+        }
+
+        .cm-hr {
+            color: color.get('elevation/9');
+        }
+
+        .cm-url {
+            color: color.get('palette/blue/base');
+        }
+
+        .cm-link {
+            color: color.get('palette/blue/base');
+        }
+
+        .cm-error {
+            color: color.get('palette/red/base');
+        }
+    }
+}
