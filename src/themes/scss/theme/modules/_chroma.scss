@@ -1,304 +1,100 @@
 @use '@lucas-labs/lui-micro/color' as color;
 @use '@lucas-labs/lui-micro/var' as var;
 
+@mixin chroma($dark: false) {
+    $orange:      if($dark, 'palette/orange/base', 'palette/orange/dark/15%');
+    $blue:        if($dark, 'palette/blue/base', 'palette/blue/dark/15%');
+    $fg:          'text';
+    $subtle:      'subtle';
+    $more-subtle: if($dark, 'elevation/8', 'elevation/8');
+    $brown:       if($dark, 'palette/brown/base', 'palette/brown/dark/15%');
+    $red:         if($dark, 'palette/red/base', 'palette/red/dark/15%');
+    $green:       if($dark, 'palette/green/base', 'palette/green/dark/10%');
+    $teal:        if($dark, 'palette/teal/base', 'palette/teal/dark/15%');
+    $purple:      if($dark, 'palette/purple/base', 'palette/purple/dark/10%');
+    $yellow:      if($dark, 'palette/yellow/base', 'palette/yellow/dark/25%');
+    $violet:      if($dark, 'palette/violet/base', 'palette/violet/dark/50%');
+    $pink:        if($dark, 'palette/pink/base', 'palette/pink/dark/25%');
+    $blwh:        if($dark, 'palette/white/base', 'palette/black/base');
 
-@mixin chroma {
-    .chroma .code-inner{
-        font: 14px var.get('code-font-family');
-    }
+    .chroma {
+        .code-inner {
+            font: 14px var.get('code-font-family');
+        }
 
-    /* NameBuiltinPseudo */
-    .chroma .bp {
-        color: color.get('palette/orange/base');
-    }
-    /* Comment */
-    .chroma .c {
-        color: color.get('elevated/7');
-    }
-    /* CommentSingle */
-    .chroma .c1 {
-        color: color.get('elevated/7');
-    }
-    /* CommentHashbang */
-    .chroma .ch {
-        color: color.get('elevated/7');
-    }
-    /* CommentMultiline */
-    .chroma .cm {
-        color: color.get('elevated/7');
-    }
-    /* CommentPreproc */
-    .chroma .cp {
-        color: color.get('palette/blue/base');
-    }
-    /* CommentPreprocFile */
-    .chroma .cpf {
-        color: color.get('palette/blue/base');
-    }
-    /* CommentSpecial */
-    .chroma .cs {
-        color: color.get('elevated/7');
-    }
-    /* LiteralStringDelimiter */
-    .chroma .dl {
-        color: color.get('palette/blue/base');
-    }
-    /* NameFunctionMagic */
-    .chroma .fm {
-    }
-    /* Generic */
-    .chroma .g {
-    }
-    /* GenericDeleted */
-    .chroma .gd {
-        color: color.get('theme');
-        background-color: rgba(#{color.get('palette/red/base', 'rgb')}, 0.15);
-    }
-    /* GenericEmph */
-    .chroma .ge {
-        font-style: italic;
-    }
-    /* GenericHeading */
-    .chroma .gh {
-        color: color.get('palette/teal/base');
-    }
-    /* GenericInserted */
-    .chroma .gi {
-        color: color.get('theme');
-        background-color: rgba(#{color.get('palette/green/base', 'rgb')}, 0.15);
-    }
-    /* GenericUnderline */
-    .chroma .gl {
-    }
-    /* GenericOutput */
-    .chroma .go {
-        color: color.get('palette/orange/base');
-    }
-    /* GenericPrompt */
-    .chroma .gp {
-        color: color.get('elevated/7');
-        font-weight: bold;
-    }
-    /* GenericError */
-    .chroma .gr {
-        color: color.get('palette/brown/base');
-    }
-    /* GenericStrong */
-    .chroma .gs {
-        font-weight: bold;
-    }
-    /* GenericTraceback */
-    .chroma .gt {
-        color: color.get('palette/brown/base');
-    }
-    /* GenericSubheading */
-    .chroma .gu {
-        color: color.get('palette/teal/base');
-    }
-    /* LiteralNumberIntegerLong */
-    .chroma .il {
-        color: color.get('palette/orange/base');
-    }
-    /* Keyword */
-    .chroma .k {
-        color: color.get('palette/purple/base');
-    }
-    /* KeywordConstant */
-    .chroma .kc {
-        color: color.get('palette/yellow/base');
-    }
-    /* KeywordDeclaration */
-    .chroma .kd {
-        color: color.get('palette/purple/base');
-    }
-    /* KeywordNamespace */
-    .chroma .kn {
-        color: color.get('palette/yellow/base');
-    }
-    /* KeywordPseudo */
-    .chroma .kp {
-        color: color.get('palette/purple/base');
-        font-weight: bold;
-    }
-    /* KeywordReserved */
-    .chroma .kr {
-        color: color.get('palette/purple/base');
-    }
-    /* KeywordType */
-    .chroma .kt {
-        color: color.get('palette/yellow/base');
-    }
-    /* Literal */
-    .chroma .l {
-    }
-    /* LiteralDate */
-    .chroma .ld {
-    }
-    /* LiteralNumber */
-    .chroma .m {
-        color: color.get('palette/orange/base');
-    }
-    /* LiteralNumberBin */
-    .chroma .mb {
-        color: color.get('palette/orange/base');
-    }
-    /* LiteralNumberFloat */
-    .chroma .mf {
-        color: color.get('palette/orange/base');
-    }
-    /* LiteralNumberHex */
-    .chroma .mh {
-        color: color.get('palette/orange/base');
-    }
-    /* LiteralNumberInteger */
-    .chroma .mi {
-        color: color.get('palette/orange/base');
-    }
-    /* LiteralNumberOct */
-    .chroma .mo {
-        color: color.get('palette/orange/base');
-    }
-    /* Name */
-    .chroma .n {
-        color: color.get('palette/violet/base');
-    }
-    /* NameAttribute */
-    .chroma .na {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameBuiltin */
-    .chroma .nb {
-        color: color.get('palette/orange/base');
-    }
-    /* NameClass */
-    .chroma .nc {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameDecorator */
-    .chroma .nd {
-        color: color.get('palette/pink/base');
-    }
-    /* NameException */
-    .chroma .ne {
-        color: color.get('palette/brown/base');
-    }
-    /* NameFunction */
-    .chroma .nf {
-        color: color.get('palette/blue/base');
-    }
-    /* NameEntity */
-    .chroma .ni {
-        color: color.get('palette/pink/base');
-    }
-    /* NameLabel */
-    .chroma .nl {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameNamespace */
-    .chroma .nn {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameConstant */
-    .chroma .no {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameTag */
-    .chroma .nt {
-        color: color.get('palette/purple/base');
-    }
-    /* NameVariable */
-    .chroma .nv {
-        color: color.get('palette/orange/base');
-    }
-    /* NameOther */
-    .chroma .nx {
-        color: color.get('palette/orange/base');
-    }
-    /* Operator */
-    .chroma .o {
-        color: color.get('palette/teal/base');
-    }
-    /* OperatorWord */
-    .chroma .ow {
-        color: color.get('palette/teal/base');
-        font-weight: bold;
-    }
-    /* Punctuation */
-    .chroma .p {
-        color: color.get('elevated/9');
-    }
-    /* NameProperty */
-    .chroma .py {
-    }
-    /* LiteralString */
-    .chroma .s {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringSingle */
-    .chroma .s1 {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringDouble */
-    .chroma .s2 {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringAffix */
-    .chroma .sa {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringBacktick */
-    .chroma .sb {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringChar */
-    .chroma .sc {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringDoc */
-    .chroma .sd {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringEscape */
-    .chroma .se {
-        color: color.get('palette/blue/base');
-    }
-    /* LiteralStringHeredoc */
-    .chroma .sh {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringInterpol */
-    .chroma .si {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringRegex */
-    .chroma .sr {
-        color: color.get('palette/blue/base');
-    }
-    /* LiteralStringSymbol */
-    .chroma .ss {
-        color: color.get('palette/green/base');
-    }
-    /* LiteralStringOther */
-    .chroma .sx {
-        color: color.get('palette/green/base');
-    }
-    /* NameVariableClass */
-    .chroma .vc {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameVariableGlobal */
-    .chroma .vg {
-        color: color.get('palette/orange/base');
-    }
-    /* NameVariableInstance */
-    .chroma .vi {
-        color: color.get('palette/yellow/base');
-    }
-    /* NameVariableMagic */
-    .chroma .vm {
-    }
-    /* TextWhitespace */
-    .chroma .w {
-        color: color.get('elevated/4');
+        .bp { color: color.get($orange); font-weight: 600;} // NameBuiltinPseudo
+        .c { color: color.get($subtle); font-style: italic; } // Comment 
+        .c1 { color: color.get($subtle); font-style: italic; } // CommentSingle
+        .ch { color: color.get($subtle); font-style: italic; } // CommentHashbang
+        .cm { color: color.get($subtle); font-style: italic; } // CommentMultiline
+        .cp { color: color.get($blue); } // CommentPreproc
+        .cpf { color: color.get($blue); } // CommentPreprocFile
+        .cs { color: color.get($subtle); } // CommentSpecial
+        .dl { color: color.get($blue); } // LiteralStringDelimiter
+        .fm {} // NameFunctionMagic
+        .g {} // Generic
+        .gd { color: color.get($blwh); background-color: rgba(#{color.get($red, 'rgb')}, .25); } // GenericDeleted
+        .ge { font-style: italic; } // GenericEmph
+        .gh { color: color.get($teal); } // GenericHeading
+        .gi { color: color.get($blwh); background-color: rgba(#{color.get($green, 'rgb')}, 0.3); } // GenericInserted
+        .gl {} // GenericUnderline
+        .go { color: color.get($orange); } // GenericOutput
+        .gp { color: color.get($subtle); font-weight: bold; } // GenericPrompt
+        .gr { color: color.get($brown); } // GenericError
+        .gs { font-weight: bold; } // GenericStrong
+        .gt { color: color.get($brown); } // GenericTraceback
+        .gu { color: color.get($teal); } // GenericSubheading
+        .il { color: color.get($orange); } // LiteralNumberIntegerLong
+        .k { color: color.get($purple); font-weight: 600; } // Keyword
+        .kc { color: color.get($yellow); } // KeywordConstant
+        .kd { color: color.get($purple); font-weight: 600; } // KeywordDeclaration
+        .kn { color: color.get($yellow); } // KeywordNamespace
+        .kp { color: color.get($purple); font-weight: 600; } // KeywordPseudo
+        .kr { color: color.get($purple); font-weight: 600;} // KeywordReserved
+        .kt { color: color.get($yellow); } // KeywordType
+        .l {} // Literal
+        .ld {} // LiteralDate
+        .m { color: color.get($orange); } // LiteralNumber
+        .mb { color: color.get($orange); } // LiteralNumberBin
+        .mf { color: color.get($orange); } // LiteralNumberFloat
+        .mh { color: color.get($orange); } // LiteralNumberHex
+        .mi { color: color.get($orange); } // LiteralNumberInteger
+        .mo { color: color.get($orange); } // LiteralNumberOct
+        .n { color: color.get($violet); } // Name
+        .na { color: color.get($yellow); } // NameAttribute
+        .nb { color: color.get($orange); font-weight: 600; } // NameBuiltin
+        .nc { color: color.get($pink); } // NameClass
+        .nd { color: color.get($pink); } // NameDecorator
+        .ne { color: color.get($brown); } // NameException
+        .nf { color: color.get($blue); } // NameFunction
+        .ni { color: color.get($pink); } // NameEntity
+        .nl { color: color.get($yellow); } // NameLabel
+        .nn { color: color.get($yellow); } // NameNamespace
+        .no { color: color.get($yellow); } // NameConstant
+        .nt { color: color.get($purple); } // NameTag
+        .nv { color: color.get($orange); } // NameVariable
+        .nx { color: color.get($orange); } // NameOther
+        .o { color: color.get($teal); } // Operator
+        .ow { color: color.get($teal); font-weight: bold; } // OperatorWord
+        .p { color: color.get($subtle); } // Punctuation
+        .py {} // NameProperty
+        .s { color: color.get($green); } // LiteralString
+        .s1 { color: color.get($green); } // LiteralStringSingle
+        .s2 { color: color.get($green); } // LiteralStringDouble
+        .sa { color: color.get($green); } // LiteralStringAffix
+        .sb { color: color.get($green); } // LiteralStringBacktick
+        .sc { color: color.get($green); } // LiteralStringChar
+        .sd { color: color.get($green); } // LiteralStringDoc
+        .se { color: color.get($blue); } // LiteralStringEscape
+        .sh { color: color.get($green); } // LiteralStringHeredoc
+        .si { color: color.get($green); } // LiteralStringInterpol
+        .sr { color: color.get($blue); } // LiteralStringRegex
+        .ss { color: color.get($green); } // LiteralStringSymbol
+        .sx { color: color.get($green); } // LiteralStringOther
+        .vc { color: color.get($yellow); } // NameVariableClass
+        .vg { color: color.get($orange); } // NameVariableGlobal
+        .vi { color: color.get($yellow); } // NameVariableInstance
+        .vm {} // NameVariableMagic
+        .w { color: color.get($more-subtle); } // TextWhitespace    
     }
 }

@@ -7,15 +7,15 @@ $brand: #6296e2;
 
 $colors: (
     primary: c.variants($brand),    
-    secondary: c.variants(#999cc5),
-    text: #4c4f69,
-    subtle: #6c6f85, // same as elevation/10
+    secondary: c.variants(#bcc0cc),
+    text: #484b60,
+    subtle: #656c90, // same as elevation/10
     palette: (
         'red':        c.variants(#d20f39), // red
         'orange':     c.variants(#fe640b), // peach
         'yellow':     c.variants(#df8e1d), // yellow
         'olive':      c.variants(#e2f095),
-        'green':      c.variants(#11752d), // green
+        'green':      c.variants(#34ac56), // green
         'teal':       c.variants(#179299), // teal
         'blue':       c.variants(#1e66f5), // blue
         'violet':     c.variants(#7287fd), // lavender
@@ -26,18 +26,18 @@ $colors: (
         'white':      c.variants(#e6edf3), // white
     ),
     elevation: (
-        '1': #dce0e8,  // elevation/1
-        '2': #e6e9ef,  // elevation/2
-        '3': #eff1f5,  // elevation/3
-        '4': #dcdfe7,  // elevation/4
-        '5': #bcc0cc,  // elevation/5
-        '6': #acb0be,  // elevation/6
-        '7': #9ca0b0,  // elevation/7
-        '8': #8c8fa1,  // elevation/8
-        '9': #7c7f93,  // elevation/9
-        '10': #6c6f85, // elevation/10
-        '11': #5c5f77, // elevation/11
-        '12': #4c4f69, // elevation/12
+        '1':  #fcfcfd,  // elevation/1
+        '2':  #f6f7f9,  // elevation/2
+        '3':  #eff1f5,  // elevation/3
+        '4':  #e6e9ef,  // elevation/4
+        '5':  #d7dce6,  // elevation/5
+        '6':  #bcc0cc,  // elevation/6
+        '7':  #9ba7bf,  // elevation/7
+        '8':  #838fae,  // elevation/8
+        '9':  #717a9f,  // elevation/9
+        '10': #656c90, // elevation/10
+        '11': #565b77, // elevation/11
+        '12': #484b60, // elevation/12
     )
 );
 

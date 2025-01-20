@@ -37,7 +37,7 @@
     .timeline-item {
         &.comment {
             .content {
-                background-color: transparent !important;
+                background-color: var(--color-box-body);
 
                 >.comment-header, >.ui.segment {
                     &:before, &:after {
@@ -70,8 +70,6 @@
                         }
                     }
                 }
-
-                
             }
 
             // comment form at the end

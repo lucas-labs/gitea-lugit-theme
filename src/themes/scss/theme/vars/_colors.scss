@@ -140,7 +140,7 @@
         --color-pink-light:   #{color.get('palette/pink/light/10%')};
         --color-brown-light:  #{color.get('palette/brown/light/10%')};
         --color-black-light:  #{if(
-                is-dark,
+                $is-dark,
                 color.get('palette/black/light/10%'),
                 color.get('palette/white/light/10%')
             )};
@@ -160,7 +160,7 @@
         --color-pink-dark-1:   #{color.get('palette/pink/dark/10%')};
         --color-brown-dark-1:  #{color.get('palette/brown/dark/10%')};
         --color-black-dark-1:  #{if(
-                is-dark,
+                $is-dark,
                 color.get('palette/black/dark/10%'),
                 color.get('palette/white/dark/10%')
             )};
@@ -180,7 +180,7 @@
         --color-pink-dark-2:   #{color.get('palette/pink/dark/20%')};
         --color-brown-dark-2:  #{color.get('palette/brown/dark/20%')};
         --color-black-dark-2:  #{if(
-                is-dark,
+                $is-dark,
                 color.get('palette/black/dark/20%'),
                 color.get('palette/white/dark/20%')
             )};  
@@ -211,23 +211,23 @@
         --color-grey:       #{color.get('elevation/9')};
         --color-grey-light: #{color.get('elevation/11')};
         --color-gold:       #{color.get('palette/yellow/dark/20%')};
-        --color-white:      #{if(is-dark, color.get('palette/black/base'), color.get('palette/white/base'))}; 
+        --color-white:      #{if($is-dark, color.get('palette/black/base'), color.get('palette/white/base'))}; 
         --color-git:        #f05133;
 
         // ┌──────┐
         // │ diff │
         // └──────┘
-        --color-diff-added-linenum-bg:   #{color.get('palette/teal/dark/50%')};
-        --color-diff-added-row-bg:       #{color.get('palette/teal/dark/60%')};
-        --color-diff-added-row-border:   #{color.get('palette/teal/dark/40%')};;
-        --color-diff-added-word-bg:      #{color.get('palette/teal/dark/50%')};
-        --color-diff-moved-row-bg:       #{color.get('palette/yellow/dark/75%')};
-        --color-diff-moved-row-border:   #{color.get('palette/yellow/dark/65%')};
-        --color-diff-removed-linenum-bg: #{color.get('palette/red/dark/60%')};
-        --color-diff-removed-row-bg:     #{color.get('palette/red/dark/65%')};
-        --color-diff-removed-row-border: #{color.get('palette/red/dark/50%')};;
-        --color-diff-removed-word-bg:    #{color.get('palette/red/dark/55%')};
-        --color-diff-inactive:           #{color.get('elevation/6')};
+        --color-diff-added-linenum-bg:   #{if($is-dark, #{color.get('palette/teal/dark/50%')}, rgba(#{color.get('palette/white/base', 'rgb')}, .2))};
+        --color-diff-added-row-bg:       #{if($is-dark, #{color.get('palette/teal/dark/60%')}, rgba(#{color.get('palette/green/light/20%', 'rgb')}, .25))};
+        --color-diff-added-row-border:   #{if($is-dark, #{color.get('palette/teal/dark/40%')}, rgba(#{color.get('palette/green/light/25%', 'rgb')}, .25))};
+        --color-diff-added-word-bg:      #{if($is-dark, #{color.get('palette/teal/dark/50%')}, rgba(#{color.get('palette/green/light/6%', 'rgb')}, .3))};
+        --color-diff-moved-row-bg:       #{if($is-dark, #{color.get('palette/yellow/dark/75%')}, rgba(#{color.get('palette/yellow/light/20%', 'rgb')}, .25))};
+        --color-diff-moved-row-border:   #{if($is-dark, #{color.get('palette/yellow/dark/65%')}, rgba(#{color.get('palette/yellow/light/25%', 'rgb')}, .25))};
+        --color-diff-removed-linenum-bg: #{if($is-dark, #{color.get('palette/red/dark/60%')}, rgba(#{color.get('palette/white/base', 'rgb')}, .2))};
+        --color-diff-removed-row-bg:     #{if($is-dark, #{color.get('palette/red/dark/65%')}, rgba(#{color.get('palette/red/light/30%', 'rgb')}, .15))};
+        --color-diff-removed-row-border: #{if($is-dark, #{color.get('palette/red/dark/50%')}, rgba(#{color.get('palette/red/light/35%', 'rgb')}, .2))};
+        --color-diff-removed-word-bg:    #{if($is-dark, #{color.get('palette/red/dark/55%')}, rgba(#{color.get('palette/red/light/25%', 'rgb')}, .2))};
+        --color-diff-inactive:           #{if($is-dark, #{color.get('elevation/6')}, red)};
 
         // ┌────────┐
         // │ status │
@@ -279,12 +279,12 @@
         --color-text-light-2: #{color.get('subtle')};
         --color-text-light-3: #{color.get('subtle')};
         --color-footer:       rgba(#{color.get('elevation/2', 'rgb')}, 0.2);
-        --color-timeline:     #{color.get('elevation/4')};
+        --color-timeline:     #{color.get('elevation/5')};
 
         // box
         --color-box-header:         #{rgba(color.get('elevation/4', 'rgb'), 1)};
         --color-box-body:           #{color.get('elevation/3')};
-        --color-box-body-highlight: #1e2226;
+        --color-box-body-highlight: #{color.get('elevation/4')};
         
         // input
         --color-input-text:              var(--color-text-dark);
@@ -303,8 +303,8 @@
         --color-menu: #{color.get('elevation/4')};
         --color-card: #{color.get('elevation/4')};
         --color-markup-table-row: rgba(#{color.get('text', 'rgb')}, 0.02);
-        --color-markup-code-block: #{color.get('elevation/5')};
-        --color-markup-code-inline: #{color.get('elevation/5')};
+        --color-markup-code-block: #{color.get('elevation/4')};
+        --color-markup-code-inline: #{color.get('elevation/4')};
         --color-button: #{color.get('elevation/4')};
         --color-code-bg: #{color.get('elevation/3')};
         --color-shadow: rgba(#{color.get('elevation/1', 'rgb')}, 0.5);
