@@ -1,0 +1,133 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use '../../components/button' as button;
+@use './issue-sidebar';
+
+@mixin apply-styles {
+    .issue-content-right {
+        @include issue-sidebar.sidebar;
+    }
+
+    .issue-title-header {
+        margin-bottom: var.get('measure/1.5x');
+        padding-bottom: var.get('measure/.75x');
+        border-bottom: 1px solid color.get('elevation/5');
+
+        .issue-title {
+            .index {
+                font-weight: 300;
+            }
+        }
+
+        .issue-title-meta {
+            color: color.get('subtle');
+        }
+    }
+
+    .issue-content {
+        column-gap: var.get('measure/1.5x');
+    }
+
+    .issue-content-left {
+        .timeline-avatar img {
+            border-radius: 50% !important;
+        }   
+    }
+
+    .timeline-item {
+        &.comment {
+            .content {
+                background-color: transparent !important;
+
+                >.comment-header, >.ui.segment {
+                    &:before, &:after {
+                        display: none;
+                    }
+                }
+
+                .comment-header {
+                    padding: var.get('measure/.25x') var.get('measure/.25x') var.get('measure/.25x') var.get('measure/1x') !important;
+
+                    .comment-header-left {
+                        .text {
+                            color: color.get('subtle') !important;
+
+                            .author {
+                                color: color.get('text') !important;
+                            }
+                        }
+                    }
+
+                    .comment-header-right {
+                        * {
+                            color: color.get('subtle') !important;
+                        }
+                        
+                        .label {
+                            height: var.get('measure/1.25x', 1.25rem) !important;
+                            padding: 0px var.get('measure/.375x') !important;
+                            border-radius: var.get('measure/1x') !important;
+                        }
+                    }
+                }
+
+                
+            }
+
+            // comment form at the end
+            &.form {
+                display: flex;
+                align-items: flex-start;
+                background-color: var(--color-body);
+                gap: var.get('measure/1x');
+                left: -68px !important;
+                width: calc(100% + 68px - 16px) !important;
+
+                @media (max-width: 768px) {
+                    left: 0 !important;
+                    margin-left: -16px !important;
+                    width: auto !important;
+                }
+
+                .timeline-avatar {
+                    display: block;
+                    position: relative !important;
+                    left: unset !important;
+                    flex: 0 0 auto !important;
+                }
+
+                .content {
+                    // fake title to mimic github new issue page
+                    &:before {
+                        display: block;
+                        content: 'Add a comment';
+                        font-weight: 600;
+                        margin-bottom: var.get('measure/1x');
+                        margin-top: var.get('measure/.5x');
+                        font-size: var.get('font-size/lg');
+                    }
+
+                    display: block;
+                    position: relative !important;
+                    margin-left: 0 !important;
+                    flex: 1;
+
+                    .ui.segment {
+                        padding: 0 !important;
+                        border: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .repository.view.issue .comment-list .comment>.content>div:last-child {
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+    }
+
+    .repository.view.issue .comment-list .comment>.content>div:first-child {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+}

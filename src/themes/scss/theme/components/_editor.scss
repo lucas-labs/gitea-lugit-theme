@@ -1,0 +1,135 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin editor {
+    #comment-form, .edit-content-zone {
+        padding: 0 !important;
+        border: none !important;
+
+        .combo-markdown-editor {
+            .top.tabular.menu {
+                background-color: var(--color-box-header);
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
+                min-height: 0px;
+                margin-bottom: var.get('measure/1x') !important;
+                
+                .item {
+                    margin: -1px 0 0 -1px; // merge borders
+                    border-top-left-radius: var(--border-radius) !important;
+                    border-top-right-radius: var(--border-radius) !important;
+                    padding: var.get('measure/.5x') var.get('measure/.75x') !important;
+                    font-weight: 400;
+
+                    &:hover {
+                        color: var(--color-text-light-2);
+                    }
+
+                    &.active {
+                        color: var(--color-text);
+                        &:after {
+                            // a hacky 1 pixel "button border" to make the border
+                            // of the whole menu disappear under the active tab
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: var(--color-body);
+                        }
+                    }
+                }
+            }
+
+            .tab {
+                .EasyMDEContainer { // legacy editor
+                    border: none !important;
+
+                    .editor-toolbar {
+                        border: none !important;
+                    }
+                }
+
+                markdown-toolbar, .EasyMDEContainer .editor-toolbar {
+                    padding: 0 10px !important;
+
+                    .markdown-toolbar-group {
+                        border: none !important;
+                        padding: 0 !important;
+
+                        &:not(:last-child) {
+                            &:after {
+                                content: '';
+                                display: block;
+                                position: relative;
+                                width: 1px;
+                                flex: 1;
+                                margin: var.get('measure/.375x') var.get('measure/.375x') !important;
+                                background-color: color.get('elevation/6');
+                            }
+                        }
+                    }
+
+                    .markdown-toolbar-button, button {
+                        line-height: 0;
+                        display: inline-block;
+                        color: var(--color-text-light-2) !important;
+                        padding: var.get('measure/.375x') !important;
+                        transition: background-color .1s ease;
+                        border-radius: var.get('measure/.375x') !important;
+                        height: auto;
+                        min-width: fit-content;
+
+                        &:hover {
+                            background-color: color.get('elevation/5') !important;
+                        }
+                        
+                        // if has attribute level
+                        &[level] {
+                            width: 34px;
+                        }
+
+                        // if aria-checked is true
+                        &[aria-checked="true"] {
+                            background-color: color.get('elevation/4');
+                        }
+                    }
+
+                    button {
+                        &:after {
+                            vertical-align: unset !important;
+                        }
+                    }
+                }
+                
+                textarea, .CodeMirror.cm-s-easymde.CodeMirror-wrap {
+                    background-color: transparent !important;
+                    border: none !important;
+                    padding: var.get('measure/1x') var.get('measure/1x') !important;
+                }
+
+                .editor-statusbar {
+                    margin-bottom: 0 !important;
+                }
+
+                &.markup {
+                    padding: 0 var.get('measure/1x') var.get('measure/1x');
+                }
+            }
+        }
+
+        .field:first-child {
+            border: 1px solid var(--color-secondary);
+            border-radius: var(--border-radius);
+            &:focus-within {
+                outline: 2px solid var(--color-accent);
+                border-radius: var(--border-radius);
+            }      
+        }
+
+        .field {
+            margin-bottom: var.get('measure/1x') !important;
+        }
+    }
+}

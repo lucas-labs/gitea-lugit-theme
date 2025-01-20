@@ -1,0 +1,63 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use '../../components/button' as button;
+
+@mixin apply-styles {
+    .repo-button-row-left {
+        .button {
+            @include button.hollow;
+        }
+    }
+
+    .repo-home-filelist {
+        > div {
+            margin: 0 !important;
+        }
+
+        display: flex;
+        flex-direction: column;
+        row-gap: var.get('measure/1x');
+
+        // file list table
+        #repo-files-table {
+            // header
+            .repo-file-last-commit {
+                padding: var.get('measure/.75x') var.get('measure/1x') !important;
+
+                .commit-summary {
+                    margin: 0;
+                }
+
+                .latest-commit {
+                    gap: var.get('measure/.5x');
+
+                    img {
+                        // make it a circle (avatar)
+                        border-radius: 50%;
+                        width: var.get('measure/1.25x');
+                        height: var.get('measure/1.25x');
+                    }
+                }
+
+                .label {
+                    // boton con icono y avatar
+                    .detail.icon.button img {
+                        display: none;
+                    }
+                }
+            }
+
+            // cells
+            .repo-file-cell {
+                padding: var.get('measure/.5x') var.get('measure/1x') !important;
+
+                &.name {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    column-gap: var.get('measure/.5x');
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

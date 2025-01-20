@@ -1,0 +1,46 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin apply-styles {
+    .page-content.repository.issue-list, .page-content.dashboard.issues {
+        .secondary-nav {
+            margin-bottom: var.get('measure/1.5x');
+        }
+
+        #issue-filters {
+            margin: var.get('measure/2x') 0 var.get('measure/1x') 0;
+            gap: var.get('measure/3x');
+            align-items: center;
+        }
+
+        #issue-list {
+            .flex-item {
+                padding: var.get('measure/.75x') 0 var.get('measure/.75x') 0;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                .branch {
+                    background-color: color.get('elevation/1');
+                }
+
+                .flex-item-icon {
+                    svg {
+                        &.green {
+                            color: color.get('palette/green/base') !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .list-header {
+            margin-bottom: var.get('measure/1.5x');
+        }
+    }
+}

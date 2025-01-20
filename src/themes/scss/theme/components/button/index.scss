@@ -1,0 +1,33 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin hollow {
+    padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+    background-color: transparent !important;
+
+    button, .button {
+        border-color: color.get('elevation/6') !important;
+        gap: var.get('measure/.5x') !important;
+
+        &:hover {
+            border-color: color.get('elevation/7') !important;
+
+            +.label {
+                border-left-color: color.get('elevation/7') !important;
+            }
+        }
+    }
+
+    .label {
+        border-color: color.get('elevation/6') !important;
+        background-color: transparent !important;
+        
+        &:hover {
+            border-color: color.get('elevation/7') !important;
+        }
+    }
+
+    &:hover {
+        border-color: color.get('elevation/7') !important;
+    }    
+}

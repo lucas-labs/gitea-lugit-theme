@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync } from 'fs';
+import { copyFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { readFiles } from '../utils/funcs.js';
 import { Logger } from '../utils/logger.js';
@@ -12,7 +12,11 @@ export async function buildFonts(srcHome, distHome) {
     const fontsSrcPath = join(srcHome, imgSrc);
     const fontsDestPath = join(distHome, imgDest);
 
-    mkdirSync(fontsDestPath, { recursive: true });
+    // if fontsSrcPath does not exist, return
+    if (!existsSync(fontsSrcPath)) {
+        logger.warn(`No fonts found in ${fontsSrcPath} (there's not even a folder there)`);
+        return;
+    }
 
     const files = readFiles(fontsSrcPath, [
         '.woff',
@@ -22,6 +26,14 @@ export async function buildFonts(srcHome, distHome) {
         '.svg',
         '.otf',
     ]);
+
+    // if there are no files, return
+    if (!files.length) {
+        logger.warn(`No fonts found in ${fontsSrcPath}`);
+        return;
+    }
+
+    mkdirSync(fontsDestPath, { recursive: true });
 
     for (const file of files) {
         // just copy the file

@@ -1,0 +1,114 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin menu {
+    .ui.dropdown>.menu {
+        --border-radius: 0;
+        opacity: 0;
+
+        &.hidden {
+            opacity: 0 !important;
+        }
+
+        &.visible {
+            opacity: 1 !important;
+        }
+
+        top: calc(100% + var.get('measure/.5x')) !important;
+        border-radius: var.get('measure/.75x') !important;
+        transition: opacity .2s ease !important;
+        box-shadow: 0px 6px 12px -3px rgba(#{color.get('elevation/1', 'rgb')}, 0.5),
+                    0px 6px 18px 0px rgba(#{color.get('elevation/1', 'rgb')}, 0.1) !important;
+
+        .divider {
+            margin-top: var.get('measure/.5x') !important;
+            margin-bottom: var.get('measure/.5x') !important;
+        }
+
+        .item {
+            margin: 0 var.get('measure/.5x') !important;
+            border-radius: var.get('measure/.375x') !important;
+            padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+            line-height: 1 !important;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            width: auto;
+
+            &:first-of-type {
+                margin-top: var.get('measure/.5x') !important;
+            }
+
+            &:last-of-type {
+                margin-bottom: var.get('measure/.5x') !important;
+            }
+
+            &.clear-selection {
+                margin-bottom: var.get('measure/.5x') !important;
+            }
+        }
+
+        input[type="text"], input[name="search"] {
+            --color-input-background: #{color.get('elevation/1')};
+            --color-input-border: #{color.get('elevation/5')};
+
+            min-height: var.get('measure/2x') !important;
+            padding: 0 var.get('measure/.5x') !important;
+            font-size: var.get('font-size/md') !important;
+            border-radius: var.get('measure/.375x') !important;
+
+            &:focus {
+                --color-primary: var(--color-accent);
+            }
+        }
+
+        .scrolling.menu {
+            .item {                
+                gap: var.get('measure/.5x') !important;
+    
+                &:hover {
+                    &:before {
+                        position: absolute;
+                        top: calc(50% - 12px);
+                        left: -8px;
+                        width: 4px;
+                        height: 24px;
+                        content: "";
+                        background-color: var(--color-accent);
+                        border-radius: 6px;
+                    }
+                }
+        
+                .item-check-mark {
+                    background-color: color.get('elevation/6');
+                    visibility: visible !important;
+                    display: inline-flex;
+                    padding: 2px;
+                    border-radius: var.get('measure/.375x');
+                    border: 1px solid color.get('elevation/8');
+    
+                    svg {
+                        visibility: hidden;
+                    }
+                }
+    
+                .item-secondary-info {
+                    flex-basis: 100%;
+                    padding: 0 0 0 var.get('measure/.5x');
+                    color: color.get('subtle');
+                }
+    
+                &.checked {
+                    .item-check-mark {
+                        background-color: var(--color-accent);
+    
+                        svg {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

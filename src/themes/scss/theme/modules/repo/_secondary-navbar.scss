@@ -1,0 +1,171 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use '../../components/button' as button;
+
+@mixin apply-styles {
+    .secondary-nav {
+        margin-bottom: var.get('measure/1.5x') !important;
+
+        .ui.container {
+            margin: 0 0 0 0 !important;
+            max-width: unset !important;
+            width: 100% !important;
+            padding: 0 var.get('measure/1x');
+        }
+
+        // header
+        .repo-header {
+            margin: 0 0 var.get('measure/1x') 0;
+            
+            // repo image
+            img.avatar {
+                width: var.get('measure/2x') !important;
+                height: var.get('measure/2x') !important;
+            }
+
+            // repo title (repo "owner / name" text)
+            .flex-item-title {
+                gap: var.get('measure/.25x') !important;
+                font-size: var.get('font-size/md') !important;
+                font-weight: normal !important;
+                color: color.get('elevation/10') !important;
+
+                a {
+                    padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+                    border-radius: var.get('measure/.25x');
+
+                    &:hover {
+                        background-color: color.get('elevation/4') !important;
+                        color: color.get('text') !important;
+                        text-decoration: none !important;
+                    }
+                }
+
+                // repo name only
+                a:last-child {
+                    font-weight: 600;
+                }
+            }
+
+            // "public/private" label
+            .flex-item-trailing {
+                .label {
+                    padding: var.get('measure/.25x') var.get('measure/.5x');
+                    font-size: var.get('font-size/sm');
+                    border-radius: var.get('measure/1x');
+                    background-color: transparent;
+                    color: color.get('elevation/10');
+                }
+
+                // lock icon
+                svg {
+                    color: color.get('elevation/10');
+                }
+            }
+
+            @media (max-width: 768px) {
+                // repo title (repo "owner / name" text)
+                .flex-item-title {
+                    display: inline-block;
+                    white-space: nowrap;
+                    padding: 0 var.get('measure/.5x') !important;
+                    font-size: var.get('font-size/sm') !important;
+                    font-weight: 500 !important;
+
+                    a {
+                        padding: 0 !important;
+
+                        &:hover {
+                            background-color: transparent !important;
+                            color: color.get('primary/base') !important;
+                            text-decoration: none !important;
+                        }
+                    }
+
+                    a:first-child {
+                        float: left;
+                        margin-right: var.get('measure/.5x');
+                        color: color.get('elevation/10') !important;
+                        font-weight: 500 !important;
+
+                        &:hover {
+                            color: color.get('primary/base') !important;                            
+                        }
+                    }
+
+                    // repo name only
+                    a:last-child {
+                        font-size: var.get('font-size/md') !important;
+                        clear: left;
+                        display: block; 
+                    }
+                }
+            }
+        }
+
+        // header navbar menu
+        overflow-menu.ui.secondary.pointing.menu {
+            .overflow-menu-items {
+                gap: var.get('measure/.25x') !important;
+            }
+
+            // navbar menu items
+            .item {
+                padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+                margin-bottom: var.get('measure/.5x') !important;
+                border-radius: var.get('measure/.25x');
+                border: none !important;
+
+                // icon
+                svg {
+                    color: var(--color-text-light-3) !important;
+                    margin-right: var.get('measure/.5x') !important;
+                }
+
+                &:hover {
+                    background-color: color.get('elevation/4') !important;
+                    color: var(--color-text-light-2) !important;
+                }
+
+                // when the represents the current route
+                &.active {
+                    border: none !important;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        left: 0;
+                        top: calc(100% + #{var.get('measure/.375x')} - 1px);
+                        background-color: color.get('primary/base');
+                        transform: unset;
+                        border: none;
+                    }
+                }
+
+                // numeric badge/label (e.g. indicating the number of issues)
+                .small.label {
+                    background-color: color.get('elevation/7');
+                    border: 1px solid color.get('elevation/7');
+                    border-radius: var.get('measure/2x');
+                    color: color.get('text');
+                    font-weight: var(--base-text-weight-medium, 500);
+                    min-width: calc(var.get('measure/1x') + 1px);
+                    padding: 2px;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        // buttons at the right of the header (unwatch, star, fork, etc.)
+        .repo-buttons {
+            .button {
+                font-size: var.get('font-size/sm') !important;
+                @include button.hollow;
+            }
+        }
+    }
+}
