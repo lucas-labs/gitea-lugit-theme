@@ -1,0 +1,45 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin file-content {
+    .non-diff-file-content {
+        .ui.segment.list-header {
+            border-radius: var(--border-radius);
+            margin-bottom: var.get('measure/1x') !important;
+            gap: var.get('measure/.5x');
+            padding: var.get('measure/.5x') var.get('measure/.75x');
+            
+            .latest-commit {
+                gap: var.get('measure/.5x');
+            }
+
+            .commit-summary {
+                color: color.get('subtle');
+            }
+
+            .age {
+                font-size: 12px;
+            }
+        }
+
+        .ui.top.attached.header {
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+
+            .file-info {
+                color: color.get('subtle') !important;
+            }
+
+            .btn-octicon {
+                --color-text: #{color.get('subtle')};
+            }
+        }
+
+        .ui.attached.segment:has(+.ui[class*="top attached"].header), .ui.attached.segment:has(+.page.buttons), .ui.attached.segment:last-child, .ui.segment:has(+.ui.segment:not(.attached)), .ui.attached.segment:has(+.ui.modal) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
+    }
+}
