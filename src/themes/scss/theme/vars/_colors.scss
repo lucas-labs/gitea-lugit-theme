@@ -327,7 +327,7 @@
 
         // navbar
         --color-nav-bg:                 #{color.get('navbar/bg', $default: if($is-dark, color.get('elevation/1'), color.get('elevation/4')))};
-        --color-nav-hover-bg:           #{color.get('navbar/hover', $default: if($is-dark, color.get('elevation/4'), color.get('elevation/5')))};
+        --color-nav-hover-bg:           #{color.get('navbar/hover', $default: if($is-dark, color.get('elevation/5'), color.get('elevation/5')))};
         --color-nav-text:               #{color.get('navbar/fg', $default: var(--color-text))};
         --color-secondary-nav-bg:       #{if($is-dark, color.get('elevation/1'), color.get('elevation/4'))};
         --color-secondary-nav-hover-bg: #{if($is-dark, color.get('elevation/4'), color.get('elevation/5'))};
