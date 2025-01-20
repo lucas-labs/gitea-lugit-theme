@@ -4,8 +4,40 @@
 
 @mixin apply-styles {
     .repo-button-row-left {
+        gap: var.get('measure/.5x');
+
         .button {
             @include button.hollow;
+        }
+
+        .breadcrumb.repo-path {
+            font-size: var.get('font-size/lg');
+            padding: 0 0 0 var.get('measure/.5x');
+
+            .section {
+                &:first-of-type, &.active {
+                    font-weight: 600;
+                }
+            }
+
+            .breadcrumb-divider, button {
+                color: color.get('subtle') !important;
+            }
+
+            button {
+                border-radius: var(--border-radius);
+                padding: var.get('measure/.375x');
+                margin: 0 0 0 var.get('measure/.5x') !important;
+
+                svg {
+                    width: var.get('measure/1x');
+                    height: var.get('measure/1x');
+                }
+
+                &:hover {
+                    background-color: var(--color-nav-hover-bg);
+                }
+            }
         }
     }
 
@@ -58,6 +90,11 @@
                     align-items: center;
                 }
             }
+        }
+
+        // readme
+        #readme {
+
         }
     }
 }
