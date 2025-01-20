@@ -7,9 +7,9 @@ $brand: #a6c6f7;
 
 $colors: (
     primary: c.variants($brand),    
-    secondary: c.variants(#1e1d2f),
+    secondary: c.variants(hsl(240, 25%, 14%)), // same as elevation/6
     text: #e6edf3,
-    subtle: #abaaca, // same as elevation/10
+    subtle: hsl(240, 10%, 70%), // same as elevation/10
     palette: (
         'red':        c.variants(#f38ba8), // red
         'orange':     c.variants(#fab387), // peach
@@ -26,18 +26,18 @@ $colors: (
         'white':      c.variants(#e6edf3), // white
     ),
     elevation: (
-        '1':  #000000, // elevation/1
-        '2':  #040406, // elevation/2
-        '3':  #07070e, // elevation/3
-        '4':  #0c0c18, // elevation/4
-        '5':  #15142c, // elevation/5
-        '6':  #1e1d2f, // elevation/6
-        '7':  #2d2c3f, // elevation/7
-        '8':  #403f55, // elevation/8
-        '9':  #6d6c89, // elevation/9
-        '10': #abaaca, // elevation/10
-        '11': #c3c2e4, // elevation/11
-        '12': #d3d2f0, // elevation/12
+        '1':  hsl(240, 33%, 01%),
+        '2':  hsl(240, 33%, 04%),
+        '3':  hsl(240, 33%, 06%),
+        '4':  hsl(240, 30%, 08%),
+        '5':  hsl(240, 28%, 12%),
+        '6':  hsl(240, 25%, 14%),
+        '7':  hsl(240, 20%, 30%),
+        '8':  hsl(240, 20%, 40%),
+        '9':  hsl(240, 10%, 50%),
+        '10': hsl(240, 10%, 70%),
+        '11': hsl(240, 10%, 80%),
+        '12': hsl(240, 10%, 90%),
     )
 );
 
