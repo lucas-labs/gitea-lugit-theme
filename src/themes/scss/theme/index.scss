@@ -11,7 +11,12 @@
     @include components.editor;       // github-style (kinda) markdown editor in comments, issues, etc.
     @include components.menu;         // github-style dropdown menus
 
-    // modules
+    // code highlighting
+    @include modules.chroma;          // syntax highlighting
+    @include modules.codemirror;      // code editor
+    @include modules.monaco;          // vscode-like code editor
+
+    // customized pages
     @include modules.repo;            // repo page
     @include modules.issues;          // issues page
 }
