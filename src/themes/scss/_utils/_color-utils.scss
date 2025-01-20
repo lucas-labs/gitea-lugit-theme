@@ -1,0 +1,100 @@
+@use 'sass:color';
+@use 'sass:map';
+
+@function light-change($color, $amount) {
+    @return color.adjust($color, $lightness: $amount * -1);
+}
+
+@function alpha-change($color, $alpha) {
+    @return color.change($color, $alpha: $alpha);
+}
+
+@function color-variants-light($color, $with-base: false) {
+    $set: (
+        '3%':  light-change($color, -3%),
+        '6%':  light-change($color, -6%),
+        '9%':  light-change($color, -9%),
+        '10%': light-change($color, -10%),
+        '12%': light-change($color, -12%),
+        '15%': light-change($color, -15%),
+        '20%': light-change($color, -20%),
+        '25%': light-change($color, -25%),
+        '30%': light-change($color, -30%),
+        '35%': light-change($color, -35%),
+        '40%': light-change($color, -40%),
+        '45%': light-change($color, -45%),
+        '50%': light-change($color, -50%),
+        '55%': light-change($color, -55%),
+        '60%': light-change($color, -60%),
+        '65%': light-change($color, -65%),
+        '70%': light-change($color, -70%),
+        '75%': light-change($color, -75%),
+        '80%': light-change($color, -80%),
+        '85%': light-change($color, -85%),
+        '90%': light-change($color, -90%),
+        '95%': light-change($color, -95%),
+        '100%': light-change($color, -100%)
+    );
+
+    @if $with-base {
+        $set: map.merge((base: $color), $set);
+    }
+
+    @return $set;  
+}
+
+@function color-variants-dark($color, $with-base: false) {
+    $set: (
+        '3%':  light-change($color, 3%),
+        '6%':  light-change($color, 6%),
+        '9%':  light-change($color, 9%),
+        '10%': light-change($color, 10%),
+        '12%': light-change($color, 12%),
+        '15%': light-change($color, 15%),
+        '20%': light-change($color, 20%),
+        '25%': light-change($color, 25%),
+        '30%': light-change($color, 30%),
+        '35%': light-change($color, 35%),
+        '40%': light-change($color, 40%),
+        '45%': light-change($color, 45%),
+        '50%': light-change($color, 50%),
+        '55%': light-change($color, 55%),
+        '60%': light-change($color, 60%),
+        '65%': light-change($color, 65%),
+        '70%': light-change($color, 70%),
+        '75%': light-change($color, 75%),
+        '80%': light-change($color, 80%),
+        '85%': light-change($color, 85%),
+        '90%': light-change($color, 90%),
+        '95%': light-change($color, 95%),
+        '100%': light-change($color, 100%)
+    );
+
+    @if $with-base {
+        $set: map.merge((base: $color), $set);
+    }
+
+    @return $set;    
+}
+
+@function variants($color, $light: true, $dark: true, $base: true, $override-base-with: null) {
+    $set: ();
+
+    @if $light {
+        $set: map.merge($set, (light: color-variants-light($color)));
+    }
+
+    @if $dark {
+        $set: map.merge($set, (dark: color-variants-dark($color)));
+    }
+
+    @if $base {
+        @if $override-base-with {
+            $set: map.merge($set, (base: $override-base-with));
+        } @else {
+            $set: map.merge($set, (base: $color));
+        }
+    }
+
+    @return $set;
+}

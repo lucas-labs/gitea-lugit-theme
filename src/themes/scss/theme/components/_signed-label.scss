@@ -1,0 +1,40 @@
+@use '@lucas-labs/lui-micro/color' as color;
+@use '@lucas-labs/lui-micro/var' as var;
+
+@mixin signed-label {
+    .label.isSigned {
+        font-size: var.get('font-size/sm') !important;
+        margin: 0px .25em !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        gap: 0px !important;
+        border-radius: 16px !important;
+
+        --color-light-border: rgba(#{color.get('palette/green/base', 'rgb')}, 1) !important;
+        --color-label-bg: none !important;
+        --color-text: rgba(#{color.get('palette/green/base', 'rgb')}, 1) !important;
+        --color-green-badge-bg: none !important;
+        --color-green-badge-hover-bg: rgba(#{color.get('palette/green/base', 'rgb')}, 0.05) !important;
+        --color-label-hover-bg: rgba(#{color.get('palette/green/base', 'rgb')}, 0.05) !important;
+        --color-label-text: rgba(#{color.get('palette/green/base', 'rgb')}, 1) !important;
+        --color-green-badge: rgba(#{color.get('palette/green/base', 'rgb')}, 1) !important;
+
+        .shortsha {
+            padding: 2px 6px 2px 8px !important;
+        }
+
+        .ui.detail.icon.button {
+            opacity: 1 !important;
+            padding: 2px 8px 2px 6px !important;
+            margin: 0 !important;
+            background: none !important;
+            border-color: rgba(#{color.get('palette/green/base', 'rgb')}, 1) !important;
+        }
+
+        &.isVerified {
+            .ui.detail.icon.button {
+                padding: 2px 8px 2px 6px !important;
+            }
+        }
+    }
+}

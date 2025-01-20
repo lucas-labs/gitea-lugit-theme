@@ -1,0 +1,9 @@
+@use './home';
+@use './secondary-navbar';
+@use './file-list';
+
+@mixin repo {
+    @include home.apply-styles();
+    @include secondary-navbar.apply-styles();
+    @include file-list.apply-styles();
+}

@@ -1,75 +1,83 @@
 @use '@lucas-labs/lui-micro' as lui;
-@use './utils/color-utils' as c;
+@use './_utils/color-utils' as c;
 @use './theme' as theme;
 
 $is-dark: true;
-
 $brand: #a6c6f7;
 
 $colors: (
-    theme: (
-        'rosewater':  c.variants(#f5e0dc, $is-dark),
-        'flamingo':   c.variants(#f2cdcd, $is-dark),
-        'pink':       c.variants(#f5c2e7, $is-dark),
-        'mauve':      c.variants(#9b6bf5, $is-dark),
-        'red':        c.variants(#f38ba8, $is-dark),
-        'maroon':     c.variants(#eba0ac, $is-dark),
-        'peach':      c.variants(#fab387, $is-dark),
-        'yellow':     c.variants(#f9e2af, $is-dark),
-        'green':      c.variants($brand, $is-dark),
-        'dark-green': c.variants(#00E676, $is-dark),
-        'teal':       c.variants(#94e2d5, $is-dark),
-        'sky':        c.variants(#89dceb, $is-dark),
-        'sapphire':   c.variants(#74c7ec, $is-dark),
-        'blue':       c.variants(#89b4fa, $is-dark),
-        'lavender':   c.variants(#b4befe, $is-dark),
-        'black':      c.variants(#181825, $is-dark),
-        'white':      c.variants(#e6edf3, $is-dark),
-    ),    
+    primary: c.variants($brand),    
+    secondary: c.variants(#1e1d2f),
     text: #e6edf3,
-    primary: c.variants($brand, $is-dark),
-    secondary: c.variants(#5d5f7a, $is-dark),
+    subtle: #abaaca, // same as elevation/10
+    palette: (
+        'red':        c.variants(#f38ba8), // red
+        'orange':     c.variants(#fab387), // peach
+        'yellow':     c.variants(#f9e2af), // yellow
+        'olive':      c.variants(#e2f095),
+        'green':      c.variants(#00E676), // green
+        'teal':       c.variants(#94e2d5), // teal
+        'blue':       c.variants(#89b4fa), // blue
+        'violet':     c.variants(#b4befe), // lavender
+        'purple':     c.variants(#9b6bf5), // mauve
+        'pink':       c.variants(#f5c2e7), // pink
+        'brown':      c.variants(#f2cdcd), // flamingo
+        'black':      c.variants(#181825), // black
+        'white':      c.variants(#e6edf3), // white
+    ),
     elevation: (
-        '1': #000000,  // crust
-        '2': #040407,  // mantle
-        '3': #07070f,  // base
-        '4': #161720,  // surface0
-        '5': #1a1a25,  // surface1
-        '6': #222330,  // surface2
-        '7': #393c4d,  // overlay0
-        '8': #515569,  // overlay1
-        '9': #6b7188,  // overlay2
-        '10': #868ca5, // subtext0
-        '11': #9aa2c2, // subtext1
-        '12': #b6c0e0, // 
+        '1':  #000000, // elevation/1
+        '2':  #040406, // elevation/2
+        '3':  #07070e, // elevation/3
+        '4':  #0c0c18, // elevation/4
+        '5':  #15142c, // elevation/5
+        '6':  #1e1d2f, // elevation/6
+        '7':  #2d2c3f, // elevation/7
+        '8':  #403f55, // elevation/8
+        '9':  #6d6c89, // elevation/9
+        '10': #abaaca, // elevation/10
+        '11': #c3c2e4, // elevation/11
+        '12': #d3d2f0, // elevation/12
+    )
+);
+
+$variables: (
+    'font-size': (
+        'xs': .714rem,
+        'sm': .857rem,
+        'md': 1rem,
+        'lg': 1.143rem,
+        'xl': 1.286rem,
+    ),                    
+    'font-family': '-apple-system, "Segoe UI", system-ui, "SF Pro Text", Inter, Roboto, "Helvetica Neue", Arial, sans-serif',
+    'code-font-family': 'ui-monospace, SFMono-Regular, "Source Code Pro", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, var(--fonts-emoji)',
+    'emoji-font-family': '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla"',
+    'measure': (
+        '.25x': 4px,
+        '.375x': 6px,
+        '.5x': 8px,
+        '.75x': 12px,
+        '.875x': 14px,
+        '1x': 16px,
+        '1.25x': 20px,
+        '1.5x': 24px,
+        '2x': 32px,
+        '2.5x': 40px,
+        '3x': 48px,
+        '4x': 64px,
+    ),
+    'navbar-logo': (
+        'width': 56px,
+        'height': 20px,
+    ),
+    'repo-home': (
+        'sidebar-width': 296px,
     )
 );
 
 // init lui-micro, css-vars only (no reboot, no basic)
 @include lui.init(
-    $theme: (
-        colors: $colors,
-        variables: (
-            'small-font-size': 12px,
-            'base-font-size': 14px,
-            'font-family': '"Outfit", Inter, Roboto, "Segoe UI", sans-serif',
-            'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
-            'measure': (
-                '.25x': 4px,
-                '.5x': 8px,
-                '1x': 16px,
-                '1.25x': 20px,
-                '1.5x': 24px,
-                '2x': 32px,
-                '3x': 48px,
-                '4x': 64px,
-            ),
-            'repo-home': (
-                'sidebar-width': 296px,
-            )
-        ),
-    ),
-    
+    $theme: (colors: $colors, variables: $variables),
     $options: (
         reboot: false,
         basic: false,
@@ -78,6 +86,4 @@ $colors: (
     ),
 );
 
-@include theme.make-theme(
-    $is-dark: $is-dark,
-);
+@include theme.make-theme($is-dark);

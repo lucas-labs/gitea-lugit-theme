@@ -1,0 +1,274 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use '../../components/button' as button;
+
+@mixin sidebar {
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+    color: var(--color-text-light-2) !important;
+    padding: 0 !important;
+
+    // reset padding and margin for all children
+    >*, .issue-sidebar-combo>*, >text+*, >.ui>* {
+        margin: unset !important;
+        padding: unset !important;
+        font-size: var.get('font-size/sm') !important;
+    }
+
+    // alignment for main children elements
+    >.ui, >.text, >.ui {
+        padding-left: var.get('measure/.5x') !important;
+        padding-right: 0 !important;
+    }
+
+    .ui.ui.ui.compact.grid>.column:not(.row), .ui.ui.ui.compact.grid>.row>.column {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    // reset for all actionable elements
+    button, input, .dropdown, .ui.grid>.row>[class*="two wide"].column, .ui.grid>.column.row>[class*="two wide"].column, .ui.grid>[class*="two wide"].column, .ui.column.grid>[class*="two wide"].column {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        min-width: 0 !important;
+    }
+
+    // -------------------------------------------------------------- // 
+    // ---------------------- Elements Styling ---------------------- //
+    // -------------------------------------------------------------- //
+    
+    a:hover {
+        text-decoration: none !important;
+    }
+
+    .ui.label {
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    // dividers
+    >.divider {
+        width: calc(100% - var.get('measure/.5x')) !important;
+        align-self: flex-end;
+        margin: var.get('measure/.875x') 0 !important;
+    }
+
+
+    // select branch dropdown
+    .select-branch {
+        align-self: flex-end;
+
+        .branch-dropdown-button {
+            @include button.hollow;
+        }
+
+        +.divider {
+            border: none !important;
+            margin: var.get('measure/.5x') 0 !important;
+        }
+
+        .menu {
+            --color-menu: #{color.get('elevation/3')};
+
+            .branch-tag-item.active, .reference-list-menu, .reference-list-menu .item {
+                --color-menu: #{color.get('elevation/4')} !important;
+            }
+
+            .branch-tag-item {
+                --border-radius: #{var.get('measure/.5x')};
+
+                &:hover {
+                    color: currentColor !important;
+                }
+            }
+        }
+    }
+
+    .issue-sidebar-combo {
+        display: flex;
+        flex-direction: column;
+        gap: var.get('measure/.5x') !important;
+
+        > * {
+            padding-left: var.get('measure/.5x') !important;
+            padding-right: var.get('measure/.5x') !important;
+        }
+
+        .ui.dropdown {
+            padding-top: var.get('measure/.375x') !important;
+            padding-bottom: var.get('measure/.375x') !important;
+            font-size: var.get('font-size/sm');
+            transition: background-color .1s ease;
+            border-radius: var(--border-radius) !important;
+
+            >a {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+
+                &:hover {
+                    color: currentColor !important;
+                    text-decoration: none !important;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(#{color.get('elevation/6', 'rgb')}, .5);
+            }
+        }
+    }
+
+    // direct text children
+    >.text {
+        // background-color: orange !important;
+        flex: 1;
+        display: flex !important;
+        justify-content: space-between;
+        font-weight: 500 !important;
+        margin-bottom: var.get('measure/.75x') !important;
+
+        strong {
+            font-weight: 500 !important;
+        }
+    }
+
+    .watching, .depending {
+        display: flex;
+        flex-direction: column;
+        gap: var.get('measure/.75x') !important;
+    }
+
+    .watching {
+        button {
+            font-weight: 500;
+            padding: var.get('measure/.5x') var.get('measure/.75x') !important;
+            border-radius: var(--border-radius) !important;
+
+            svg {
+                color: color.get('subtle') !important;
+            }
+        }
+    }
+
+    .depending {
+        .divided.list {
+            display: flex;
+            flex-direction: column;
+            gap: var.get('measure/1x') !important;
+
+            .dependency {
+                border: none !important;
+
+                .item-left {
+                    a { // issue
+
+                    }
+
+                    div.text { // repo
+                        font-size: var.get('font-size/xs') !important;
+                    }
+                }
+
+                // if not the first dependency in the list, we add a :before element to serve as divider
+                &:not(:first-child) {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: -8px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: color.get('elevation/4');
+                    }
+                }
+            }
+        }
+
+        .selection.dropdown {
+            padding: var.get('measure/.375x') var.get('measure/.75x') !important;
+
+            input {
+                padding: var.get('measure/.375x') var.get('measure/.75x') !important;
+                line-height: 20px !important;
+            }
+        }
+
+        button {
+            padding: var.get('measure/.5x') !important;
+        }
+    }
+
+    // reference
+    div.ui.equal.width.compact.grid {
+        button {
+            @include button.hollow;
+            display: flex;
+            color: color.get('subtle') !important;
+            width: unset !important;
+            // padding: var.get('measure/.5x') !important;
+        }
+    }
+
+    // issue due date form
+    .issue-due-form {
+        * {
+            color: color.get('subtle') !important;
+        }
+
+        // input of type date
+        input[type="date"] {
+            padding: var.get('measure/.5x') var.get('measure/.75x') !important;
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+        }
+        
+        button {
+            padding: var.get('measure/.5x') !important;
+            border-top-right-radius: var(--border-radius) !important;
+            border-bottom-right-radius: var(--border-radius) !important;
+        }
+    }
+
+    // direct form child
+    >form, .form {
+        display: flex;
+        flex-direction: column;
+        gap: var.get('measure/.5x') !important;
+    }
+
+    // buttons at the end of the sidebar
+    >form button, >button {
+        font-size: var.get('font-size/sm') !important;
+        border: none !important;
+        background: transparent !important;
+        padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+        justify-content: start !important;
+        gap: var.get('measure/.5x') !important;
+        margin-bottom: var.get('measure/.25x') !important;
+        border-radius: var(--border-radius) !important;
+
+        svg {
+            color: color.get('subtle') !important;
+        }
+
+        &:hover {
+            background: color.get('elevation/4') !important;
+        }
+
+        // if the data-modal attr is #sidebar-delete-issue, make the color red
+        &[data-modal="#sidebar-delete-issue"] {
+            color: color.get('palette/red/base') !important;
+            svg {
+                color: color.get('palette/red/base') !important;
+            }
+
+            &:hover {
+                background: rgba(#{color.get('palette/red/dark/15%', 'rgb')}, 0.1) !important;
+            }
+        }
+    }
+}

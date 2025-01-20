@@ -1,83 +1,90 @@
-@use '@lucas-labs/lui-micro' as lui;
-@use './utils/color-utils' as c;
-@use './theme' as theme;
+// @use '@lucas-labs/lui-micro' as lui;
+// @use './utils/color-utils' as c;
+// @use './theme' as theme;
 
-$is-dark: true;
+// $is-dark: false;
 
-$brand: #6296e2;
+// $brand: #6296e2;
 
-$colors: (
-    theme: (
-        'rosewater':  c.variants(#dc8a78, $is-dark),
-        'flamingo':   c.variants(#dd7878, $is-dark),
-        'pink':       c.variants(#ea76cb, $is-dark),
-        'mauve':      c.variants($brand, $is-dark),
-        'red':        c.variants(#d20f39, $is-dark),
-        'maroon':     c.variants(#e64553, $is-dark),
-        'peach':      c.variants(#fe640b, $is-dark),
-        'yellow':     c.variants(#df8e1d, $is-dark),
-        'green':      c.variants($brand, $is-dark),
-        'dark-green': c.variants(#11752d, $is-dark),
-        'teal':       c.variants(#179299, $is-dark),
-        'sky':        c.variants(#04a5e5, $is-dark),
-        'sapphire':   c.variants(#209fb5, $is-dark),
-        'blue':       c.variants(#1e66f5, $is-dark),
-        'lavender':   c.variants(#7287fd, $is-dark),
-        'black':      c.variants(#181825, $is-dark),
-        'white':      c.variants(#e6edf3, $is-dark),
-    ),    
-    text: #4c4f69,
-    primary: c.variants($brand, $is-dark),
-    secondary: c.variants(#5d5f7a, $is-dark),
-    elevation: (
-        '1': #dce0e8,  // crust
-        '2': #e6e9ef,  // mantle
-        '3': #eff1f5,  // base
-        '4': #ccd0da,  // surface0
-        '5': #bcc0cc,  // surface1
-        '6': #acb0be,  // surface2
-        '7': #9ca0b0,  // overlay0
-        '8': #8c8fa1,  // overlay1
-        '9': #7c7f93,  // overlay2
-        '10': #6c6f85, // subtext0
-        '11': #5c5f77, // subtext1
-        '12': #4c4f69, // 
-    )
-);
+// $colors: (
+//     theme: (
+//         'rosewater':  c.variants(#dc8a78),
+//         'flamingo':   c.variants(#dd7878),
+//         'pink':       c.variants(#ea76cb),
+//         'mauve':      c.variants(#8652e7),
+//         'red':        c.variants(#d20f39),
+//         'maroon':     c.variants(#e64553),
+//         'peach':      c.variants(#fe640b),
+//         'yellow':     c.variants(#df8e1d),
+//         'green':      c.variants(#11752d),
+//         'teal':       c.variants(#179299),
+//         'sky':        c.variants(#04a5e5),
+//         'sapphire':   c.variants(#209fb5),
+//         'blue':       c.variants(#1e66f5),
+//         'lavender':   c.variants(#7287fd),
+//         'black':      c.variants(#181825),
+//         'white':      c.variants(#e6edf3),
+//     ),    
+//     text: #4c4f69,
+//     primary: c.variants($brand),
+//     secondary: c.variants(#999cc5),
+//     elevation: (
+//         '1': #dce0e8,  // crust
+//         '2': #e6e9ef,  // mantle
+//         '3': #eff1f5,  // base
+//         '4': #dcdfe7,  // surface0
+//         '5': #bcc0cc,  // surface1
+//         '6': #acb0be,  // surface2
+//         '7': #9ca0b0,  // overlay0
+//         '8': #8c8fa1,  // overlay1
+//         '9': #7c7f93,  // overlay2
+//         '10': #6c6f85, // subtext0
+//         '11': #5c5f77, // subtext1
+//         '12': #4c4f69, // 
+//     )
+// );
 
-// init lui-micro, css-vars only (no reboot, no basic)
-@include lui.init(
-    $theme: (
-        colors: $colors,
-        variables: (
-            'small-font-size': 12px,
-            'base-font-size': 14px,
-            'font-family': '"Outfit", Inter, Roboto, "Segoe UI", sans-serif',
-            'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
-            'measure': (
-                '.25x': 4px,
-                '.5x': 8px,
-                '1x': 16px,
-                '1.25x': 20px,
-                '1.5x': 24px,
-                '2x': 32px,
-                '3x': 48px,
-                '4x': 64px,
-            ),
-            'repo-home': (
-                'sidebar-width': 296px,
-            )
-        ),
-    ),
+// // init lui-micro, css-vars only (no reboot, no basic)
+// @include lui.init(
+//     $theme: (
+//         colors: $colors,
+//         variables: (
+//             'font-size': (
+//                 'xs': .75rem,
+//                 'sm': .875rem,
+//                 'md': 1rem,
+//                 'lg': 1.125rem,
+//                 'xl': 1.25rem,
+//             ),
+//             'font-family': '"Outfit", Inter, Roboto, "Segoe UI", sans-serif',
+//             'code-font-family': '"Source Code Pro", "Roboto Mono", Consolas, monospace',
+//             'measure': (
+//                 '.25x': 4px,
+//                 '.375x': 6px,
+//                 '.5x': 8px,
+//                 '.75x': 12px,
+//                 '1x': 16px,
+//                 '1.25x': 20px,
+//                 '1.5x': 24px,
+//                 '2x': 32px,
+//                 '2.5x': 40px,
+//                 '3x': 48px,
+//                 '4x': 64px,
+//             ),
+//             'repo-home': (
+//                 'sidebar-width': 296px,
+//             )
+//         ),
+//     ),
     
-    $options: (
-        reboot: false,
-        basic: false,
-        fg-var-name: 'text',
-        bg-var-name: 'elevation/1',
-    ),
-);
+//     $options: (
+//         reboot: false,
+//         basic: false,
+//         fg-var-name: 'text',
+//         bg-var-name: 'elevation/1',
+//     ),
+// );
 
-@include theme.make-theme(
-    $is-dark: $is-dark,
-);
+// @include theme.make-theme(
+//     $is-dark: $is-dark,
+// );

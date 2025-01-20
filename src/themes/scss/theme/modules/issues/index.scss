@@ -1,0 +1,7 @@
+@use './list';
+@use './issue';
+
+@mixin issues {
+    @include list.apply-styles();
+    @include issue.apply-styles();
+}
