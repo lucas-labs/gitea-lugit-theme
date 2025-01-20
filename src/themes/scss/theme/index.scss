@@ -10,6 +10,8 @@
     @include components.signed-label;   // label for GPG signed commits
     @include components.editor;         // github-style (kinda) markdown editor in comments, issues, etc.
     @include components.menu;           // github-style dropdown menus
+    @include components.file-content;   // github-style file content
+    @include components.avatar;         // github-style avatars
 
     // code highlighting
     @include modules.chroma($is-dark);  // syntax highlighting

@@ -106,7 +106,7 @@
         // header navbar menu
         overflow-menu.ui.secondary.pointing.menu {
             .overflow-menu-items {
-                gap: var.get('measure/.25x') !important;
+                gap: var.get('measure/.5x') !important;
             }
 
             // navbar menu items

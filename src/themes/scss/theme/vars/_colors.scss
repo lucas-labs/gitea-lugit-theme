@@ -301,7 +301,7 @@
         --color-hover-opaque: var(--color-box-header);
         --color-active: #{color.get('elevation/4')};
         --color-menu: #{color.get('elevation/4')};
-        --color-card: #{color.get('elevation/4')};
+        --color-card: #{color.get('elevation/3')};
         --color-markup-table-row: rgba(#{color.get('text', 'rgb')}, 0.02);
         --color-markup-code-block: #{color.get('elevation/4')};
         --color-markup-code-inline: #{color.get('elevation/4')};
@@ -313,7 +313,7 @@
         --color-expand-button: #{color.get('elevation/6')};
         --color-placeholder-text: #{color.get('elevation/9')};
         --color-editor-line-highlight: var(--color-primary-light-5);
-        --color-project-column-bg: var(--color-secondary-light-2);
+        --color-project-column-bg: #{color.get('elevation/1')};
         --color-caret: var(--color-text);
         --color-reaction-bg: rgba(#{color.get('primary/dark/30%', 'rgb')}, .1);;
         --color-reaction-hover-bg: rgba(#{color.get('primary/dark/30%', 'rgb')}, .2);;
