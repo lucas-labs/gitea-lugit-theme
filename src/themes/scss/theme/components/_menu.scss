@@ -17,8 +17,8 @@
         top: calc(100% + var.get('measure/.5x')) !important;
         border-radius: var.get('measure/.75x') !important;
         transition: opacity .2s ease !important;
-        box-shadow: 0px 6px 12px -3px rgba(#{color.get('elevation/1', 'rgb')}, 0.5),
-                    0px 6px 18px 0px rgba(#{color.get('elevation/1', 'rgb')}, 0.1) !important;
+        box-shadow: 0px 6px 12px -3px rgba(var(--color-shadow-rgb), 0.5), 
+                    0px 6px 18px 0px rgba(var(--color-shadow-rgb), 0.1) !important;
 
         .divider {
             margin-top: var.get('measure/.5x') !important;
