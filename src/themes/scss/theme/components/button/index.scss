@@ -2,12 +2,16 @@
 @use '@lucas-labs/lui-micro/color' as color;
 
 @mixin hollow {
+    --border-radius: #{var.get('measure/.25x')};
+
     padding: var.get('measure/.375x') var.get('measure/.5x') !important;
     background-color: transparent !important;
+    font-weight: normal;
 
     button, .button {
         border-color: color.get('elevation/6') !important;
         gap: var.get('measure/.5x') !important;
+        border-radius: var(--border-radius);
 
         &:hover {
             border-color: color.get('elevation/7') !important;
@@ -18,16 +22,59 @@
         }
     }
 
-    .label {
-        border-color: color.get('elevation/6') !important;
-        background-color: transparent !important;
-        
-        &:hover {
-            border-color: color.get('elevation/7') !important;
+    &.labeled {
+        button, .button {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }        
+
+        .label {
+            border-color: color.get('elevation/6') !important;
+            background-color: transparent !important;
+
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            
+            
+            &:hover {
+                border-color: color.get('elevation/7') !important;
+            }
         }
     }
 
     &:hover {
         border-color: color.get('elevation/7') !important;
-    }    
+    }
+}
+
+@mixin gitea-button {
+    .ui.button {
+        border-radius: var(--border-radius);
+        transition: color .1s ease, background-color .1s ease, border-color .1s ease;
+
+        &.basic {
+            border-radius: var(--border-radius);
+        }
+
+        &.red, &.red.basic {
+            border-color: var(--color-secondary);
+            background: var(--color-button);
+            color: var(--color-red);
+
+            &:hover {
+                background: var(--color-red-dark-2);
+                color: var(--color-white);
+            }
+
+            &.basic {
+                border-color: rgba(#{color.get('palette/red/base', 'rgb')}, 0.4);
+            }
+        }
+
+        &.primary, &.red, &.basic {
+            font-weight: 500;
+        }
+    }
 }

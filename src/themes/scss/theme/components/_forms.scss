@@ -1,0 +1,9 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use './forms/' as forms;
+
+@mixin forms {
+    @include forms.dropdown-menu;
+    @include forms.input;
+}
+

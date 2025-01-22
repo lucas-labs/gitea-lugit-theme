@@ -3,6 +3,13 @@
 @use '../../components/button' as button;
 
 @mixin sidebar {
+    --spc: #{var.get('measure/1x')};    //                        var(--spc)      16px
+    --spc-7_8: calc(var(--spc) * .875); // 7/8 of the base        var(--spc-7_8)  14px
+    --spc-6_8: calc(var(--spc) * .750); // 6/8 = 3/4 of the base  var(--spc-6_8)  12px
+    --spc-4_8: calc(var(--spc) * .500); // 4/8 = 1/2 of the base  var(--spc-4_8)  8px
+    --spc-3_8: calc(var(--spc) * .375); // 3/8 of the base        var(--spc-3_8)  6px
+    --spc-2_8: calc(var(--spc) * .250); // 2/8 = 1/4 of the base  var(--spc-2_8)  4px
+
     display: flex;
     flex-direction: column;
     border: none !important;
@@ -18,7 +25,7 @@
 
     // alignment for main children elements
     >.ui, >.text, >.ui {
-        padding-left: var.get('measure/.5x') !important;
+        padding-left: var(--spc-4_8) !important;
         padding-right: 0 !important;
     }
 
@@ -43,16 +50,11 @@
         text-decoration: none !important;
     }
 
-    .ui.label {
-        height: 20px;
-        border-radius: 20px;
-    }
-
     // dividers
     >.divider {
-        width: calc(100% - var.get('measure/.5x')) !important;
+        width: calc(100% - var(--spc-4_8)) !important;
         align-self: flex-end;
-        margin: var.get('measure/.875x') 0 !important;
+        margin: var(--spc-7_8) 0 !important;
     }
 
 
@@ -66,7 +68,7 @@
 
         +.divider {
             border: none !important;
-            margin: var.get('measure/.5x') 0 !important;
+            margin: var(--spc-4_8) 0 !important;
         }
 
         .menu {
@@ -77,7 +79,7 @@
             }
 
             .branch-tag-item {
-                --border-radius: #{var.get('measure/.5x')};
+                --border-radius: #{var(--spc-4_8)};
 
                 &:hover {
                     color: currentColor !important;
@@ -89,16 +91,16 @@
     .issue-sidebar-combo {
         display: flex;
         flex-direction: column;
-        gap: var.get('measure/.5x') !important;
+        gap: var(--spc-4_8) !important;
 
         > * {
-            padding-left: var.get('measure/.5x') !important;
-            padding-right: var.get('measure/.5x') !important;
+            padding-left: var(--spc-4_8) !important;
+            padding-right: var(--spc-4_8) !important;
         }
 
         .ui.dropdown {
-            padding-top: var.get('measure/.375x') !important;
-            padding-bottom: var.get('measure/.375x') !important;
+            padding-top: var(--spc-3_8) !important;
+            padding-bottom: var(--spc-3_8) !important;
             font-size: var.get('font-size/sm');
             transition: background-color .1s ease;
             border-radius: var(--border-radius) !important;
@@ -127,23 +129,21 @@
         display: flex !important;
         justify-content: space-between;
         font-weight: 500 !important;
-        margin-bottom: var.get('measure/.75x') !important;
+        margin-bottom: var(--spc-6_8) !important;
 
         strong {
             font-weight: 500 !important;
         }
     }
 
-    .watching, .depending {
+    .watching {
         display: flex;
         flex-direction: column;
-        gap: var.get('measure/.75x') !important;
-    }
+        gap: var(--spc-6_8) !important;
 
-    .watching {
         button {
             font-weight: 500;
-            padding: var.get('measure/.5x') var.get('measure/.75x') !important;
+            padding: var(--spc-4_8) var(--spc-6_8) !important;
             border-radius: var(--border-radius) !important;
 
             svg {
@@ -153,10 +153,20 @@
     }
 
     .depending {
+        // title
+        >.text {
+            display: inline-block;
+            margin-bottom: var(--spc-6_8) !important;
+        }
+
+        >p {
+            margin-bottom: var(--spc-4_8) !important;
+        }
+
         .divided.list {
             display: flex;
             flex-direction: column;
-            gap: var.get('measure/1x') !important;
+            gap: var(--spc) !important;
 
             .dependency {
                 border: none !important;
@@ -188,17 +198,28 @@
             }
         }
 
-        .selection.dropdown {
-            padding: var.get('measure/.375x') var.get('measure/.75x') !important;
+        #new-dependency-drop-list {
+            padding: var(--spc-3_8) var(--spc-6_8) !important;
+            // make radius to the right be 0 to merge with the add button
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+
+            &.active {
+                // restore right border to 1px when active
+                border-top-left-radius: var(--border-radius) !important;
+                border-bottom-left-radius: var(--border-radius) !important;
+                border-color: color.get('elevation/5') !important;
+                outline: 2px solid var(--color-accent);
+            }
 
             input {
-                padding: var.get('measure/.375x') var.get('measure/.75x') !important;
+                padding: var(--spc-3_8) var(--spc-6_8) !important;
                 line-height: 20px !important;
             }
         }
 
         button {
-            padding: var.get('measure/.5x') !important;
+            padding: var(--spc-4_8) !important;
         }
     }
 
@@ -209,7 +230,6 @@
             display: flex;
             color: color.get('subtle') !important;
             width: unset !important;
-            // padding: var.get('measure/.5x') !important;
         }
     }
 
@@ -221,13 +241,13 @@
 
         // input of type date
         input[type="date"] {
-            padding: var.get('measure/.5x') var.get('measure/.75x') !important;
+            padding: var(--spc-4_8) var(--spc-6_8) !important;
             border-top-left-radius: var(--border-radius);
             border-bottom-left-radius: var(--border-radius);
         }
         
         button {
-            padding: var.get('measure/.5x') !important;
+            padding: var(--spc-4_8) !important;
             border-top-right-radius: var(--border-radius) !important;
             border-bottom-right-radius: var(--border-radius) !important;
         }
@@ -237,7 +257,7 @@
     >form, .form {
         display: flex;
         flex-direction: column;
-        gap: var.get('measure/.5x') !important;
+        gap: var(--spc-4_8) !important;
     }
 
     // buttons at the end of the sidebar
@@ -245,10 +265,10 @@
         font-size: var.get('font-size/sm') !important;
         border: none !important;
         background: transparent !important;
-        padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+        padding: var(--spc-3_8) var(--spc-4_8) !important;
         justify-content: start !important;
-        gap: var.get('measure/.5x') !important;
-        margin-bottom: var.get('measure/.25x') !important;
+        gap: var(--spc-4_8) !important;
+        margin-bottom: var(--spc-2_8) !important;
         border-radius: var(--border-radius) !important;
 
         svg {

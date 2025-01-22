@@ -1,0 +1,94 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin nav {
+    .vertical.menu {
+        --spacing: #{var.get('measure/.375x')} #{var.get('measure/.75x')};
+        --min-height: #{var.get('measure/2x')};
+        background-color: transparent;
+        border: none;
+
+        .header.item {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing);
+            font-size: var.get('font-size/sm');
+            font-weight: 600;
+            color: color.get('subtle');
+            background-color: transparent;
+            min-height: var(--min-height);
+        }
+
+        a.item, details.item {
+            min-height: var(--min-height);
+            &:before {
+                content: none;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: var.get('measure/.25x');
+            }
+
+            &.active {
+                font-weight: 600;
+                background-color: var(--color-menu);
+                position: relative;
+
+                &:hover {
+                    background-color: var(--color-hover);
+                }
+
+                &:after {
+                    background: var(--color-primary);
+                    border-radius: .375rem;
+                    content: "";
+                    height: 24px;
+                    width: 4px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: calc(0px - 4px - #{var.get('measure/.375x')});
+                }
+            }
+        }
+
+        a.item, details.item summary {
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+
+        details.item {
+            --octicon-chevron-down: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3Z"></path></svg>');
+
+            summary {
+                &:after {
+                    color: color.get('subtle');
+                    transform: scaleY(1);
+                    transition: transform .12s linear;
+                    mask-image: var(--octicon-chevron-down);
+                    -webkit-mask-image: var(--octicon-chevron-down);
+                }
+            }
+
+            &[open] summary {
+                &:after {
+                    transform: scaleY(-1);
+                }
+            }
+
+            .menu {
+                .item {
+                    display: flex;
+                    align-items: center;
+                    color: color.get('text') !important;
+
+                    &:hover {
+                        background-color: var(--color-hover);
+                    }
+                }
+                
+                margin: 0 !important;
+            }
+        }
+    }
+}

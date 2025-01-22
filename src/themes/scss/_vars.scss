@@ -1,0 +1,36 @@
+$variables: (
+    'font-size': (
+        'xs': .714rem,
+        'sm': .857rem,
+        'md': 1rem,      // 14
+        'lg': 1.143rem,  // 16
+        'xl': 1.286rem,  // 18
+        '2xl': 1.429rem, // 20
+        '3xl': 1.714rem, // 24
+        '4xl': 2rem,     // 28
+    ),                    
+    'font-family': '-apple-system, "Segoe UI", system-ui, "SF Pro Text", Inter, Roboto, "Helvetica Neue", Arial, sans-serif',
+    'code-font-family': 'ui-monospace, SFMono-Regular, "Source Code Pro", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, var(--fonts-emoji)',
+    'emoji-font-family': '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla"',
+    'measure': (
+        '.25x': 4px,
+        '.375x': 6px,
+        '.5x': 8px,
+        '.75x': 12px,
+        '.875x': 14px,
+        '1x': 16px,
+        '1.25x': 20px,
+        '1.5x': 24px,
+        '2x': 32px,
+        '2.5x': 40px,
+        '3x': 48px,
+        '4x': 64px,
+    ),
+    'navbar-logo': (
+        'width': 56px,
+        'height': 20px,
+    ),
+    'repo-home': (
+        'sidebar-width': 296px,
+    )
+);
