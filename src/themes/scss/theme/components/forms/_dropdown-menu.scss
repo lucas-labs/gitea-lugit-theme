@@ -1,0 +1,180 @@
+@use '@lucas-labs/lui-micro/color' as color;
+@use '@lucas-labs/lui-micro/var' as var;
+
+@mixin dropdown-menu {
+    .ui.dropdown {
+        // dropdown menu
+        >.menu {
+            --border-radius: #{var.get('measure/.75x')};
+
+            opacity: 0;
+            overflow-x: hidden;
+            &.hidden { opacity: 0 !important;}
+            &.visible { opacity: 1 !important; }
+
+            border-radius: var(--border-radius) !important;
+            transition: opacity .2s ease !important;
+            box-shadow: 0px 6px 12px -3px rgba(var(--color-shadow-rgb), 0.5), 
+                        0px 6px 18px 0px rgba(var(--color-shadow-rgb), 0.1) !important;
+
+            .divider {
+                margin-top: var.get('measure/.5x') !important;
+                margin-bottom: var.get('measure/.5x') !important;
+            }
+
+            .item:not(.comment-reaction-button) {
+                --border-radius: #{var.get('measure/.375x')};
+
+                margin: 0 var.get('measure/.5x') !important;
+                border-radius: var(--border-radius) !important;
+                padding: var.get('measure/.375x') var.get('measure/.5x') !important;
+                line-height: 1 !important;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                width: auto;
+
+                &:first-of-type {
+                    margin-top: var.get('measure/.5x') !important;
+                }
+
+                &:last-of-type {
+                    margin-bottom: var.get('measure/.5x') !important;
+                }
+
+                &.clear-selection {
+                    margin-bottom: var.get('measure/.5x') !important;
+                }
+            }
+
+            input[type="text"], input[name="search"] {
+                --color-input-background: #{color.get('elevation/1')};
+                --color-input-border: #{color.get('elevation/5')};
+
+                min-height: var.get('measure/2x') !important;
+                padding: 0 var.get('measure/.5x') !important;
+                font-size: var.get('font-size/md') !important;
+                border-radius: var.get('measure/.375x') !important;
+
+                &:focus {
+                    --color-primary: var(--color-accent);
+                }
+            }
+
+            .scrolling.menu {
+                .item {                
+                    gap: var.get('measure/.5x') !important;
+        
+                    &:hover {
+                        &:before {
+                            position: absolute;
+                            top: calc(50% - 12px);
+                            left: -8px;
+                            width: 4px;
+                            height: 24px;
+                            content: "";
+                            background-color: var(--color-accent);
+                            border-radius: 6px;
+                        }
+                    }
+            
+                    .item-check-mark {
+                        background-color: color.get('elevation/6');
+                        visibility: visible !important;
+                        display: inline-flex;
+                        padding: 2px;
+                        border-radius: var.get('measure/.375x');
+                        border: 1px solid color.get('elevation/8');
+        
+                        svg {
+                            visibility: hidden;
+                        }
+                    }
+
+                    // <div class="item-secondary-info">
+                    //     <div>
+                    //         <small>Breaking change that won't be backward compatible</small>
+                    //     </div>
+                    // </div>
+        
+                    .item-secondary-info {
+                        flex-basis: 100%;
+                        padding: 0 0 0 var.get('measure/.5x');
+                        color: color.get('subtle');
+                        line-height: 100%;
+                        white-space: nowrap;
+                        overflow-x: hidden;
+
+                        small {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+        
+                    &.checked {
+                        .item-check-mark {
+                            background-color: var(--color-accent);
+        
+                            svg {
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // if not .upward
+        &:not(.upward) {
+            >.menu {
+                top: calc(100% + var.get('measure/.5x')) !important;
+            }
+        }
+
+        &.upward {
+            >.menu {
+                bottom: calc(100% + var.get('measure/.5x')) !important;
+            }
+        }
+
+        &.upward.selection.visible, &.active.upward.selection {
+            border-top-left-radius: var(--border-radius) !important;
+            border-top-right-radius: var(--border-radius) !important;
+            border-bottom-left-radius: var(--border-radius) !important;
+            border-bottom-right-radius: var(--border-radius) !important;
+        }
+
+        &.selection.active, &.selection.active:hover, &.selection.active .menu, &.selection.active:hover .menu {
+            border-color: var(--color-secondary) !important;
+        }
+
+        // select type dropdown
+        &.selection {
+            --border-radius: #{var.get('measure/.5x')};
+            border-radius: var(--border-radius) !important;
+
+            &:focus, &.active {
+                border-color: var(--color-secondary) !important;
+                outline: 2px solid var(--color-accent);
+            }
+
+            &.active {
+                border-radius: var(--border-radius) !important;
+            }
+
+            >.menu {
+                border-radius: var(--border-radius) !important;
+                border-top-width: 1px !important;
+                border-color: var(--color-secondary) !important;
+                display: flex !important;
+                flex-direction: column;
+                gap: var.get('measure/.25x');
+
+                .item {
+                    border: none !important;
+                }
+            }
+        }
+    } 
+}

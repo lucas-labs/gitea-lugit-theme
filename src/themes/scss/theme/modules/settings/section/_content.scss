@@ -1,0 +1,80 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+
+@mixin content {
+
+    .ui.top.attached.header {
+        background: unset;
+        border: none;
+        font-size: var.get('font-size/3xl');
+        font-weight: 400;
+        padding: 0 0 var.get('measure/.5x') 0;
+        border-bottom: 1px solid var(--color-secondary);
+        margin-bottom: var.get('measure/1x');
+
+        // if not the first header, add a margin top
+        &:not(:first-child) {
+            margin-top: var.get('measure/2.5x');
+        }
+
+        &.error {
+            border-color: var(--color-secondary) !important;
+            background: unset !important;
+        }
+    }
+
+    .ui.segment {
+        border-radius: var(--border-radius);
+
+        >*:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .ui.attached.segment {
+        background: unset;
+        padding:0;
+        border: none;
+        margin: 0;
+
+        &.bottom {
+            margin-top: var.get('measure/2x');
+        }
+
+        a:not(.button) {
+            color: var(--color-primary);
+            text-decoration: underline;
+            display: inline-flex;
+            align-items: center;
+            column-gap: var.get('measure/.375x');
+
+            svg {
+                margin-left: var.get('measure/.25x');
+            }
+        }
+
+        .field {
+            margin: var.get('measure/1x') 0;
+        }
+
+        .divider {
+            margin: var.get('measure/1x') 0;
+        }
+
+        .list {
+            border: 1px solid var(--color-secondary);
+            border-radius: var(--border-radius);
+
+            .item {
+                margin-left: 0;
+                margin-right: 0;
+
+                &:not(:first-child), &:first-child {
+                    padding: 1rem;
+                    margin: 0rem 0rem 0rem 0rem;
+                }
+            }            
+        }
+    }
+}

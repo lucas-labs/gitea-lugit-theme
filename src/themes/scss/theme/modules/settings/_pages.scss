@@ -1,0 +1,21 @@
+@use '@lucas-labs/lui-micro/var' as var;
+@use '@lucas-labs/lui-micro/color' as color;
+@use './section';
+
+@mixin settings-pages {
+    .page-content.user.settings, .page-content.admin {
+        .ui.flex-container {
+            column-gap: 40px;
+            
+            .flex-container-nav {
+                width: 232px;
+                @include section.nav;
+            }
+
+            .flex-container-main {
+                @include section.content;
+            }
+        }
+        
+    }
+}

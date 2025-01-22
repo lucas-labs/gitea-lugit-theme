@@ -1,0 +1,74 @@
+@use '@lucas-labs/lui-micro/color' as color;
+@use '@lucas-labs/lui-micro/var' as var;
+
+@mixin -all-inputs($state: null) {
+    input#{$state},
+    textarea#{$state},
+    .ui.input>input#{$state},
+    .ui.form input:not([type])#{$state},
+    .ui.form select#{$state},
+    .ui.form textarea#{$state},
+    .ui.form input[type=date]#{$state},
+    .ui.form input[type=datetime-local]#{$state},
+    .ui.form input[type=email]#{$state},
+    .ui.form input[type=file]#{$state},
+    .ui.form input[type=number]#{$state},
+    .ui.form input[type=password]#{$state},
+    .ui.form input[type=search]#{$state},
+    .ui.form input[type=tel]#{$state},
+    .ui.form input[type=text]#{$state},
+    .ui.form input[type=time]#{$state},
+    .ui.form input[type=url]#{$state},
+    .ui.selection.dropdown#{$state} {
+        @content;
+    }
+}
+
+@mixin input {
+    @include -all-inputs {
+        border-color: var(--color-input-border);
+        color: var(--color-input-text);
+        border-radius: var(--border-radius);
+        line-height: normal;
+        min-height: auto;
+        padding: calc(#{var.get('measure/.375x')} - 1px) var.get('measure/.75x');
+    }
+
+    @include -all-inputs(':hover') {
+        border-radius: var(--border-radius);
+        border-color: var(--color-input-border);
+        color: var(--color-input-text)
+    }
+
+    @include -all-inputs(':focus') {
+        border-radius: var(--border-radius);
+        border-color: var(--color-input-border);
+        color: var(--color-input-text);
+        outline: 2px solid var(--color-accent);
+        background-color: color.get('elevation/2');
+    }
+
+    @include -all-inputs('.active') {
+        border-radius: var(--border-radius);
+        outline: 2px solid var(--color-accent);
+    }
+
+    .ui.action.input:not([class*="left action"])>input:focus {
+        border-right-color: var(--color-input-border);
+        z-index: 1;
+    }
+
+    .ui.action.input:not([class*="left action"])>input:focus+.ui.dropdown.selection,
+    .ui.action.input:not([class*="left action"])>input:focus+.ui.dropdown.selection:hover,
+    .ui.action.input:not([class*="left action"])>input:focus+.button,
+    .ui.action.input:not([class*="left action"])>input:focus+.button:hover,
+    .ui.action.input:not([class*="left action"])>input:focus+i.icon+.button,
+    .ui.action.input:not([class*="left action"])>input:focus+i.icon+.button:hover {
+        border-left-color: var(--color-input-border);
+    }
+    .ui.form .field>label {
+        margin: 0 0 var.get('measure/.375x');
+        font-size: var.get('font-size/md');
+        font-weight: 600;
+    }
+}

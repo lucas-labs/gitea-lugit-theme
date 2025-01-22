@@ -125,7 +125,11 @@
             &:focus-within {
                 outline: 2px solid var(--color-accent);
                 border-radius: var(--border-radius);
-            }      
+            }
+
+            textarea:focus {
+                outline: none;
+            }
         }
 
         .field {

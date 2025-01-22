@@ -1,0 +1,5 @@
+@use './pages';
+
+@mixin settings {
+    @include pages.settings-pages;
+}

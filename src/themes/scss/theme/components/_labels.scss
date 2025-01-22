@@ -1,7 +1,7 @@
 @use '@lucas-labs/lui-micro/color' as color;
 @use '@lucas-labs/lui-micro/var' as var;
 
-@mixin signed-label {
+@mixin label-signed {
     .label.isSigned {
         font-size: var.get('font-size/sm') !important;
         margin: 0px .25em !important;
@@ -37,4 +37,27 @@
             }
         }
     }
+}
+
+@mixin label-default {
+    .ui.label {
+        // height: var.get('measure/1.25x');
+        border-radius: var.get('measure/1.25x');
+
+        &.scope-left {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &.scope-right {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &.green, &.red {
+            color: var(--color-green-contrast) !important;
+        }
+
+    }
+
 }

@@ -7,16 +7,19 @@
     @include vars.colors($is-dark);
 
     // components
-    @include components.signed-label;   // label for GPG signed commits
+    @include components.label-default;  // label for GPG signed commits
+    @include components.label-signed;   // label for GPG signed commits
     @include components.editor;         // github-style (kinda) markdown editor in comments, issues, etc.
-    @include components.menu;           // github-style dropdown menus
+    @include components.forms;          // github-style dropdown menus
     @include components.file-content;   // github-style file content
     @include components.avatar;         // github-style avatars
+    @include components.gitea-button;   // github-style buttons
 
     // code highlighting
     @include modules.chroma($is-dark);  // syntax highlighting
     @include modules.codemirror;        // code editor
     @include modules.monaco;            // vscode-like code editor
+    @include modules.settings;          // settings & profile pages
 
     // customized pages
     @include modules.repo;              // repo page

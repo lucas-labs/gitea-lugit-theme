@@ -126,6 +126,13 @@
         --color-black:  #{color.get('elevation/1')};
 
         // ┌───────┐
+        // │ named │ » contrasts (lugit addition)
+        // └───────┘
+        --color-green-contrast: #{if($is-dark, var(--color-black), var(--color-white))};
+        --color-red-contrast:   #{if($is-dark, var(--color-black), var(--color-white))};
+
+
+        // ┌───────┐
         // │ named │ » light variants
         // └───────┘
         --color-red-light:    #{color.get('palette/red/light/10%')};
@@ -211,7 +218,7 @@
         --color-grey:       #{color.get('elevation/9')};
         --color-grey-light: #{color.get('elevation/11')};
         --color-gold:       #{color.get('palette/yellow/dark/20%')};
-        --color-white:      #{if($is-dark, color.get('palette/black/base'), color.get('palette/white/base'))}; 
+        --color-white:      #{color.get('palette/white/base')}; 
         --color-git:        #f05133;
 
         // ┌──────┐
@@ -298,7 +305,7 @@
         --color-light-mimic-enabled: rgba(0, 0, 0, calc(40 / 255 * 222 / 255 / var(--opacity-disabled)));
         --color-light-border: #{color.get('elevation/6')};
         --color-hover: rgba(#{color.get('elevation/6', 'rgb')}, 0.5);
-        --color-hover-opaque: var(--color-box-header);
+        --color-hover-opaque: #{color.get('elevation/6', 'rgb')};
         --color-active: #{color.get('elevation/4')};
         --color-menu: #{color.get('elevation/4')};
         --color-card: #{color.get('elevation/3')};

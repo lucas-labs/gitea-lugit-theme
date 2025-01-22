@@ -1,6 +1,7 @@
 @use '@lucas-labs/lui-micro' as lui;
 @use './_utils/color-utils' as c;
 @use './theme' as theme;
+@use './vars' as vars;
 
 $is-dark: false;
 $brand: #6296e2;
@@ -41,43 +42,9 @@ $colors: (
     )
 );
 
-$variables: (
-    'font-size': (
-        'xs': .714rem,
-        'sm': .857rem,
-        'md': 1rem,
-        'lg': 1.143rem,
-        'xl': 1.286rem,
-    ),                    
-    'font-family': '-apple-system, "Segoe UI", system-ui, "SF Pro Text", Inter, Roboto, "Helvetica Neue", Arial, sans-serif',
-    'code-font-family': 'ui-monospace, SFMono-Regular, "Source Code Pro", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, var(--fonts-emoji)',
-    'emoji-font-family': '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla"',
-    'measure': (
-        '.25x': 4px,
-        '.375x': 6px,
-        '.5x': 8px,
-        '.75x': 12px,
-        '.875x': 14px,
-        '1x': 16px,
-        '1.25x': 20px,
-        '1.5x': 24px,
-        '2x': 32px,
-        '2.5x': 40px,
-        '3x': 48px,
-        '4x': 64px,
-    ),
-    'navbar-logo': (
-        'width': 56px,
-        'height': 20px,
-    ),
-    'repo-home': (
-        'sidebar-width': 296px,
-    )
-);
-
 // init lui-micro, css-vars only (no reboot, no basic)
 @include lui.init(
-    $theme: (colors: $colors, variables: $variables),
+    $theme: (colors: $colors, variables: vars.$variables),
     $options: (
         reboot: false,
         basic: false,
