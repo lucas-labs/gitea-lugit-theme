@@ -90,12 +90,6 @@
                             visibility: hidden;
                         }
                     }
-
-                    // <div class="item-secondary-info">
-                    //     <div>
-                    //         <small>Breaking change that won't be backward compatible</small>
-                    //     </div>
-                    // </div>
         
                     .item-secondary-info {
                         flex-basis: 100%;
@@ -177,4 +171,35 @@
             }
         }
     } 
+}
+
+@mixin menu {
+    .ui.menu {
+        border-radius: var(--border-radius);
+
+        >.item:first-child {
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        &.compact:not(.secondary) .item:last-child {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+    }
+
+    .ui.secondary.menu {
+        gap: var.get('measure/.25x');
+
+        &.vertical {
+            >.item {
+                border: none;
+                margin: 0 0 var.get('measure/.25x') 0;
+                border-radius: var(--border-radius) !important;
+            }
+        }
+
+        .dropdown.item.active:hover, a.item.active:hover {
+            color: var(--color-text);
+            background: var(--color-hover);
+        }
+    }    
 }
