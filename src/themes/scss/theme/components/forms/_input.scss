@@ -29,13 +29,18 @@
         border-color: var(--color-input-border);
         color: var(--color-input-text);
         border-radius: var(--border-radius);
-        line-height: normal;
+        line-height: 20px;
         min-height: auto;
         padding: calc(#{var.get('measure/.375x')} - 1px) var.get('measure/.75x');
+        
+        +.ui.button:last-child {
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
     }
 
     @include -all-inputs(':hover') {
-        border-radius: var(--border-radius);
+        // border-radius: var(--border-radius);
         border-color: var(--color-input-border);
         color: var(--color-input-text)
     }
@@ -58,6 +63,12 @@
         z-index: 1;
     }
 
+    .ui.action.input>.dropdown:not(:first-child):not(:last-child),
+    .ui.action.input>.button:not(:first-child):not(:last-child),
+    .ui.action.input>.buttons:not(:first-child):not(:last-child)>.button {
+        border-radius: 0 !important;
+    }
+
     .ui.action.input:not([class*="left action"])>input:focus+.ui.dropdown.selection,
     .ui.action.input:not([class*="left action"])>input:focus+.ui.dropdown.selection:hover,
     .ui.action.input:not([class*="left action"])>input:focus+.button,
@@ -66,6 +77,7 @@
     .ui.action.input:not([class*="left action"])>input:focus+i.icon+.button:hover {
         border-left-color: var(--color-input-border);
     }
+
     .ui.form .field>label {
         margin: 0 0 var.get('measure/.375x');
         font-size: var.get('font-size/md');

@@ -41,7 +41,6 @@
 
 @mixin label-default {
     .ui.label {
-        // height: var.get('measure/1.25x');
         border-radius: var.get('measure/1.25x');
 
         &.scope-left {
@@ -57,7 +56,5 @@
         &.green, &.red {
             color: var(--color-green-contrast) !important;
         }
-
     }
-
 }

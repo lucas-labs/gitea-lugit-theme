@@ -1,6 +1,8 @@
 @mixin avatar {
     img.ui.avatar, .ui.avatar img, .ui.avatar svg {
-        border-radius: 50% !important;
-        object-fit: fill;
+        &:not(.org-avatar) {
+            border-radius: 50% !important;
+            object-fit: fill;
+        }
     }
 }

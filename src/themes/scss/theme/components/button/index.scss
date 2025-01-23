@@ -53,6 +53,9 @@
     .ui.button {
         border-radius: var(--border-radius);
         transition: color .1s ease, background-color .1s ease, border-color .1s ease;
+        padding: calc(#{var.get('measure/.375x')} - 1px) var.get('measure/1x');
+        font-size: var.get('font-size/md') !important;
+        line-height: 20px;
 
         &.basic {
             border-radius: var(--border-radius);
