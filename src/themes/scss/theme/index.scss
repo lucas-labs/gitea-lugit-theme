@@ -14,6 +14,8 @@
     @include components.file-content;   // github-style file content
     @include components.avatar;         // github-style avatars
     @include components.gitea-button;   // github-style buttons
+    @include components.segment;
+    @include components.comments;       // github-style comment boxes
 
     // code highlighting
     @include modules.chroma($is-dark);  // syntax highlighting

@@ -22,6 +22,12 @@
         .issue-title-meta {
             color: color.get('subtle');
         }
+
+        &:has(+ .ui.pull.tabs) { // if the next sibling is a tab (e.g. pull request tab selector)
+            margin-bottom: var.get('measure/1x');
+            padding-bottom: var.get('measure/.5x');
+            border-bottom: none;
+        }
     }
 
     .issue-content {
@@ -35,97 +41,171 @@
     }
 
     .timeline-item {
-        &.comment {
-            .content {
-                background-color: var(--color-box-body);
-
-                >.comment-header, >.ui.segment {
-                    &:before, &:after {
-                        display: none;
-                    }
+        &.event {
+            .badge {
+                // and not contains a tw-bg-* class
+                &:not([class*="tw-bg-"]) {
+                    color: var(--color-timeline-badge-fg) !important;
                 }
 
-                .comment-header {
-                    padding: var.get('measure/.25x') var.get('measure/.25x') var.get('measure/.25x') var.get('measure/1x') !important;
+                &.tw-bg-green.tw-text-white {
+                    color: var(--color-green-contrast) !important;
+                }
 
-                    .comment-header-left {
-                        .text {
-                            color: color.get('subtle') !important;
-
-                            .author {
-                                color: color.get('text') !important;
-                            }
-                        }
-                    }
-
-                    .comment-header-right {
-                        * {
-                            color: color.get('subtle') !important;
-                        }
-                        
-                        .label {
-                            height: var.get('measure/1.25x', 1.25rem) !important;
-                            padding: 0px var.get('measure/.375x') !important;
-                            border-radius: var.get('measure/1x') !important;
-                        }
-                    }
+                &.tw-bg-red.tw-text-white {
+                    color: var(--color-red-contrast) !important;
                 }
             }
 
-            // comment form at the end
-            &.form {
-                display: flex;
-                align-items: flex-start;
-                background-color: var(--color-body);
-                gap: var.get('measure/1x');
-                left: -68px !important;
-                width: calc(100% + 68px - 16px) !important;
+            .ui.segments.conversation-holder {
+                margin-left: var.get('measure/.5x');
+                border-radius: var(--border-radius);
+            }
+        }
+    }
 
-                @media (max-width: 768px) {
-                    left: 0 !important;
-                    margin-left: -16px !important;
-                    width: auto !important;
-                }
+    .repository.view.issue {
+        --avatar-size: 24px;
 
-                .timeline-avatar {
-                    display: block;
-                    position: relative !important;
-                    left: unset !important;
-                    flex: 0 0 auto !important;
-                }
+        .comment-list .ui.comments {
+            background-color: transparent;
+            gap: var.get('measure/1x');
+            position: relative;
+        }
 
-                .content {
-                    // fake title to mimic github new issue page
+        .comment-list {
+            .ui.comment-code-cloud.segment {
+                padding: 0 var.get('measure/.5x') var.get('measure/.5x') !important;
+
+                .ui.comments {
+                    gap: var.get('measure/.5x');
+
                     &:before {
                         display: block;
-                        content: 'Add a comment';
-                        font-weight: 600;
-                        margin-bottom: var.get('measure/1x');
-                        margin-top: var.get('measure/.5x');
-                        font-size: var.get('font-size/lg');
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: calc((var(--avatar-size) / 2) - 1px);
+                        top: 16px;
+                        width:  3px;
+                        background-color: var(--color-timeline);
+                        opacity: 50%;
                     }
 
-                    display: block;
-                    position: relative !important;
-                    margin-left: 0 !important;
-                    flex: 1;
+                    .comment.code-comment .content.comment-container{
+                        background-color: transparent !important;
 
-                    .ui.segment {
+                        .header.comment-header {
+                            .comment-header-left {
+                                gap: var.get('measure/.5x');
+                                .avatar img {
+                                    z-index: 1 !important;
+                                    width: var(--avatar-size) !important;
+                                    height: var(--avatar-size) !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .code-comment-buttons {
+                    margin: 0!important;
+                }
+
+                .comment-form {
+                    margin-top: var.get('measure/1x');
+
+                    .field.footer {
+                        margin: 0 !important;
                         padding: 0 !important;
-                        border: none !important;
+
+                        button {
+                            padding: var.get('measure/.5x') var.get('measure/1x') !important;
+                        }
                     }
                 }
             }
         }
     }
 
-    .repository.view.issue .comment-list .comment>.content>div:last-child {
-        border-bottom-left-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
+    .repository .ui.tabs.divider {
+        margin-bottom: var.get('measure/1x');
     }
 
-    .repository.view.issue .comment-list .comment>.content>div:first-child {
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
+    .repository .diff-detail-box { // diff page detail box
+        padding: var.get('measure/.5x') 0;
+        margin: calc(var.get('measure/1x') * -1) 0 0 0;
+        height: 60px;
     }
+
+    .repository #diff-container {
+        #diff-file-tree {
+            top: 60px;
+            .diff-file-tree-items {
+                margin: 0;
+            }
+        }
+
+        column-gap: var.get('measure/1x');
+
+        .diff-file-body tr.tag-code:last-child td:first-child, .diff-file-body tr.tag-code:last-child td:first-child * {
+            border-bottom-left-radius: calc(var(--border-radius) - 2px);
+        }
+
+        .diff-file-body tr.tag-code:last-child td:last-child, .diff-file-body tr.tag-code:last-child td:last-child * {
+            border-bottom-right-radius: var(--border-radius);
+        }
+
+        .ui.attached.header.diff-file-header.sticky-2nd-row {
+            position: sticky;
+            top: 60px;
+            z-index: 7;
+        }
+
+        .add-comment {
+            border-top: 1px solid var(--color-secondary);
+            border-bottom: 1px solid var(--color-secondary);
+            
+            .conversation-holder {
+                .comment-code-cloud {
+                    padding: var.get('measure/.75x') !important;
+                    form {
+                        &:not(:first-child) {
+                            margin-top: var.get('measure/.5x');
+                        }
+                        
+                        .field.footer {
+                            margin: 0 !important;
+                            padding: 0 !important;
+
+                            button {
+                                padding: var.get('measure/.5x') var.get('measure/1x') !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // new issue page
+    .page-content.repository.new.issue {
+        .issue-content-left {
+            .ui.comments .comment {
+                .ui.segment.content {
+                    padding: 6px 0 0;
+                    border: none;
+
+                    .field {
+                        margin-bottom: var.get('measure/1x');
+                    }
+
+                    &:before, &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }        
 }

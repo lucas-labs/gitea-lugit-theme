@@ -39,7 +39,14 @@
 
         .repo-description {
             margin-bottom: var.get('measure/1x');
-        }
+
+            +a.flex-text-block {
+                svg {
+                    color: color.get('subtle') !important;
+                }
+                margin-bottom: var.get('measure/1x');
+            }
+        }        
 
         .flex-text-block {
             gap: var.get('measure/.25x') !important;
@@ -53,6 +60,10 @@
         @media (max-width: 768px) {
             .repo-description {
                 margin-top: 0 !important;
+
+                +a.flex-text-block {
+                    margin-bottom: 0;
+                }
             }
 
             #repo-topics, #manage_topic, .flex-item-title {
@@ -105,7 +116,6 @@
             gap: 0 !important;
 
             .language-stats {
-                background-color: red !important;
                 margin: 0 !important;
                 height: var.get('measure/.5x') !important;
                 margin-bottom: var.get('measure/.5x') !important;
@@ -163,5 +173,71 @@
                 gap: var.get('measure/1x');
             }
         }
+    }
+
+    button.ui.primary.button.js-btn-clone-panel {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var.get('measure/.5x');
+        align-items: center;
+
+        span {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: var.get('measure/.375x');
+            align-items: center;
+        }
+    }
+
+    .clone-panel-popup {
+        .clone-panel-field {
+            margin: var.get('measure/1x');
+        }
+
+        .clone-panel-list {
+            margin: var.get('measure/1x');
+
+            .item {
+                margin: var.get('measure/.5x') 0;
+            }
+        }
+
+        .clone-panel-tab {
+            padding: 0 var.get('measure/1x') var.get('measure/.5x');
+            display: flex;
+            gap: var.get('measure/.5x');
+
+            button {
+                padding: var.get('measure/.375x') var.get('measure/.5x');
+                font-weight: 600;
+
+                &.active {
+                    border-bottom: 0;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -7px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: color.get('primary/base');
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--color-hover);
+                    border-radius: var(--border-radius);
+                    transition: background 0.12s ease-out;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .tippy-svg-arrow {
+        display: none;
     }
 }

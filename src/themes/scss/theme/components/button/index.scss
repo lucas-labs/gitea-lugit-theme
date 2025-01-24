@@ -50,12 +50,55 @@
 }
 
 @mixin gitea-button {
+    .ui.icon.buttons .button, .ui.icon.button:not(.compact) {
+        // padding: 50px;
+    }
+
+    .code-comment-buttons-buttons {
+        button:not(.labeled):not(.icon) {
+            padding: .78571429em !important;
+        }
+    }
+
+    // buttons group
+    .ui.buttons {
+        &.icon .button, &.icon:not(.compact) {
+            padding: 50px 50px;
+        }
+
+        .button {
+            &:first-child {
+                border-top-left-radius: var(--border-radius);
+                border-bottom-left-radius: var(--border-radius);
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &.button:last-child {
+                border-top-right-radius: var(--border-radius);
+                border-bottom-right-radius: var(--border-radius);
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            border-right: none;
+            flex: 1 0 auto;
+            border-radius: 0;
+            margin: 0;
+        }
+    }
+
     .ui.button {
         border-radius: var(--border-radius);
         transition: color .1s ease, background-color .1s ease, border-color .1s ease;
         padding: calc(#{var.get('measure/.375x')} - 1px) var.get('measure/1x');
-        font-size: var.get('font-size/md') !important;
+        font-size: var.get('font-size/md');
         line-height: 20px;
+
+        &.tiny {
+            font-size: var.get('font-size/sm');
+            line-height: var.get('font-size/sm');
+        }
 
         &.basic {
             border-radius: var(--border-radius);
@@ -80,4 +123,6 @@
             font-weight: 500;
         }
     }
+
+    
 }

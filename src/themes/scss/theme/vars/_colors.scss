@@ -123,7 +123,7 @@
         --color-purple: #{color.get('palette/purple/base')};
         --color-pink:   #{color.get('palette/pink/base')};
         --color-brown:  #{color.get('palette/brown/base')};
-        --color-black:  #{color.get('elevation/1')};
+        --color-black:  #{color.get('palette/black/base')};
 
         // ┌───────┐
         // │ named │ » contrasts (lugit addition)
@@ -287,6 +287,7 @@
         --color-text-light-3: #{color.get('subtle')};
         --color-footer:       rgba(#{color.get('elevation/2', 'rgb')}, 0.2);
         --color-timeline:     #{color.get('elevation/5')};
+        --color-timeline-badge-fg:  #{if($is-dark, var(--color-white), var.get('color-text'))};
 
         // box
         --color-box-header:         #{rgba(color.get('elevation/4', 'rgb'), 1)};
@@ -306,7 +307,7 @@
         --color-light-border: #{color.get('elevation/6')};
         --color-hover: rgba(#{color.get('elevation/6', 'rgb')}, 0.5);
         --color-hover-opaque: #{color.get('elevation/6', 'rgb')};
-        --color-active: #{color.get('elevation/4')};
+        --color-active: #{color.get('elevation/5')};
         --color-menu: #{color.get('elevation/4')};
         --color-card: #{color.get('elevation/3')};
         --color-markup-table-row: rgba(#{color.get('text', 'rgb')}, 0.02);
