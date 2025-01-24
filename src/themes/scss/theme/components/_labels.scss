@@ -53,8 +53,12 @@
             border-bottom-left-radius: 0;
         }
 
-        &.green, &.red {
+        &.green {
             color: var(--color-green-contrast) !important;
+        }
+
+        &.red {
+            color: var(--color-red-contrast) !important;
         }
     }
 }

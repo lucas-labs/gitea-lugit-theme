@@ -3,7 +3,7 @@
 @use './section';
 
 @mixin settings-pages {
-    .page-content.user.settings, .page-content.admin {
+    .page-content.user.settings, .page-content.admin, .page-content.repository.settings {
         .ui.flex-container {
             column-gap: 40px;
             
@@ -16,6 +16,5 @@
                 @include section.content;
             }
         }
-        
     }
 }

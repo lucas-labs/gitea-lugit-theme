@@ -161,16 +161,19 @@
                 border-radius: var(--border-radius) !important;
                 border-top-width: 1px !important;
                 border-color: var(--color-secondary) !important;
-                display: flex !important;
                 flex-direction: column;
                 gap: var.get('measure/.25x');
+
+                &.visible {
+                    display: flex;
+                }
 
                 .item {
                     border: none !important;
                 }
             }
         }
-    } 
+    }
 }
 
 @mixin menu {
@@ -202,4 +205,10 @@
             background: var(--color-hover);
         }
     }    
+}
+
+@mixin tabular-menu {
+    .ui.tabular.menu .active.item, .ui.tabular.menu .active.item:hover {
+        border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    }
 }

@@ -5,6 +5,7 @@
 @mixin forms {
     @include forms.dropdown-menu;
     @include forms.menu;
+    @include forms.tabular-menu;
     @include forms.input;
 }
 
