@@ -1,0 +1,35 @@
+@use '@lucas-labs/lui-micro/color' as color;
+@use '@lucas-labs/lui-micro/var' as var;
+
+@mixin markup {
+    .markup {
+        .task-list-item input[type=checkbox] {
+            margin: 0 .5em .25em -1.4em;
+        }
+
+        input[type=checkbox] {
+            --border-radius: #{var.get('measure/.25x')};
+            width: var.get('measure/1x');
+            height: var.get('measure/1x');
+            margin-right: 4px;
+            --color-input-background: #{color.get('elevation/5')};
+            
+            &:checked {
+                background-color: var(--color-primary);
+            }
+
+            &:after {
+                --color-text: var(--color-primary-contrast);
+            }
+
+            &:not([disabled]):hover, &:not([disabled]):active {
+                border-color: var(--color-secondary);
+                background-color: color.get('elevation/6');
+
+                &:checked {
+                    background-color: var(--color-primary-hover);
+                }
+            }
+        }        
+    }
+}

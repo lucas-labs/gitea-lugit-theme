@@ -16,6 +16,7 @@
     @include components.gitea-button;   // github-style buttons
     @include components.segment;
     @include components.comments;       // github-style comment boxes
+    @include components.markup;         // styling rendered for markdown content
 
     // code highlighting
     @include modules.chroma($is-dark);  // syntax highlighting
