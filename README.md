@@ -44,9 +44,6 @@ DEFAULT_THEME=dark # optional
 
 4. Restart `gitea`.
 
-> [!NOTE]
-> The latest version works with `gitea` version `v1.22.x`.
-
 ## Credits
 
 - [`catppuccin/gitea`](https://github.com/catppuccin/gitea), these themes are based on them.
@@ -73,4 +70,4 @@ $ npm run serve -- -- --server c:/gitea/custom
 
 ## Contributing
 
-Please feel free to open an issue or a pull request. Contributions are welcome!
+Feel free to open an issue or a pull request. Contributions are welcome!
