@@ -2,6 +2,20 @@
 @use '@lucas-labs/lui-micro/color' as color;
 
 @mixin segment {
+    .ui.segment {
+        margin: var.get('measure/1x') 0;
+        padding: var.get('measure/1x');
+        border-radius: var(--border-radius);
+    }
+
+    .ui.segment form >*:first-child {
+        margin-top: 0;
+    }
+
+    .ui.segment form >*:last-child {
+        margin-bottom: 0;
+    }
+
     .ui.top.attached.header {
         border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
@@ -11,15 +25,11 @@
         border-bottom-right-radius: var(--border-radius);
     }
 
-    .ui.segments:not(.horizontal)>.segment:first-child {
+    .ui.segments:not(.horizontal)>.segment:first-child, .ui.segments.horizontal>.segment:first-child {
         border-radius: var(--border-radius);
     }
 
-    .ui.segments:not(.horizontal)>.segment:last-child {
-        border-radius: var(--border-radius);
-    }
-
-    .ui.segment {
+    .ui.segments:not(.horizontal)>.segment:last-child, .ui.horizontal.segments>.segment:last-child {
         border-radius: var(--border-radius);
     }
 }
