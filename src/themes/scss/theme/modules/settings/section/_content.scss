@@ -2,7 +2,6 @@
 @use '@lucas-labs/lui-micro/color' as color;
 
 @mixin content {
-
     .ui.top.attached.header {
         background: unset;
         border: none;
@@ -52,6 +51,14 @@
             svg {
                 margin-left: var.get('measure/.25x');
             }
+        }
+
+        .ui.form .field {
+            margin: 0 0 1em;
+        }
+
+        .ui.form .fields .fields, .ui.form .field:last-child, .ui.form .fields:last-child .field {
+            margin-bottom: 0;
         }
 
         .field {
