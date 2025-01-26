@@ -347,8 +347,8 @@
         --color-label-active-bg: #728292ff;
 
         // accents
-        --color-accent: #{color.get('palette/blue/dark/25%')};
-        --color-small-accent: var(--color-primary-light-5);
+        --color-accent: #{color.get('accent', $default: color.get('palette/blue/dark/25%'))};
+        --color-small-accent: #{color.get('accent', $default: var(--color-primary-light-5))};
         --color-highlight-fg: #{color.get('palette/yellow/dark/20%')};
         --color-highlight-bg: #{color.get('palette/yellow/dark/75%')};
     }
