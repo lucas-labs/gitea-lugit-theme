@@ -103,6 +103,11 @@
             }
         }
 
+        .fork-flag {
+            margin-top: calc(#{var.get('measure/1x')} * -1) !important;
+            margin-bottom: var.get('measure/1x') !important;
+        }
+
         // header navbar menu
         overflow-menu.ui.secondary.pointing.menu {
             .overflow-menu-items {

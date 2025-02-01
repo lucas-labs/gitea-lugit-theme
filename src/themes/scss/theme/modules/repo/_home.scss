@@ -240,4 +240,8 @@
     .tippy-svg-arrow {
         display: none;
     }
+
+    .repository.file.editor .commit-form-wrapper .commit-form:before, .repository.file.editor .commit-form-wrapper .commit-form:after {
+        display: none;
+    }
 }

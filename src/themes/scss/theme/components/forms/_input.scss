@@ -30,7 +30,6 @@
         color: var(--color-input-text);
         border-radius: var(--border-radius);
         line-height: 20px;
-        min-height: auto;
         padding: calc(#{var.get('measure/.375x')} - 1px) var.get('measure/.75x');
         
         +.ui.button:last-child {
@@ -40,7 +39,6 @@
     }
 
     @include -all-inputs(':hover') {
-        // border-radius: var(--border-radius);
         border-color: var(--color-input-border);
         color: var(--color-input-text)
     }
@@ -56,6 +54,10 @@
     @include -all-inputs('.active') {
         border-radius: var(--border-radius);
         outline: 2px solid var(--color-accent);
+
+        > input.search {
+            outline: none;            
+        }
     }
 
     .ui.action.input:not([class*="left action"])>input:focus {
@@ -82,5 +84,44 @@
         margin: 0 0 var.get('measure/.375x');
         font-size: var.get('font-size/md');
         font-weight: 600;
+    }
+
+    .ui.form textarea,
+    .ui.form input:not([type]),
+    .ui.form input[type=date],
+    .ui.form input[type=datetime-local],
+    .ui.form input[type=email],
+    .ui.form input[type=number],
+    .ui.form input[type=password],
+    .ui.form input[type=search],
+    .ui.form input[type=tel],
+    .ui.form input[type=time],
+    .ui.form input[type=text],
+    .ui.form input[type=file],
+    .ui.form input[type=url] {
+        min-height: 2.71428571em;
+    }
+    
+    .ui.selection.dropdown {
+        min-height: 2.71428571em;
+        >input {
+            min-height: 0;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .ui.multiple.dropdown>.label, .ui.multiple.search.dropdown>input.search {
+        padding: var.get('measure/.375x') var.get('measure/.75x');
+        margin: .14285714rem .28571429rem .14285714rem 0;
+    }
+
+    .ui.multiple.search.dropdown>input.search  {
+        padding-left: 0;
+    }
+
+    .ui.checkbox label, .ui.radio.checkbox label {
+        margin-left: 20px !important;
     }
 }

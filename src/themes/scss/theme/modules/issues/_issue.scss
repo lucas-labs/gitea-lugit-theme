@@ -182,8 +182,15 @@
 
     .repository .diff-detail-box { // diff page detail box
         padding: var.get('measure/.5x') 0;
-        margin: calc(var.get('measure/1x') * -1) 0 0 0;
         height: 60px;
+    }
+
+    .repository.view.issue .pull.tabs.container {
+        + div {
+            >.diff-detail-box:first-child {
+                margin: calc(var.get('measure/1x') * -1) 0 0 0;
+            }
+        }
     }
 
     .repository #diff-container {
